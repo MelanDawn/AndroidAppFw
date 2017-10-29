@@ -1,11 +1,17 @@
 package com.zs.androidappfw;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+
+import com.zs.androidappfw.config.Config;
+import com.zs.androidappfw.utils.LUtil;
+
+import java.lang.ref.WeakReference;
 
 /**
  * Created by shoes on 2017/10/25.
@@ -14,23 +20,37 @@ import android.support.v7.app.AppCompatActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private Handler handler = new Handler(){
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            if (msg.what == 1){
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                finish();
-            }
-        }
-    };
+    private static final String TAG = "SplashActivity";
+
+    private static final int MSG_SPLASH = Config.HANDLER_BASE_SPLASH;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        handler.sendEmptyMessageDelayed(1, 3000);
+        new BetterHandler(SplashActivity.this).sendEmptyMessageDelayed(MSG_SPLASH, 3000);
+
+        LUtil.v(TAG, "create successfully");
     }
 
+    private static class BetterHandler extends Handler{
 
+        private WeakReference<Activity> activityWeakReference;
+
+        BetterHandler(Activity activity){
+            activityWeakReference = new WeakReference<>(activity);
+        }
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Activity activity = activityWeakReference.get();
+            if (activity != null) {
+                if (msg.what == MSG_SPLASH){
+                    activity.startActivity(new Intent(activity, MainActivity.class));
+                    activity.finish();
+                }
+            }
+        }
+    }
 }

@@ -12,4 +12,7 @@ public class Config {
 
     public static final String DB_NAME = "AppFw.db";
     public static final int DB_VERSION = 1;
+
+    //handler msg base code
+    public static final int HANDLER_BASE_SPLASH = 100;
 }
