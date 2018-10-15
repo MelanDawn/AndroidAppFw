@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-
     package="com.zs.androidappfw">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
         android:allowBackup="true"
@@ -9,6 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:fullBackupContent="true"
+        android:name=".App"
         android:theme="@style/AppTheme">
 
         <activity android:name=".SplashActivity"
@@ -20,7 +22,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".ui.activity.MainActivity"/>
 
 <!--        <activity
             android:name=".TestActivity"

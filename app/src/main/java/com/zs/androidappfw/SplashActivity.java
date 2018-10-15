@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.zs.androidappfw.config.Config;
+import com.zs.androidappfw.ui.activity.MainActivity;
 import com.zs.androidappfw.utils.LUtil;
 
 import java.lang.ref.WeakReference;

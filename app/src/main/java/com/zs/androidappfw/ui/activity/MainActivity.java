@@ -1,4 +1,4 @@
-package com.zs.androidappfw;
+package com.zs.androidappfw.ui.activity;
 
 import android.support.v7.app.AppCompatActivity;
 
