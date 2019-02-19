@@ -1,4 +1,4 @@
-package com.zs.androidappfw.database;
+package com.zs.androidappfw.storage.database;
 
 import android.content.Context;
 import android.database.DatabaseErrorHandler;
