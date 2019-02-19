@@ -38,23 +38,22 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation "com.android.support:appcompat-v7:${project.ANDROID_SUPPORT_LIBRARY_VERSION}"
-
     testImplementation 'junit:junit:4.12'
-
     //https://github.com/mcxiaoke/android-volley
     implementation 'com.mcxiaoke.volley:library:1.0.19'
     //json is builtin
     //implementation 'org.json:json:20180130'
     implementation 'com.google.code.gson:gson:2.8.5'
-
     // inner thread communication
     implementation 'org.greenrobot:eventbus:3.1.1'
     // dependency injection for view
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    implementation project(':umeng')
 }

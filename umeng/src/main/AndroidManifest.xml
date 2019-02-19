@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cm.umeng" >
+
+    <application>
+        <meta-data android:name="UMENG_APPKEY" android:value="5bd68ec9b465f5ec7c0000e2" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="test" />
+    </application>
+</manifest>

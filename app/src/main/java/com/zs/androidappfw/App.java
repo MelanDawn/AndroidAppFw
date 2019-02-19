@@ -3,6 +3,8 @@ package com.zs.androidappfw;
 import android.app.Application;
 import android.content.Context;
 
+import cm.umeng.Umeng;
+
 
 // Created by zhangs on 2018/8/1.
 
@@ -19,6 +21,8 @@ public class App extends Application {
     }
 
     private void init() {
+        // init umeng
+        Umeng.init(appContext);
 
     }
 }
