@@ -3,6 +3,7 @@
 
     <!-- Main activity -->
     <string name="to_tv">to TextView</string>
+    <string name="to_et">to EditText</string>
 
     <!-- TextView activity -->
     <string name="tv_normal">普通文本展示框</string>
@@ -12,4 +13,43 @@
     <string name="tv_normal_ellipse_end">普通内容过大尾部省略框，限制：单行。填充填充填充填充填充填充填充填充填充填充</string>
     <string name="tv_normal_ellipse_start">填充填充填充填充填充填充填充填充填充填充。普通内容过大头部省略框。限制：单行</string>
     <string name="tv_normal_ellipse_marquee">普通内容过大跑马灯展示框，限制：单行、获取焦点、获取触摸模式的焦点。填充填充填充</string>
+
+    <!-- EditText activity -->
+    <string name="et_hint_focus">提示内容输入框</string>
+    <string name="et_hint">提示内容（变更颜色）输入框</string>
+    <string name="et_content">填充内容输入框，此时光标在最前面，需设置</string>
+    <string name="et_background_no">去掉底部线条（实际上是背景）</string>
+    <string name="et_background_another">更换底部线条背景为其他背景</string>
+    <string name="et_input_date">date</string>
+    <string name="et_input_datetime">datetime</string>
+    <string name="et_input_none">none</string>
+    <string name="et_input_number">number</string>
+    <string name="et_input_numberDecimal">numberDecimal</string>
+    <string name="et_input_numberPassword">numberPassword</string>
+    <string name="et_input_numberSinged">numberSinged</string>
+    <string name="et_input_phone">phone</string>
+    <string name="et_input_text">text</string>
+    <string name="et_input_textAutoComplete">textAutoComplete</string>
+    <string name="et_input_textAutoCorrect">textAutoCorrect</string>
+    <string name="et_input_textCapCharacters">textCapCharacters</string>
+    <string name="et_input_textCapSentences">textCapSentences</string>
+    <string name="et_input_textCapWords">textCapWords</string>
+    <string name="et_input_textEmailAddress">textEmailAddress</string>
+    <string name="et_input_textEmailSubject">textEmailSubject</string>
+    <string name="et_input_textFilter">textFilter</string>
+    <string name="et_input_textImeMultiLine">textImeMultiLine</string>
+    <string name="et_input_textLongMessage">textLongMessage</string>
+    <string name="et_input_textMultiLine">textMultiLine</string>
+    <string name="et_input_textNoSuggestions">textNoSuggestions</string>
+    <string name="et_input_textPassword">textPassword</string>
+    <string name="et_input_textPersonName">textPersonName</string>
+    <string name="et_input_textPhonetic">textPhonetic</string>
+    <string name="et_input_textPostalAddress">textPostalAddress</string>
+    <string name="et_input_textShortMessage">textShortMessage</string>
+    <string name="et_input_textUri">textUri</string>
+    <string name="et_input_textVisiblePassword">textVisiblePassword</string>
+    <string name="et_input_textWebEditText">textWebEditText</string>
+    <string name="et_input_textWebEmailAddress">textWebEmailAddress</string>
+    <string name="et_input_textWebPassword">textWebPassword</string>
+    <string name="et_input_time">time</string>
 </resources>

@@ -10,4 +10,11 @@
         android:textAllCaps="false"
         android:onClick="toTextView"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:text="@string/to_et"
+        android:textAllCaps="false"
+        android:onClick="toEditText"/>
+
 </LinearLayout>

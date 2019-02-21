@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/et_hint_focus"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+
+            android:focusable="false"
+            android:inputType="text"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/et_hint"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/holo_blue_dark"
+
+            android:focusable="false"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/et_content_focus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+
+            android:focusable="true"
+            android:inputType="text"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_background_no"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+
+            android:inputType="text"
+
+            android:background="@null"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_background_another"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+
+            android:inputType="text"
+
+            android:background="@android:color/darker_gray"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_date"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="date"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_datetime"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="datetime"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_time"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="time"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_none"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="none"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_number"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="number"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_numberDecimal"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="numberDecimal"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_numberSinged"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="numberPassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_phone"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="phone"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_text"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="text"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textAutoComplete"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textAutoComplete"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textAutoCorrect"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textAutoCorrect"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textCapCharacters"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textCapCharacters"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textCapSentences"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textCapSentences"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textCapWords"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textCapWords"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textEmailAddress"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textEmailAddress"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textEmailSubject"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textEmailSubject"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textFilter"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textFilter"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textImeMultiLine"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textImeMultiLine"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textLongMessage"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textLongMessage"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textMultiLine"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textMultiLine"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textNoSuggestions"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textNoSuggestions"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textPassword"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textPassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textPersonName"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textPersonName"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textPhonetic"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textPhonetic"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textPostalAddress"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textPostalAddress"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textShortMessage"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textShortMessage"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textUri"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textUri"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textVisiblePassword"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textVisiblePassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textWebEditText"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textWebEditText"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textWebEmailAddress"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textWebEmailAddress"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/et_height"
+
+            android:hint="@string/app_name"
+            android:text="@string/et_input_textWebPassword"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+
+            android:inputType="textWebPassword"/>
+    </LinearLayout>
+</ScrollView>

@@ -5,4 +5,7 @@
 
     <!-- TextView Activity -->
     <dimen name="tv_height">30dp</dimen>
+
+    <!-- EditText Activity -->
+    <dimen name="et_height">40dp</dimen>
 </resources>

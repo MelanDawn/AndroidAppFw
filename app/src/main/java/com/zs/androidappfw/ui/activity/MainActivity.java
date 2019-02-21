@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
     public void toTextView(View view) {
         startActivity(new Intent(MainActivity.this, TextViewAct.class));
     }
+
+
+    public void toEditText(View view) {
+        startActivity(new Intent(MainActivity.this, EditTextAct.class));
+    }
 }
