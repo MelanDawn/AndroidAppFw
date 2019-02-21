@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AndroidAppFw</string>
+
+    <!-- Main activity -->
+    <string name="to_tv">to TextView</string>
+
+    <!-- TextView activity -->
+    <string name="tv_normal">普通文本展示框</string>
+    <string name="tv_normal_center_v">普通竖直居中文本展示框</string>
+    <string name="tv_normal_center_h">普通水平居中展示框</string>
+    <string name="tv_normal_center">普通居中展示框</string>
+    <string name="tv_normal_ellipse_end">普通内容过大尾部省略框，限制：单行。填充填充填充填充填充填充填充填充填充填充</string>
+    <string name="tv_normal_ellipse_start">填充填充填充填充填充填充填充填充填充填充。普通内容过大头部省略框。限制：单行</string>
+    <string name="tv_normal_ellipse_marquee">普通内容过大跑马灯展示框，限制：单行、获取焦点、获取触摸模式的焦点。填充填充填充</string>
 </resources>
