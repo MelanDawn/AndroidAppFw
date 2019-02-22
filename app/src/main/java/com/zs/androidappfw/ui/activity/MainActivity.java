@@ -28,4 +28,8 @@ public class MainActivity extends AppCompatActivity {
     public void toEditText(View view) {
         startActivity(new Intent(MainActivity.this, EditTextAct.class));
     }
+
+    public void toImageView(View view) {
+        startActivity(new Intent(MainActivity.this, ImageViewAct.class));
+    }
 }

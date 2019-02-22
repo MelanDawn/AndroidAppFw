@@ -4,6 +4,7 @@
     <!-- Main activity -->
     <string name="to_tv">to TextView</string>
     <string name="to_et">to EditText</string>
+    <string name="to_iv">to ImageView</string>
 
     <!-- TextView activity -->
     <string name="tv_normal">普通文本展示框</string>
@@ -52,4 +53,18 @@
     <string name="et_input_textWebEmailAddress">textWebEmailAddress</string>
     <string name="et_input_textWebPassword">textWebPassword</string>
     <string name="et_input_time">time</string>
+
+    <!-- ImageView Activity -->
+    <string name="iv_scale_type_description">ImageView的scaleType属性demo展示如下。\n
+        图片原始尺寸180x120，180x120，90x30。\n
+        第一组iv适应高宽，后续iv尺寸120*60，所有iv设置背景色为红色</string>
+    <string name="iv_scale_type_no">原图，无scaleType属性，适应高宽</string>
+    <string name="iv_scale_type_center">center：不缩放图片。图片与iv中心点重合，截取图片与iv重合的区域</string>
+    <string name="iv_scale_type_centerCrop">centerCrop：等比例缩放图片，直到图片一边等于iv，图片另一边大于iv，图片与iv中心点重合，展示iv与图片重合的区域</string>
+    <string name="iv_scale_type_centerInside">centerInside：图片大于iv则等比例缩放，图片完全展示，图片start（即左或上）对齐iv；图片小于iv，不拉伸，居中显示</string>
+    <string name="iv_scale_type_fitStart">fitStart：等比例缩放，直到图片一边等于iv的一边，另一边不超过iv的另一边，图片完全展示，图片start（即左或顶）对齐iv</string>
+    <string name="iv_scale_type_fitEnd">fitEnd：等比例缩放，直到图片一边等于iv的一边，另一边不超过iv的另一边，图片完全展示，图片end（即右或底）对齐iv</string>
+    <string name="iv_scale_type_fitCenter">fitCenter：等比例缩放，直到图片一边等于iv的一边，另一边不超过iv的另一边，图片完全展示，图片居中</string>
+    <string name="iv_scale_type_fitXY">fitXY：非等比例缩放，图片拉伸变形，保证图片全部展示且填满iv，同background效果</string>
+    <string name="iv_scale_type_matrix">matrix：不缩放图片，图片与iv左上角重合，展示iv与图片重合的区域</string>
 </resources>

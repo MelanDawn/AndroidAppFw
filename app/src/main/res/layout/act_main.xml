@@ -17,4 +17,11 @@
         android:textAllCaps="false"
         android:onClick="toEditText"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:text="@string/to_iv"
+        android:textAllCaps="false"
+        android:onClick="toImageView"/>
+
 </LinearLayout>
