@@ -10,7 +10,9 @@ import cm.umeng.Statistics;
 
 // Created by zhangs on 2018/10/29.
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
+
+    protected final String TAG = this.getClass().getSimpleName();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

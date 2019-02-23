@@ -8,13 +8,14 @@ import android.view.View;
 import android.widget.RadioButton;
 
 import com.zs.androidappfw.R;
+import com.zs.androidappfw.ui.base.BaseActivity;
 
 /**
  * Created by shoes on 2017/10/25.
  *
  */
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void toTextView(View view) {
         startActivity(new Intent(MainActivity.this, TextViewAct.class));
+    }
+
+    public void toCheckedTextView(View view) {
+        startActivity(new Intent(MainActivity.this, CheckedTextViewAct.class));
     }
 
     public void toEditText(View view) {

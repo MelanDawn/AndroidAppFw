@@ -4,6 +4,7 @@
     <!-- Main activity -->
     <string name="to_tv">TextView</string>
     <string name="to_et">|-- EditText</string>
+    <string name="to_checked_tv">|-- CheckedTextView</string>
     <string name="to_btn">|-- Button</string>
     <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)（抽象类）</string>
     <string name="to_check_box">|-- |-- |-- CheckBox(复选框)</string>
@@ -20,6 +21,17 @@
     <string name="tv_normal_ellipse_end">普通内容过大尾部省略框，限制：单行。填充填充填充填充填充填充填充填充填充填充</string>
     <string name="tv_normal_ellipse_start">填充填充填充填充填充填充填充填充填充填充。普通内容过大头部省略框。限制：单行</string>
     <string name="tv_normal_ellipse_marquee">普通内容过大跑马灯展示框，限制：单行、获取焦点、获取触摸模式的焦点。填充填充填充</string>
+
+    <!-- CheckedTextView activity -->
+    <string name="checked_tv_normal">默认配置</string>
+    <string name="checked_tv_check_multiple_1">多选模式框1，框间选择逻辑无关，控制框样式</string>
+    <string name="checked_tv_check_multiple_2">多选模式框2，框间选择逻辑无关，控制框样式</string>
+    <string name="checked_tv_check_single_1">单选模式框1，框间选择逻辑无关，控制框样式</string>
+    <string name="checked_tv_check_single_2">单选模式框2，框间选择逻辑无关，控制框样式</string>
+    <string name="checked_tv_center">文本下上居中</string>
+    <string name="checked_tv_width_match_parent">宽度占满</string>
+    <string name="checked_tv_checked">checked</string>
+    <string name="checked_tv_unchecked">unchecked</string>
 
     <!-- EditText activity -->
     <string name="et_hint_focus">提示内容输入框</string>
