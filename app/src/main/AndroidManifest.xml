@@ -49,6 +49,12 @@
         <activity android:name=".ui.activity.TextViewAct" />
         <activity android:name=".ui.activity.EditTextAct" />
         <activity android:name=".ui.activity.ButtonAct" />
+        <activity android:name=".ui.activity.CompoundButtonAct" />
+        <activity android:name=".ui.activity.CheckBoxAct" />
+        <activity android:name=".ui.activity.RadioButtonAct" />
+        <activity android:name=".ui.activity.SwitchAct" />
+        <activity android:name=".ui.activity.ToggleButtonAct" />
+
         <activity android:name=".ui.activity.ImageViewAct" />
 
     </application>

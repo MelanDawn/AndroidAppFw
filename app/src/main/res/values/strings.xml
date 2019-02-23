@@ -5,6 +5,11 @@
     <string name="to_tv">TextView</string>
     <string name="to_et">|-- EditText</string>
     <string name="to_btn">|-- Button</string>
+    <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)（抽象类）</string>
+    <string name="to_check_box">|-- |-- |-- CheckBox(复选框)</string>
+    <string name="to_radio_btn">|-- |-- |-- RadioButton(单选框)</string>
+    <string name="to_switch">|-- |-- |-- Switch(拨动开关)</string>
+    <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
     <string name="to_iv">ImageView</string>
 
     <!-- TextView activity -->
@@ -63,6 +68,29 @@
     <string name="btn_not_upper">Second Button，123，英文按照文本定义显示</string>
     <string name="btn_shape">自定义点击效果和样式（背景、字体）</string>
     <string name="btn_control_diy_shape">控制自定义样式的button（即上一个）</string>
+
+    <!-- CompoundButton Activity-->
+    <string name="compound_btn_description">复合按钮类型，抽象类无法实例化</string>
+
+    <!-- CheckBox Activity-->
+    <string name="check_box_normal">多选框（默认配置）</string>
+
+    <!-- RadioButton Activity-->
+    <string name="radio_btn_normal_description_1">第一组单选框（默认配置，宽度、背景色除外）</string>
+    <string name="radio_btn_normal_description_2">第二组单选框（水平方向）</string>
+    <string name="radio_btn_normal_selection_a">选项A</string>
+    <string name="radio_btn_normal_selection_b">选项B</string>
+    <string name="radio_btn_normal_selection_c">选项C</string>
+
+    <!-- ToggleButton Activity -->
+    <string name="toggle_btn_normal">默认配置</string>
+    <string name="toggle_btn_no_background">去掉背景，background=@null</string>
+
+
+    <!-- Switch Activity -->
+    <string name="switch_normal">默认配置</string>
+    <string name="switch_disabled">disabled状态</string>
+    <string name="switch_no_background">去掉背景，background=@null</string>
 
     <!-- ImageView Activity -->
     <string name="iv_scale_type_description">ImageView的scaleType属性demo展示如下。\n

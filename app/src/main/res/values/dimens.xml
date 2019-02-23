@@ -12,6 +12,9 @@
     <!-- Button Activity -->
     <dimen name="btn_height">40dp</dimen>
 
+    <!-- CheckBox Activity -->
+    <dimen name="check_box_height">60dp</dimen>
+
     <!-- ImageView Activity-->
     <dimen name="iv_height">60dp</dimen>
     <dimen name="iv_width">120dp</dimen>

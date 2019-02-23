@@ -31,6 +31,46 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
         android:gravity="center_vertical|start"
+        android:text="@string/to_compound_btn"
+        android:textAllCaps="false"
+        android:onClick="toCompoundButton"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_check_box"
+        android:textAllCaps="false"
+        android:onClick="toCheckBox"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_radio_btn"
+        android:textAllCaps="false"
+        android:onClick="toRadioBtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_switch"
+        android:textAllCaps="false"
+        android:onClick="toSwitch"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_toggle_btn"
+        android:textAllCaps="false"
+        android:onClick="toToggleBtn"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
         android:text="@string/to_iv"
         android:textAllCaps="false"
         android:onClick="toImageView"/>

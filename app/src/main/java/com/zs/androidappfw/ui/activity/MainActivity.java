@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.RadioButton;
 
 import com.zs.androidappfw.R;
 
@@ -30,6 +31,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void toButton(View view) {
         startActivity(new Intent(MainActivity.this, ButtonAct.class));
+    }
+
+    public void toCompoundButton(View view) {
+        startActivity(new Intent(MainActivity.this, CompoundButtonAct.class));
+    }
+
+    public void toCheckBox(View view) {
+        startActivity(new Intent(MainActivity.this, CheckBoxAct.class));
+    }
+
+    public void toRadioBtn(View view) {
+        startActivity(new Intent(MainActivity.this, RadioButtonAct.class));
+    }
+
+    public void toSwitch(View view) {
+        startActivity(new Intent(MainActivity.this, SwitchAct.class));
+    }
+
+    public void toToggleBtn(View view) {
+        startActivity(new Intent(MainActivity.this, ToggleButtonAct.class));
     }
 
     public void toImageView(View view) {
