@@ -30,6 +30,10 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, CheckedTextViewAct.class));
     }
 
+    public void toChronometer(View view) {
+        startActivity(new Intent(MainActivity.this, ChronometerAct.class));
+    }
+
     public void toEditText(View view) {
         startActivity(new Intent(MainActivity.this, EditTextAct.class));
     }

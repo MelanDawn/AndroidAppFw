@@ -5,6 +5,7 @@
     <string name="to_tv">TextView</string>
     <string name="to_et">|-- EditText</string>
     <string name="to_checked_tv">|-- CheckedTextView</string>
+    <string name="to_chronometer">|-- Chronometer</string>
     <string name="to_btn">|-- Button</string>
     <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)（抽象类）</string>
     <string name="to_check_box">|-- |-- |-- CheckBox(复选框)</string>
@@ -32,6 +33,11 @@
     <string name="checked_tv_width_match_parent">宽度占满</string>
     <string name="checked_tv_checked">checked</string>
     <string name="checked_tv_unchecked">unchecked</string>
+
+    <!-- Chronometer activity -->
+    <string name="chronometer_normal">默认配置</string>
+    <string name="chronometer_count_down">倒计时模式（时间减少, api>=24）countDown=true</string>
+    <string name="chronometer_count_up">计时模式（时间增加, api>=24）countDown=false</string>
 
     <!-- EditText activity -->
     <string name="et_hint_focus">提示内容输入框</string>

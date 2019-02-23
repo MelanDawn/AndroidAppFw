@@ -48,6 +48,7 @@
 
         <activity android:name=".ui.activity.TextViewAct" />
         <activity android:name=".ui.activity.CheckedTextViewAct" />
+        <activity android:name=".ui.activity.ChronometerAct" />
         <activity android:name=".ui.activity.EditTextAct" />
         <activity android:name=".ui.activity.ButtonAct" />
         <activity android:name=".ui.activity.CompoundButtonAct" />
