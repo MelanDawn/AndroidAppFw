@@ -4,8 +4,9 @@
     <!-- Main activity -->
     <string name="to_tv">TextView</string>
     <string name="to_et">|-- EditText</string>
-    <string name="to_checked_tv">|-- CheckedTextView</string>
-    <string name="to_chronometer">|-- Chronometer</string>
+    <string name="to_checked_tv">|-- CheckedTextView(带选择框的文本)</string>
+    <string name="to_chronometer">|-- Chronometer(计时器)</string>
+    <string name="to_text_clock">|-- TextClock(文本时钟)</string>
     <string name="to_btn">|-- Button</string>
     <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)（抽象类）</string>
     <string name="to_check_box">|-- |-- |-- CheckBox(复选框)</string>

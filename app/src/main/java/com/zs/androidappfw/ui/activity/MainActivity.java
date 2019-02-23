@@ -34,6 +34,10 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, ChronometerAct.class));
     }
 
+    public void toTextClock(View view) {
+        startActivity(new Intent(MainActivity.this, TextClockAct.class));
+    }
+
     public void toEditText(View view) {
         startActivity(new Intent(MainActivity.this, EditTextAct.class));
     }

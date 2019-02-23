@@ -31,6 +31,14 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
         android:gravity="center_vertical|start"
+        android:text="@string/to_text_clock"
+        android:textAllCaps="false"
+        android:onClick="toTextClock"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
         android:text="@string/to_et"
         android:textAllCaps="false"
         android:onClick="toEditText"/>
