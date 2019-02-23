@@ -6,6 +6,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
         android:text="@string/to_tv"
         android:textAllCaps="false"
         android:onClick="toTextView"/>
@@ -13,6 +14,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
         android:text="@string/to_et"
         android:textAllCaps="false"
         android:onClick="toEditText"/>
@@ -20,6 +22,15 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_btn"
+        android:textAllCaps="false"
+        android:onClick="toButton"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
         android:text="@string/to_iv"
         android:textAllCaps="false"
         android:onClick="toImageView"/>

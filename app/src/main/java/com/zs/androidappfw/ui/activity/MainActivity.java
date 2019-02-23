@@ -24,9 +24,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, TextViewAct.class));
     }
 
-
     public void toEditText(View view) {
         startActivity(new Intent(MainActivity.this, EditTextAct.class));
+    }
+
+    public void toButton(View view) {
+        startActivity(new Intent(MainActivity.this, ButtonAct.class));
     }
 
     public void toImageView(View view) {

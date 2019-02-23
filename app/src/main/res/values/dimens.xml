@@ -9,6 +9,9 @@
     <!-- EditText Activity -->
     <dimen name="et_height">40dp</dimen>
 
+    <!-- Button Activity -->
+    <dimen name="btn_height">40dp</dimen>
+
     <!-- ImageView Activity-->
     <dimen name="iv_height">60dp</dimen>
     <dimen name="iv_width">120dp</dimen>

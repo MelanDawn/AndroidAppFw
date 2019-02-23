@@ -2,9 +2,10 @@
     <string name="app_name">AndroidAppFw</string>
 
     <!-- Main activity -->
-    <string name="to_tv">to TextView</string>
-    <string name="to_et">to EditText</string>
-    <string name="to_iv">to ImageView</string>
+    <string name="to_tv">TextView</string>
+    <string name="to_et">|-- EditText</string>
+    <string name="to_btn">|-- Button</string>
+    <string name="to_iv">ImageView</string>
 
     <!-- TextView activity -->
     <string name="tv_normal">普通文本展示框</string>
@@ -53,6 +54,15 @@
     <string name="et_input_textWebEmailAddress">textWebEmailAddress</string>
     <string name="et_input_textWebPassword">textWebPassword</string>
     <string name="et_input_time">time</string>
+
+    <!-- Button Activity -->
+    <string name="btn_description">1、相对于TextView文本都字体偏大且加粗形式\n
+        2、默认button背景色未铺满给定区域\n
+        3、默认button点击时有阴影效果</string>
+    <string name="btn_normal">First Button，123，英文默认大写</string>
+    <string name="btn_not_upper">Second Button，123，英文按照文本定义显示</string>
+    <string name="btn_shape">自定义点击效果和样式（背景、字体）</string>
+    <string name="btn_control_diy_shape">控制自定义样式的button（即上一个）</string>
 
     <!-- ImageView Activity -->
     <string name="iv_scale_type_description">ImageView的scaleType属性demo展示如下。\n
