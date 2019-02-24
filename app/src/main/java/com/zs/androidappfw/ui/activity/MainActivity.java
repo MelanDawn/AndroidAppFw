@@ -42,6 +42,18 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, EditTextAct.class));
     }
 
+    public void toAutoCompleteTextView(View view) {
+        startActivity(new Intent(MainActivity.this, AutoCompleteTextViewAct.class));
+    }
+
+    public void toMultiAutoCompleteTextView(View view) {
+        startActivity(new Intent(MainActivity.this, MultiAutoCompleteTextViewAct.class));
+    }
+
+    public void toExtractEditText(View view) {
+        startActivity(new Intent(MainActivity.this, ExtractEditTextAct.class));
+    }
+
     public void toButton(View view) {
         startActivity(new Intent(MainActivity.this, ButtonAct.class));
     }

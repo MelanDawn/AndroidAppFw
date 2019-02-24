@@ -51,6 +51,9 @@
         <activity android:name=".ui.activity.ChronometerAct" />
         <activity android:name=".ui.activity.TextClockAct" />
         <activity android:name=".ui.activity.EditTextAct" />
+        <activity android:name=".ui.activity.AutoCompleteTextViewAct" />
+        <activity android:name=".ui.activity.MultiAutoCompleteTextViewAct" />
+        <activity android:name=".ui.activity.ExtractEditTextAct" />
         <activity android:name=".ui.activity.ButtonAct" />
         <activity android:name=".ui.activity.CompoundButtonAct" />
         <activity android:name=".ui.activity.CheckBoxAct" />

@@ -3,10 +3,13 @@
 
     <!-- Main activity -->
     <string name="to_tv">TextView</string>
-    <string name="to_et">|-- EditText</string>
     <string name="to_checked_tv">|-- CheckedTextView(带选择框的文本)</string>
     <string name="to_chronometer">|-- Chronometer(计时器)</string>
-    <string name="to_text_clock">|-- TextClock(文本时钟)</string>
+    <string name="to_text_clock">|-- TextClock(文本时钟, API 17 开始替代DigitalClock)</string>
+    <string name="to_et">|-- EditText</string>
+    <string name="to_auto_complete_tv">|-- |-- AutoCompleteTextView(单次提示输入框)</string>
+    <string name="to_multi_auto_complete_tv">|-- |-- |-- MultiAutoCompleteTextView(多次提示输入框)</string>
+    <string name="to_extract_et">|-- |-- ExtractEditText(非UI视图组件)</string>
     <string name="to_btn">|-- Button</string>
     <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)（抽象类）</string>
     <string name="to_check_box">|-- |-- |-- CheckBox(复选框)</string>
@@ -41,6 +44,7 @@
     <string name="chronometer_count_up">计时模式（时间增加, api>=24）countDown=false</string>
 
     <!-- EditText activity -->
+    <string name="et_normal">默认配置</string>
     <string name="et_hint_focus">提示内容输入框</string>
     <string name="et_hint">提示内容（变更颜色）输入框</string>
     <string name="et_content">填充内容输入框，此时光标在最前面，需设置</string>
@@ -78,6 +82,30 @@
     <string name="et_input_textWebEmailAddress">textWebEmailAddress</string>
     <string name="et_input_textWebPassword">textWebPassword</string>
     <string name="et_input_time">time</string>
+
+    <!-- AutoCompleteTextView Activity -->
+    <string name="auto_complete_tv_description">单次提示指的是：关键字输入完毕后不再提示</string>
+    <string name="auto_complete_tv_normal">默认配置(默认输入2个字符才出现提示)</string>
+    <string name="auto_complete_tv_auto_1">自动提示(设置自动提示为 1 )</string>
+    <string name="auto_complete_tv_auto_0">自动提示(设置自动提示为 0 )</string>
+    <string-array name="auto_complete_tv_res">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>深圳</item>
+    </string-array>
+
+    <!-- MultiAutoCompleteTextView Activity -->
+    <string name="multi_auto_complete_tv_description">多次提示指的是：关键字输入完毕后添加间隔符，还可以再次提示</string>
+    <string name="multi_auto_complete_tv_normal">默认配置(默认输入2个字符才出现提示)</string>
+    <string name="multi_auto_complete_tv_auto_1">自动提示(设置自动提示为 1 )</string>
+    <string name="multi_auto_complete_tv_auto_0">自动提示(设置自动提示为 0 )</string>
+    <string-array name="multi_auto_complete_tv_res">
+        <item>北京</item>
+        <item>上海</item>
+        <item>广州</item>
+        <item>深圳</item>
+    </string-array>
 
     <!-- Button Activity -->
     <string name="btn_description">1、相对于TextView文本都字体偏大且加粗形式\n

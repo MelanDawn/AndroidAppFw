@@ -9,6 +9,12 @@
     <!-- EditText Activity -->
     <dimen name="et_height">40dp</dimen>
 
+    <!-- AutoCompleteTextView Activity -->
+    <dimen name="auto_complete_tv_et_height">40dp</dimen>
+
+    <!-- MultiAutoCompleteTextView Activity -->
+    <dimen name="multi_auto_complete_tv_et_height">40dp</dimen>
+
     <!-- Button Activity -->
     <dimen name="btn_height">40dp</dimen>
 

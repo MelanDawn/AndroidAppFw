@@ -1,102 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_tv"
-        android:textAllCaps="false"
-        android:onClick="toTextView"/>
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_checked_tv"
-        android:textAllCaps="false"
-        android:onClick="toCheckedTextView"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_chronometer"
-        android:textAllCaps="false"
-        android:onClick="toChronometer"/>
+        <!-- ImageView and its subclass -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_iv"
+            android:textAllCaps="false"
+            android:onClick="toImageView"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_text_clock"
-        android:textAllCaps="false"
-        android:onClick="toTextClock"/>
+        <!-- TextView and its subclass -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tv"
+            android:textAllCaps="false"
+            android:onClick="toTextView"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_et"
-        android:textAllCaps="false"
-        android:onClick="toEditText"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_checked_tv"
+            android:textAllCaps="false"
+            android:onClick="toCheckedTextView"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_btn"
-        android:textAllCaps="false"
-        android:onClick="toButton"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_chronometer"
+            android:textAllCaps="false"
+            android:onClick="toChronometer"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_compound_btn"
-        android:textAllCaps="false"
-        android:onClick="toCompoundButton"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_text_clock"
+            android:textAllCaps="false"
+            android:onClick="toTextClock"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_check_box"
-        android:textAllCaps="false"
-        android:onClick="toCheckBox"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_et"
+            android:textAllCaps="false"
+            android:onClick="toEditText"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_radio_btn"
-        android:textAllCaps="false"
-        android:onClick="toRadioBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_auto_complete_tv"
+            android:textAllCaps="false"
+            android:onClick="toAutoCompleteTextView"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_switch"
-        android:textAllCaps="false"
-        android:onClick="toSwitch"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_multi_auto_complete_tv"
+            android:textAllCaps="false"
+            android:onClick="toMultiAutoCompleteTextView"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_toggle_btn"
-        android:textAllCaps="false"
-        android:onClick="toToggleBtn"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_extract_et"
+            android:textAllCaps="false"
+            android:onClick="toExtractEditText"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_iv"
-        android:textAllCaps="false"
-        android:onClick="toImageView"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_btn"
+            android:textAllCaps="false"
+            android:onClick="toButton"/>
 
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_compound_btn"
+            android:textAllCaps="false"
+            android:onClick="toCompoundButton"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_check_box"
+            android:textAllCaps="false"
+            android:onClick="toCheckBox"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_radio_btn"
+            android:textAllCaps="false"
+            android:onClick="toRadioBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_switch"
+            android:textAllCaps="false"
+            android:onClick="toSwitch"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_toggle_btn"
+            android:textAllCaps="false"
+            android:onClick="toToggleBtn"/>
+    </LinearLayout>
+</ScrollView>
