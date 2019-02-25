@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.QuickContactBadge;
 import android.widget.RadioButton;
 
 import com.zs.androidappfw.R;
@@ -20,6 +21,18 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
+    }
+
+    public void toImageView(View view) {
+        startActivity(new Intent(MainActivity.this, ImageViewAct.class));
+    }
+
+    public void toImageButton(View view) {
+        startActivity(new Intent(MainActivity.this, ImageButtonAct.class));
+    }
+
+    public void toQuickContactBadge(View view) {
+        startActivity(new Intent(MainActivity.this, QuickContactBadgeAct.class));
     }
 
     public void toTextView(View view) {
@@ -76,9 +89,5 @@ public class MainActivity extends BaseActivity {
 
     public void toToggleBtn(View view) {
         startActivity(new Intent(MainActivity.this, ToggleButtonAct.class));
-    }
-
-    public void toImageView(View view) {
-        startActivity(new Intent(MainActivity.this, ImageViewAct.class));
     }
 }

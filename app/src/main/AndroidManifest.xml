@@ -5,6 +5,8 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- QuickContactBadge -->
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
         android:allowBackup="true"
@@ -46,6 +48,10 @@
             </intent-filter>
         </activity>-->
 
+        <activity android:name=".ui.activity.ImageViewAct" />
+        <activity android:name=".ui.activity.ImageButtonAct" />
+        <activity android:name=".ui.activity.QuickContactBadgeAct" />
+
         <activity android:name=".ui.activity.TextViewAct" />
         <activity android:name=".ui.activity.CheckedTextViewAct" />
         <activity android:name=".ui.activity.ChronometerAct" />
@@ -60,8 +66,6 @@
         <activity android:name=".ui.activity.RadioButtonAct" />
         <activity android:name=".ui.activity.SwitchAct" />
         <activity android:name=".ui.activity.ToggleButtonAct" />
-
-        <activity android:name=".ui.activity.ImageViewAct" />
 
     </application>
 

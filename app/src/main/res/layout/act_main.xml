@@ -16,6 +16,21 @@
             android:text="@string/to_iv"
             android:textAllCaps="false"
             android:onClick="toImageView"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_iv_btn"
+            android:textAllCaps="false"
+            android:onClick="toImageButton"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_quick_contact_badge"
+            android:textAllCaps="false"
+            android:onClick="toQuickContactBadge"/>
 
         <!-- TextView and its subclass -->
         <Button
