@@ -23,6 +23,22 @@ public class MainActivity extends BaseActivity {
         setContentView(R.layout.act_main);
     }
 
+    public void toProgressBar(View view) {
+        startActivity(new Intent(MainActivity.this, ProgressBarAct.class));
+    }
+
+    public void toAbsSeekBar(View view) {
+        startActivity(new Intent(MainActivity.this, AbsSeekBarAct.class));
+    }
+
+    public void toRatingBar(View view) {
+        startActivity(new Intent(MainActivity.this, RatingBarAct.class));
+    }
+
+    public void toSeekBar(View view) {
+        startActivity(new Intent(MainActivity.this, SeekBarAct.class));
+    }
+
     public void toImageView(View view) {
         startActivity(new Intent(MainActivity.this, ImageViewAct.class));
     }

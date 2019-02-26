@@ -1,7 +1,12 @@
 <resources>
     <string name="app_name">AndroidAppFw</string>
 
-    <!-- Main activity -->to_iv_btn
+    <!-- Main activity -->
+    <string name="to_progress_bar">ProgressBar(不可交互)</string>
+    <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)(抽象类)</string>
+    <string name="to_rating_bar">|-- |-- RatingBar(比例进度条，五角星状)</string>
+    <string name="to_seek_bar">|-- |-- SeekBar(拖动进度条)</string>
+
     <string name="to_iv">ImageView</string>
     <string name="to_iv_btn">|-- ImageButton(图片按钮)</string>
     <string name="to_quick_contact_badge">|-- QuickContactBadge(联系人快捷方式)</string>
@@ -20,6 +25,9 @@
     <string name="to_radio_btn">|-- |-- |-- RadioButton(单选框)</string>
     <string name="to_switch">|-- |-- |-- Switch(拨动开关)</string>
     <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
+
+    <!-- AbsSeekBar Activity -->
+    <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>
 
     <!-- ImageView Activity -->
     <string name="iv_scale_type_description">ImageView的scaleType属性demo展示如下。\n

@@ -52,6 +52,11 @@
         <activity android:name=".ui.activity.ImageButtonAct" />
         <activity android:name=".ui.activity.QuickContactBadgeAct" />
 
+        <activity android:name=".ui.activity.ProgressBarAct" />
+        <activity android:name=".ui.activity.AbsSeekBarAct" />
+        <activity android:name=".ui.activity.RatingBarAct" />
+        <activity android:name=".ui.activity.SeekBarAct" />
+
         <activity android:name=".ui.activity.TextViewAct" />
         <activity android:name=".ui.activity.CheckedTextViewAct" />
         <activity android:name=".ui.activity.ChronometerAct" />

@@ -8,6 +8,38 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- ProgressBar and its subclass -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_progress_bar"
+            android:textAllCaps="false"
+            android:onClick="toProgressBar"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_abs_seek_bar"
+            android:textAllCaps="false"
+            android:onClick="toAbsSeekBar"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_rating_bar"
+            android:textAllCaps="false"
+            android:onClick="toRatingBar"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_seek_bar"
+            android:textAllCaps="false"
+            android:onClick="toSeekBar"/>
+
         <!-- ImageView and its subclass -->
         <Button
             android:layout_width="match_parent"
