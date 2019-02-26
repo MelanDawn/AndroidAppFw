@@ -3,10 +3,7 @@ package com.zs.androidappfw.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.QuickContactBadge;
-import android.widget.RadioButton;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;
@@ -105,5 +102,21 @@ public class MainActivity extends BaseActivity {
 
     public void toToggleBtn(View view) {
         startActivity(new Intent(MainActivity.this, ToggleButtonAct.class));
+    }
+
+    public void toViewGroup(View view) {
+        startActivity(new Intent(MainActivity.this, ViewGroupAct.class));
+    }
+
+    public void toRelativeLayout(View view) {
+        startActivity(new Intent(MainActivity.this, RelativeLayoutAct.class));
+    }
+
+    public void toDialerFilter(View view) {
+        startActivity(new Intent(MainActivity.this, DialerFilterAct.class));
+    }
+
+    public void toTwoLineListItem(View view) {
+        startActivity(new Intent(MainActivity.this, TwoLineListItemAct.class));
     }
 }

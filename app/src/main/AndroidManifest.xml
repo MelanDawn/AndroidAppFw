@@ -72,6 +72,11 @@
         <activity android:name=".ui.activity.SwitchAct" />
         <activity android:name=".ui.activity.ToggleButtonAct" />
 
+        <activity android:name=".ui.activity.ViewGroupAct" />
+        <activity android:name=".ui.activity.RelativeLayoutAct" />
+        <activity android:name=".ui.activity.DialerFilterAct" />
+        <activity android:name=".ui.activity.TwoLineListItemAct" />
+
     </application>
 
 </manifest>

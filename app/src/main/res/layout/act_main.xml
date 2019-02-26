@@ -176,5 +176,38 @@
             android:text="@string/to_toggle_btn"
             android:textAllCaps="false"
             android:onClick="toToggleBtn"/>
+
+        <!-- ViewGroup and its subclass -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_group"
+            android:textAllCaps="false"
+            android:onClick="toViewGroup"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_relative_layout"
+            android:textAllCaps="false"
+            android:onClick="toRelativeLayout"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_dialer_filter"
+            android:textAllCaps="false"
+            android:onClick="toDialerFilter"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_two_line_list_item"
+            android:textAllCaps="false"
+            android:onClick="toTwoLineListItem"/>
     </LinearLayout>
 </ScrollView>

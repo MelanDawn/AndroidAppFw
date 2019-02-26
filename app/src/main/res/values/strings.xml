@@ -26,6 +26,11 @@
     <string name="to_switch">|-- |-- |-- Switch(拨动开关)</string>
     <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
 
+    <string name="to_view_group">ViewGroup</string>
+    <string name="to_relative_layout">|-- RelativeLayout（相对布局）</string>
+    <string name="to_dialer_filter">|-- |-- DialerFilter（API 26 过期）</string>
+    <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
+
     <!-- AbsSeekBar Activity -->
     <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>
 
@@ -162,9 +167,45 @@
     <string name="toggle_btn_normal">默认配置</string>
     <string name="toggle_btn_no_background">去掉背景，background=@null</string>
 
-
     <!-- Switch Activity -->
     <string name="switch_normal">默认配置</string>
     <string name="switch_disabled">disabled状态</string>
     <string name="switch_no_background">去掉背景，background=@null</string>
+
+    <!-- RelativeLayout Activity -->
+    <string name="relative_description">相对布局的主要两种布局情况：相对父容器View、相对同级View。\n
+        相对父容器水平、竖直居中，左、顶、右、底对齐；\n
+        相对同级元素居左、上、右、下，左、顶、右、底对齐。\n
+        alignBaseline暂不可理解。\n
+        alignWithParentIfMissing意思是：设置相对同级元素A居左，如果没有实际运行时没有这个元素A时，则相对父容器
+    </string>
+    <string name="relative_center">中心元素</string>
+    <string name="relative_center_left">左元素</string>
+    <string name="relative_center_right">右元素</string>
+    <string name="relative_center_top">上元素</string>
+    <string name="relative_center_bottom">下元素</string>
+    <string name="relative_center_lt">左上元素</string>
+    <string name="relative_center_rb">右下元素</string>
+    <string name="relative_bottom_left">底左元素</string>
+    <string name="relative_bottom_center">底中元素</string>
+    <string name="relative_bottom_right">底右元素</string>
+    <string name="relative_base_line">alignBaseline</string>
+
+    <!-- DialerFilter Activity-->
+    <string name="dialer_filter_description">API 26 已过期 \n这个控件是一个布局，它包含了几个指定命名的子视图，可以处理标准电话数字拨号键盘。</string>
+
+    <!-- TwoLineListItem Activity -->
+    <string name="two_line_list_item_description">整体描述：\n
+        内部包含两个id（@android:id/text1，@android:id/text2）确定的TextView(或子类)，
+        一个id（@android:id/selectedIcon）确定的iewV（或子类），
+        但在默认配置下三种 mode值 貌似没有效果，因此此时三者实际上没有布局关系，聚集在父类左上角。\n\n
+        布局比较简单自定义即可！！！\n
+    </string>
+    <string name="two_line_list_item_text_1">SSSSSSSSSSSSSSSSSS</string>
+    <string name="two_line_list_item_text_2">BBBBBBBBBBBBBBBBB</string>
+    <string name="two_line_list_item_mode_one">mode=oneLine</string>
+    <string name="two_line_list_item_mode_two">mode=twoLine</string>
+    <string name="two_line_list_item_mode_collapsing">mode=collapsing</string>
+    <string name="two_line_list_item_layout">mode=oneLine，应用相对布局</string>
+
 </resources>
