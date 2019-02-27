@@ -179,7 +179,9 @@
         2、单元格可设置在网格中的位置，未指定位置的按照代码顺序和排列方向依次排列\n
         3、单元格可扩充到占多行、多列，如下例子</string>
     <string name="grid_layout_demo_1">默认设置，退化成线性布局，默认水平，不会换行</string>
-    <string name="grid_layout_demo_2">3x3，单元格默认水平排列。可设置单元格的行列坐标(0行0列开始)，但整体内容未铺满屏幕。\n未单独设置行列的单元格按照代码顺序（若代码顺序中本单元格的上一个单元格A设置了行列，那么本单元格从A的后一个开始排列，例如后13，后21）和布局方向排列。由于后13角标是21，但21位置有其他单元格，因此后13不显示，后21角标是22  </string>
+    <string name="grid_layout_demo_2">3x3，单元格默认水平排列。可设置单元格的行列坐标(0行0列开始)，但整体内容未铺满屏幕。\n
+        未单独设置行列的单元格按照代码顺序（若代码顺序中本单元格的上一个单元格A设置了行列，那么本单元格从A的后一个开始排列，例如后13，后21）和布局方向排列。
+        由于后13角标是21，但21位置之后设置其他单元格，因此红色13前半部分被覆盖，第一内容容宽，因此第一列整体宽度大；后21角标是22  </string>
     <string name="grid_layout_demo_3">3x3，单元格竖直排列。其他同上，因此后21的角标是31，后13角标是23</string>
     <string name="grid_layout_demo_4">这里引入的是android.support.v7.widget.GridLayout，由于需要使用 API 21 引入的 layout_columnWeight和layout_rowWeight属性，确保内容铺满屏幕且平分</string>
     <string name="grid_layout_behind_13">后13</string>
