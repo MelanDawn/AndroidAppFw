@@ -27,6 +27,7 @@
     <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
 
     <string name="to_view_group">ViewGroup</string>
+    <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
     <string name="to_relative_layout">|-- RelativeLayout（相对布局）</string>
     <string name="to_dialer_filter">|-- |-- DialerFilter（API 26 过期）</string>
     <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
@@ -171,6 +172,28 @@
     <string name="switch_normal">默认配置</string>
     <string name="switch_disabled">disabled状态</string>
     <string name="switch_no_background">去掉背景，background=@null</string>
+
+    <!-- GridLayout Activity -->
+    <string name="grid_layout_description">网格布局是API15引入\n
+        1、网格布局可设置行列总数和排列方向，默认水平\n
+        2、单元格可设置在网格中的位置，未指定位置的按照代码顺序和排列方向依次排列\n
+        3、单元格可扩充到占多行、多列，如下例子</string>
+    <string name="grid_layout_demo_1">默认设置，退化成线性布局，默认水平，不会换行</string>
+    <string name="grid_layout_demo_2">3x3，单元格默认水平排列。可设置单元格的行列坐标(0行0列开始)，但整体内容未铺满屏幕。\n未单独设置行列的单元格按照代码顺序（若代码顺序中本单元格的上一个单元格A设置了行列，那么本单元格从A的后一个开始排列，例如后13，后21）和布局方向排列。由于后13角标是21，但21位置有其他单元格，因此后13不显示，后21角标是22  </string>
+    <string name="grid_layout_demo_3">3x3，单元格竖直排列。其他同上，因此后21的角标是31，后13角标是23</string>
+    <string name="grid_layout_demo_4">这里引入的是android.support.v7.widget.GridLayout，由于需要使用 API 21 引入的 layout_columnWeight和layout_rowWeight属性，确保内容铺满屏幕且平分</string>
+    <string name="grid_layout_behind_13">后13</string>
+    <string name="grid_layout_behind_21">后21</string>
+    <string name="grid_layout_cal_back">退格</string>
+    <string name="grid_layout_cal_divide">/</string>
+    <string name="grid_layout_cal_multi">*</string>
+    <string name="grid_layout_cal_num_1">1</string>
+    <string name="grid_layout_cal_num_2">2</string>
+    <string name="grid_layout_cal_num_3">3</string>
+    <string name="grid_layout_cal_equal">=</string>
+    <string name="grid_layout_cal_mode">%</string>
+    <string name="grid_layout_cal_zero">0</string>
+    <string name="grid_layout_cal_point">.</string>
 
     <!-- RelativeLayout Activity -->
     <string name="relative_description">相对布局的主要两种布局情况：相对父容器View、相对同级View。\n
