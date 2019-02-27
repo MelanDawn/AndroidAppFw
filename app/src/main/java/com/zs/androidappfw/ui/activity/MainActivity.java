@@ -112,6 +112,10 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, GridLayoutAct.class));
     }
 
+    public void toLinearLayout(View view) {
+        startActivity(new Intent(MainActivity.this, LinearLayoutAct.class));
+    }
+
     public void toRelativeLayout(View view) {
         startActivity(new Intent(MainActivity.this, RelativeLayoutAct.class));
     }

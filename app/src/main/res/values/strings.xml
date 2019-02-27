@@ -28,6 +28,7 @@
 
     <string name="to_view_group">ViewGroup</string>
     <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
+    <string name="to_linear_layout">|-- LinearLayout(线性布局)</string>
     <string name="to_relative_layout">|-- RelativeLayout（相对布局）</string>
     <string name="to_dialer_filter">|-- |-- DialerFilter（API 26 过期）</string>
     <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
@@ -196,6 +197,17 @@
     <string name="grid_layout_cal_mode">%</string>
     <string name="grid_layout_cal_zero">0</string>
     <string name="grid_layout_cal_point">.</string>
+
+    <!-- LinearLayout Activity -->
+    <string name="linear_layout_description">
+        1、水平方向或竖直方向依次排列，内容超出不换行；\n
+        2、内容可在行或列上平分或按比例分配；\n
+        3、内容还可以大部分设置具体高宽，最后一个占满剩余空间</string>
+    <string name="linear_layout_demo_1">默认水平布局，内容未超过宽度，平铺.</string>
+    <string name="linear_layout_demo_2">水平布局，内容超过宽度，超出内容未显示且添加和减少内容占有高度不变化，原因未知</string>
+    <string name="linear_layout_demo_3">水平布局，宽度占满，子视图平分宽度.</string>
+    <string name="linear_layout_demo_4">水平布局，宽度占满，子视图按比例3：2：1平分宽度，宽度属性值match_parent.</string>
+    <string name="linear_layout_demo_5">竖直布局，部分占有固定高度，剩一个元素占满剩余空间.</string>
 
     <!-- RelativeLayout Activity -->
     <string name="relative_description">相对布局的主要两种布局情况：相对父容器View、相对同级View。\n
