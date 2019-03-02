@@ -29,6 +29,14 @@
     <string name="to_view_group">ViewGroup</string>
     <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
     <string name="to_linear_layout">|-- LinearLayout(线性布局)</string>
+    <string name="to_action_menu_view">|-- |-- ActionMenuView(未完成，API 21 引入)</string>
+    <string name="to_number_picker">|-- |-- NumberPicker(数字[数组]选择器，API 11 引入)</string>
+    <string name="to_radio_group">|-- |-- RadioGroup(单选框)</string>
+    <string name="to_search_view">|-- |-- SearchView(未完成，API 11 引入)</string>
+    <string name="to_tab_widget">|-- |-- TabWidget(选项卡布局)</string>
+    <string name="to_table_layout">|-- |-- TableLayout(表格布局)</string>
+    <string name="to_table_row">|-- |-- TableRow(表格行布局)</string>
+    <string name="to_zoom_controls">|-- |-- ZoomControls(放大缩小按钮)</string>
     <string name="to_relative_layout">|-- RelativeLayout（相对布局）</string>
     <string name="to_dialer_filter">|-- |-- DialerFilter（API 26 过期）</string>
     <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
@@ -175,10 +183,13 @@
     <string name="switch_no_background">去掉背景，background=@null</string>
 
     <!-- GridLayout Activity -->
-    <string name="grid_layout_description">网格布局是API15引入\n
+    <string name="grid_layout_description">
+        网格布局是API15引入\n
         1、网格布局可设置行列总数和排列方向，默认水平\n
         2、单元格可设置在网格中的位置，未指定位置的按照代码顺序和排列方向依次排列\n
-        3、单元格可扩充到占多行、多列，如下例子</string>
+        3、单元格可扩充到占多行、多列，如下列例子。
+        4、与TableLayout相比，GridLayout具有扩行能力，更加灵活
+    </string>
     <string name="grid_layout_demo_1">默认设置，退化成线性布局，默认水平，不会换行</string>
     <string name="grid_layout_demo_2">3x3，单元格默认水平排列。可设置单元格的行列坐标(0行0列开始)，但整体内容未铺满屏幕。\n
         未单独设置行列的单元格按照代码顺序（若代码顺序中本单元格的上一个单元格A设置了行列，那么本单元格从A的后一个开始排列，例如后13，后21）和布局方向排列。
@@ -208,6 +219,68 @@
     <string name="linear_layout_demo_3">水平布局，宽度占满，子视图平分宽度.</string>
     <string name="linear_layout_demo_4">水平布局，宽度占满，子视图按比例3：2：1平分宽度，宽度属性值match_parent.</string>
     <string name="linear_layout_demo_5">竖直布局，部分占有固定高度，剩一个元素占满剩余空间.</string>
+
+    <!-- NumberPicker Activity -->
+    <string name="number_picker_description">数字（字符串数组也可以）选择器：\n
+        1、支持范围内选择，\n
+        2、支持键盘输入，\n
+        3、支持内容循环滑动，\n
+        4、字体大小、分割线颜色等。\n
+        5、默认竖直方向（设置水平无效）\n
+        6、参考 https://www.jianshu.com/p/1042995703ad \n
+    </string>
+    <string name="number_picker_person_height">身高选择（cm）：</string>
+    <string name="number_picker_demo_2">设置成水平方向，但实际并没有变更，因此不支持水平。显示数组内容，不可循环、不可编辑</string>
+
+    <!-- RadioGroup Activity -->
+    <string name="radio_group_description">RadioGroup是专为RadioButton定制的线性布局。\n
+        1、拥有checkedButton属性以指定默认选择的选项。\n
+        2、可以通过getCheckedRadioButtonId ()获取当前被选择的选项，若没有值为-1。\n
+        3、默认竖直方向排列，与线性布局不同。\n
+    </string>
+    <string name="radio_group_demo_1">首个选项通过RG的checkedButton默认设置为已选择，选择其他选项时首个选项变成未选择。</string>
+    <string name="radio_group_demo_2">没有按钮默认已选择</string>
+    <string name="radio_group_demo_3">3、4号按钮通过RB的checked属性设置为已选择，选择其他选项时，3、4号按钮仍是选择状态</string>
+    <string name="radio_group_demo_4">如果要求选项根据屏幕尺寸变成2行2列4个的形式该如何实现呢？</string>
+    <string name="radio_group_selection_1">A</string>
+    <string name="radio_group_selection_2">B</string>
+    <string name="radio_group_selection_3">C</string>
+    <string name="radio_group_selection_4">D</string>
+
+    <!-- TabWidget Activity -->
+    <string name="tab_widget_description">
+        选项卡布局组件\n
+        1、TabWidget在它父容器选项卡集合中展示一些代表每个页面的选项卡。\n
+        2、TabWidget的父容器是TabHost，尽量不要操作TabWidget，应通过操作TabHost达到目的。\n
+        3、一般情况是TabHost、TabWidget、FrameLayout组合使用：\n
+            TabHost代表整个选项卡及其内容集合（若所在Activity是TabActivity则其id必须是 android:id/tabhost；否则可自定义）\n
+            TabWidget是选项，可点击选择（其id必须是 android:id/tabs）\n
+            FrameLayout是每个选项展示的内容（其id必须是 android:id/tabcontent）\n
+        4、参考 https://www.jianshu.com/p/caf3d1ef4dda
+    </string>
+    <string name="tab_widget_demo_1">整体布局上比较固定，选项中每一页内容比较灵活</string>
+
+    <!-- TableLayout Activity -->
+    <string name="table_layout_description">
+        表格布局\n
+        1、TableLayout以行和列形式对控件进行管理，每行一个TableRow对象或一个View对象。
+        若是TableRow对象，则可在TableRow内添加子控件，默认情况下每个子控件占据一列；若是View对象，则单独一列（如果这个view对象是容器，应该可以添加内容）。\n
+        2、TableLayout行数由开发决定，写多少个TableRow和一级子VIew，就有多少行。\n
+        3、与 GridLayout 相比，TableLayout不具有跨行的能力，具有跨列能力。\n
+    </string>
+    <string name="table_layout_demo_1">第0列扩展、第2列收缩、第3列隐藏，其他均为默认配置</string>
+
+    <!-- TableRow Activity -->
+    <string name="table_row_description">
+        表格行：一种为TableLayout行元素定制的水平方向的布局。\n
+        TableRow应该始终作为TableLayout的子项使用，若TableRow的父容器不是TableLayout，那么它与水平方向的线性布局表现相同。
+    </string>
+
+    <!-- ZoomControls Activity -->
+    <string name="zoom_controls_description">
+        放大缩小布局，包含两个按钮，分别上传放大、缩小事件。\n
+    </string>
+    <string name="zoom_controls_demo_1">放大缩小文本，通过事件触发setSize方法</string>
 
     <!-- RelativeLayout Activity -->
     <string name="relative_description">相对布局的主要两种布局情况：相对父容器View、相对同级View。\n

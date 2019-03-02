@@ -75,6 +75,14 @@
         <activity android:name=".ui.activity.ViewGroupAct" />
         <activity android:name=".ui.activity.GridLayoutAct" />
         <activity android:name=".ui.activity.LinearLayoutAct" />
+        <activity android:name=".ui.activity.ActionMenuViewAct" />
+        <activity android:name=".ui.activity.NumberPickerAct" />
+        <activity android:name=".ui.activity.RadioGroupAct" />
+        <activity android:name=".ui.activity.SearchViewAct" />
+        <activity android:name=".ui.activity.TabWidgetAct" />
+        <activity android:name=".ui.activity.TableLayoutAct" />
+        <activity android:name=".ui.activity.TableRowAct" />
+        <activity android:name=".ui.activity.ZoomControlsAct" />
         <activity android:name=".ui.activity.RelativeLayoutAct" />
         <activity android:name=".ui.activity.DialerFilterAct" />
         <activity android:name=".ui.activity.TwoLineListItemAct" />

@@ -116,6 +116,38 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, LinearLayoutAct.class));
     }
 
+    public void toActionMenuView(View view) {
+        startActivity(new Intent(MainActivity.this, ActionMenuViewAct.class));
+    }
+
+    public void toNumberPicker(View view) {
+        startActivity(new Intent(MainActivity.this, NumberPickerAct.class));
+    }
+
+    public void toRadioGroup(View view) {
+        startActivity(new Intent(MainActivity.this, RadioGroupAct.class));
+    }
+
+    public void toSearchView(View view) {
+        startActivity(new Intent(MainActivity.this, SearchViewAct.class));
+    }
+
+    public void toTabWidget(View view) {
+        startActivity(new Intent(MainActivity.this, TabWidgetAct.class));
+    }
+
+    public void toTableLayout(View view) {
+        startActivity(new Intent(MainActivity.this, TableLayoutAct.class));
+    }
+
+    public void toTableRow(View view) {
+        startActivity(new Intent(MainActivity.this, TableRowAct.class));
+    }
+
+    public void toZoomControls(View view) {
+        startActivity(new Intent(MainActivity.this, ZoomControlsAct.class));
+    }
+
     public void toRelativeLayout(View view) {
         startActivity(new Intent(MainActivity.this, RelativeLayoutAct.class));
     }

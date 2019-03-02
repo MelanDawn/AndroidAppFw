@@ -206,6 +206,72 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/bt_height"
             android:gravity="center_vertical|start"
+            android:text="@string/to_action_menu_view"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_purple"
+            android:onClick="toActionMenuView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_number_picker"
+            android:textAllCaps="false"
+            android:onClick="toNumberPicker"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_radio_group"
+            android:textAllCaps="false"
+            android:onClick="toRadioGroup"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_search_view"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_purple"
+            android:onClick="toSearchView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tab_widget"
+            android:textAllCaps="false"
+            android:onClick="toTabWidget"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_table_layout"
+            android:textAllCaps="false"
+            android:onClick="toTableLayout"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_table_row"
+            android:textAllCaps="false"
+            android:onClick="toTableRow"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_zoom_controls"
+            android:textAllCaps="false"
+            android:onClick="toZoomControls"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
             android:text="@string/to_relative_layout"
             android:textAllCaps="false"
             android:onClick="toRelativeLayout"/>
