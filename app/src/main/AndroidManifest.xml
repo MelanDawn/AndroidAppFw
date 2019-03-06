@@ -73,7 +73,11 @@
         <activity android:name=".ui.activity.ToggleButtonAct" />
 
         <activity android:name=".ui.activity.ViewGroupAct" />
+
+        <activity android:name=".ui.activity.FrameLayoutAct" />
+
         <activity android:name=".ui.activity.GridLayoutAct" />
+
         <activity android:name=".ui.activity.LinearLayoutAct" />
         <activity android:name=".ui.activity.ActionMenuViewAct" />
         <activity android:name=".ui.activity.NumberPickerAct" />
@@ -83,6 +87,7 @@
         <activity android:name=".ui.activity.TableLayoutAct" />
         <activity android:name=".ui.activity.TableRowAct" />
         <activity android:name=".ui.activity.ZoomControlsAct" />
+
         <activity android:name=".ui.activity.RelativeLayoutAct" />
         <activity android:name=".ui.activity.DialerFilterAct" />
         <activity android:name=".ui.activity.TwoLineListItemAct" />

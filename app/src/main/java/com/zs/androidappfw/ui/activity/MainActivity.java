@@ -108,6 +108,10 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, ViewGroupAct.class));
     }
 
+    public void toFrameLayout(View view) {
+        startActivity(new Intent(MainActivity.this, FrameLayoutAct.class));
+    }
+
     public void toGridLayout(View view) {
         startActivity(new Intent(MainActivity.this, GridLayoutAct.class));
     }

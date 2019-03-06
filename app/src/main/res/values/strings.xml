@@ -28,6 +28,7 @@
 
     <string name="to_view_group">ViewGroup</string>
     <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
+    <string name="to_frame_layout">|-- FrameLayout</string>
     <string name="to_linear_layout">|-- LinearLayout(线性布局)</string>
     <string name="to_action_menu_view">|-- |-- ActionMenuView(未完成，API 21 引入)</string>
     <string name="to_number_picker">|-- |-- NumberPicker(数字[数组]选择器，API 11 引入)</string>
@@ -181,6 +182,18 @@
     <string name="switch_normal">默认配置</string>
     <string name="switch_disabled">disabled状态</string>
     <string name="switch_no_background">去掉背景，background=@null</string>
+
+    <!-- FrameLayout Activity -->
+    <string name="frame_layout_description">
+        帧布局：默认所有子组件按代码顺序由下到上排列，最上方的组件完全可见。\n
+        1、未设置layout_gravity时，layout_margin以帧布局的左上角为参考点偏移;\n
+        2、设置layout_gravity时,layout_margin以layout_gravity规定的位置作为参考点偏移；\n
+        3、FrameLayout和其子组件均可设置前景图，FrameLayout的前景图处在所有子组件最上方，
+        子组件的前景图处在子组件的最上方但可被其他同级组件遮盖，前景图位置可调整。
+    </string>
+    <string name="frame_layout_demo_1">组件遮盖测试，每个子组件都是正方形</string>
+    <string name="frame_layout_demo_2">组件布局测试，紫色只用layout_gravity，红色采用了layout_gravity和layout_margin</string>
+    <string name="frame_layout_demo_3">前景图测试，左下方的是FrameLayout的前景图，右下方是子组件的前景图</string>
 
     <!-- GridLayout Activity -->
     <string name="grid_layout_description">
