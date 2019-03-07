@@ -75,6 +75,8 @@
         <activity android:name=".ui.activity.ViewGroupAct" />
 
         <activity android:name=".ui.activity.FrameLayoutAct" />
+        <activity android:name=".ui.activity.HorizontalScrollViewAct" />
+        <activity android:name=".ui.activity.ScrollViewAct" />
 
         <activity android:name=".ui.activity.GridLayoutAct" />
 

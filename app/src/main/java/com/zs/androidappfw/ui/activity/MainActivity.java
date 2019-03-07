@@ -112,6 +112,14 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, FrameLayoutAct.class));
     }
 
+    public void toHorizontalScrollView(View view) {
+        startActivity(new Intent(MainActivity.this, HorizontalScrollViewAct.class));
+    }
+
+    public void toScrollView(View view) {
+        startActivity(new Intent(MainActivity.this, ScrollViewAct.class));
+    }
+
     public void toGridLayout(View view) {
         startActivity(new Intent(MainActivity.this, GridLayoutAct.class));
     }

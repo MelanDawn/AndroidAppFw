@@ -29,6 +29,8 @@
     <string name="to_view_group">ViewGroup</string>
     <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
     <string name="to_frame_layout">|-- FrameLayout</string>
+    <string name="to_horizontal_scroll_view">|-- |-- HorizontalScrollView（水平滑动视图）</string>
+    <string name="to_scroll_view">|-- |-- ScrollView（竖直滑动视图）</string>
     <string name="to_linear_layout">|-- LinearLayout(线性布局)</string>
     <string name="to_action_menu_view">|-- |-- ActionMenuView(未完成，API 21 引入)</string>
     <string name="to_number_picker">|-- |-- NumberPicker(数字[数组]选择器，API 11 引入)</string>
@@ -194,6 +196,28 @@
     <string name="frame_layout_demo_1">组件遮盖测试，每个子组件都是正方形</string>
     <string name="frame_layout_demo_2">组件布局测试，紫色只用layout_gravity，红色采用了layout_gravity和layout_margin</string>
     <string name="frame_layout_demo_3">前景图测试，左下方的是FrameLayout的前景图，右下方是子组件的前景图</string>
+
+    <!-- HorizontalScrollView Activity -->
+    <string name="horizontal_scroll_view_description">
+        HorizontalScrollView：内容超过布局尺寸时可水平滑动显示。\n
+        1、HorizontalScrollView 的子组件只能存在一个，一般是线性布局，线性布局内部再包含其他组件；\n
+        2、HorizontalScrollView 新增属性 fillViewport 会在子组件（线性布局）无法铺满 HorizontalScrollView占有的空间时，让子组件扩展以铺满其空间。\n
+    </string>
+    <string name="horizontal_scroll_view_demo_1">内容超过 HorizontalScrollView 占有的范围，内容滑动</string>
+    <string name="horizontal_scroll_view_demo_2">内容不足 HorizontalScrollView 占有的范围，设置fillViewport=true，线性布局（绿色）铺满 HorizontalScrollView 所在空间</string>
+    <string name="horizontal_scroll_view_demo_3">内容不足 HorizontalScrollView 占有的范围，未设置fillViewport属性，默认为false，因此线性布局（绿色）未铺满所以不可见</string>
+    <string name="horizontal_scroll_view_demo_content">HorizontalScrollView</string>
+
+    <!-- ScrollView Activity -->
+    <string name="scroll_view_description">
+        ScrollView：内容超过布局尺寸时可竖直滑动显示。\n
+        1、ScrollView 的子组件只能存在一个，一般是线性布局，线性布局内部再包含其他组件；\n
+        2、ScrollView 新增属性 fillViewport 会在子组件（线性布局）无法铺满 ScrollView 占有的空间时，让子组件扩展以铺满其空间。\n
+    </string>
+    <string name="scroll_view_demo_1">左侧样例：内容超过 ScrollView 占有的范围，内容滑动</string>
+    <string name="scroll_view_demo_2">中间样例：内容不足 ScrollView 占有的范围，设置fillViewport=true，线性布局（绿色）铺满 ScrollView 所在空间</string>
+    <string name="scroll_view_demo_3">右边样例：内容不足 ScrollView 占有的范围，未设置fillViewport属性，默认为false，因此线性布局（绿色）未铺满所以不可见</string>
+    <string name="scroll_view_demo_content">ScrollView</string>
 
     <!-- GridLayout Activity -->
     <string name="grid_layout_description">

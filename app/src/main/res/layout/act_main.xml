@@ -198,6 +198,22 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/bt_height"
             android:gravity="center_vertical|start"
+            android:text="@string/to_horizontal_scroll_view"
+            android:textAllCaps="false"
+            android:onClick="toHorizontalScrollView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_scroll_view"
+            android:textAllCaps="false"
+            android:onClick="toScrollView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
             android:text="@string/to_grid_layout"
             android:textAllCaps="false"
             android:onClick="toGridLayout"/>
