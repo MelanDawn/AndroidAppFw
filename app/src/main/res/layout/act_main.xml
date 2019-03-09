@@ -198,6 +198,30 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/bt_height"
             android:gravity="center_vertical|start"
+            android:text="@string/to_calendar_view"
+            android:textAllCaps="false"
+            android:onClick="toCalendarView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_date_picker"
+            android:textAllCaps="false"
+            android:onClick="toDatePicker"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_time_picker"
+            android:textAllCaps="false"
+            android:onClick="toTimePicker"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
             android:text="@string/to_horizontal_scroll_view"
             android:textAllCaps="false"
             android:onClick="toHorizontalScrollView"/>
@@ -209,6 +233,14 @@
             android:text="@string/to_scroll_view"
             android:textAllCaps="false"
             android:onClick="toScrollView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tab_host"
+            android:textAllCaps="false"
+            android:onClick="toTabHost"/>
 
         <Button
             android:layout_width="match_parent"

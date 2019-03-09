@@ -29,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        new BetterHandler(SplashActivity.this).sendEmptyMessageDelayed(MSG_SPLASH, 3000);
+        new BetterHandler(SplashActivity.this).sendEmptyMessageDelayed(MSG_SPLASH, 1000);
 
         LUtil.v(TAG, "create successfully");
     }

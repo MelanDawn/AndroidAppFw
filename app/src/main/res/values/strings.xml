@@ -29,8 +29,12 @@
     <string name="to_view_group">ViewGroup</string>
     <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
     <string name="to_frame_layout">|-- FrameLayout</string>
+    <string name="to_calendar_view">|-- |-- CalendarView（日历视图）</string>
+    <string name="to_date_picker">|-- |-- DatePicker（日期选择）</string>
     <string name="to_horizontal_scroll_view">|-- |-- HorizontalScrollView（水平滑动视图）</string>
     <string name="to_scroll_view">|-- |-- ScrollView（竖直滑动视图）</string>
+    <string name="to_tab_host">|-- |-- TabHost（选项卡布局）</string>
+    <string name="to_time_picker">|-- |-- TimePicker（时间选择器）</string>
     <string name="to_linear_layout">|-- LinearLayout(线性布局)</string>
     <string name="to_action_menu_view">|-- |-- ActionMenuView(未完成，API 21 引入)</string>
     <string name="to_number_picker">|-- |-- NumberPicker(数字[数组]选择器，API 11 引入)</string>
@@ -197,6 +201,15 @@
     <string name="frame_layout_demo_2">组件布局测试，紫色只用layout_gravity，红色采用了layout_gravity和layout_margin</string>
     <string name="frame_layout_demo_3">前景图测试，左下方的是FrameLayout的前景图，右下方是子组件的前景图</string>
 
+    <!-- CalendarView Activity -->
+    <string name="calendar_view_description">该视图用于从日历中选择指定的日期</string>
+
+    <!-- DatePicker Activity -->
+    <string name="date_picker_description">该视图既可以选择日期又可以显示日期</string>
+
+    <!-- TimePicker Activity -->
+    <string name="time_picker_description">该选择时间和显示时间，有clock和spinner两种模式</string>
+
     <!-- HorizontalScrollView Activity -->
     <string name="horizontal_scroll_view_description">
         HorizontalScrollView：内容超过布局尺寸时可水平滑动显示。\n
@@ -218,6 +231,10 @@
     <string name="scroll_view_demo_2">中间样例：内容不足 ScrollView 占有的范围，设置fillViewport=true，线性布局（绿色）铺满 ScrollView 所在空间</string>
     <string name="scroll_view_demo_3">右边样例：内容不足 ScrollView 占有的范围，未设置fillViewport属性，默认为false，因此线性布局（绿色）未铺满所以不可见</string>
     <string name="scroll_view_demo_content">ScrollView</string>
+
+    <!-- TabHost Activity -->
+    <string name="tab_host_description">TabHost是选项卡的最外层布局，具体使用请参考 https://blog.csdn.net/qq_38228830/article/details/80851532 。具体用例请参考TabWidget</string>
+    <string name="tab_host_btn">toTabWidget</string>
 
     <!-- GridLayout Activity -->
     <string name="grid_layout_description">

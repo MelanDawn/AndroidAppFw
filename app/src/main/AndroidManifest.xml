@@ -75,8 +75,12 @@
         <activity android:name=".ui.activity.ViewGroupAct" />
 
         <activity android:name=".ui.activity.FrameLayoutAct" />
+        <activity android:name=".ui.activity.CalendarViewAct" />
+        <activity android:name=".ui.activity.DatePickerAct" />
         <activity android:name=".ui.activity.HorizontalScrollViewAct" />
         <activity android:name=".ui.activity.ScrollViewAct" />
+        <activity android:name=".ui.activity.TabHostAct" />
+        <activity android:name=".ui.activity.TimePickerAct" />
 
         <activity android:name=".ui.activity.GridLayoutAct" />
 

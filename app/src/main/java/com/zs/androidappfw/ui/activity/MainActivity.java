@@ -112,6 +112,15 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, FrameLayoutAct.class));
     }
 
+    public void toCalendarView(View view) {
+        startActivity(new Intent(MainActivity.this, CalendarViewAct.class));
+    }
+
+    public void toDatePicker(View view) {
+        startActivity(new Intent(MainActivity.this, DatePickerAct.class));
+    }
+
+
     public void toHorizontalScrollView(View view) {
         startActivity(new Intent(MainActivity.this, HorizontalScrollViewAct.class));
     }
@@ -119,6 +128,15 @@ public class MainActivity extends BaseActivity {
     public void toScrollView(View view) {
         startActivity(new Intent(MainActivity.this, ScrollViewAct.class));
     }
+
+    public void toTabHost(View view) {
+        startActivity(new Intent(MainActivity.this, TabHostAct.class));
+    }
+
+    public void toTimePicker(View view) {
+        startActivity(new Intent(MainActivity.this, TimePickerAct.class));
+    }
+
 
     public void toGridLayout(View view) {
         startActivity(new Intent(MainActivity.this, GridLayoutAct.class));
