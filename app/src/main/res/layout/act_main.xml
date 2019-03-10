@@ -198,6 +198,14 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/bt_height"
             android:gravity="center_vertical|start"
+            android:text="@string/to_app_widget_host_view"
+            android:textAllCaps="false"
+            android:onClick="toAppWidgetHostView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
             android:text="@string/to_calendar_view"
             android:textAllCaps="false"
             android:onClick="toCalendarView"/>
@@ -222,6 +230,22 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/bt_height"
             android:gravity="center_vertical|start"
+            android:text="@string/to_gesture_overlay_view"
+            android:textAllCaps="false"
+            android:onClick="toGestureOverlayView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_media_controller"
+            android:textAllCaps="false"
+            android:onClick="toMediaController"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
             android:text="@string/to_horizontal_scroll_view"
             android:textAllCaps="false"
             android:onClick="toHorizontalScrollView"/>
@@ -241,6 +265,46 @@
             android:text="@string/to_tab_host"
             android:textAllCaps="false"
             android:onClick="toTabHost"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_animator"
+            android:textAllCaps="false"
+            android:onClick="toViewAnimator"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_flipper"
+            android:textAllCaps="false"
+            android:onClick="toViewFlipper"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_switcher"
+            android:textAllCaps="false"
+            android:onClick="toViewSwitcher"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_image_switcher"
+            android:textAllCaps="false"
+            android:onClick="toImageSwitcher"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_text_switcher"
+            android:textAllCaps="false"
+            android:onClick="toTextSwitcher"/>
 
         <Button
             android:layout_width="match_parent"

@@ -112,14 +112,25 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, FrameLayoutAct.class));
     }
 
+    public void toAppWidgetHostView(View view) {
+        startActivity(new Intent(MainActivity.this, AppWidgetHostViewAct.class));
+    }
+
     public void toCalendarView(View view) {
         startActivity(new Intent(MainActivity.this, CalendarViewAct.class));
+    }
+
+    public void toGestureOverlayView(View view) {
+        startActivity(new Intent(MainActivity.this, GestureOverlayViewAct.class));
     }
 
     public void toDatePicker(View view) {
         startActivity(new Intent(MainActivity.this, DatePickerAct.class));
     }
 
+    public void toMediaController(View view) {
+        startActivity(new Intent(MainActivity.this, MediaControllerAct.class));
+    }
 
     public void toHorizontalScrollView(View view) {
         startActivity(new Intent(MainActivity.this, HorizontalScrollViewAct.class));
@@ -137,6 +148,25 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, TimePickerAct.class));
     }
 
+    public void toViewAnimator(View view) {
+        startActivity(new Intent(MainActivity.this, ViewAnimatorAct.class));
+    }
+
+    public void toViewFlipper(View view) {
+        startActivity(new Intent(MainActivity.this, ViewFlipperAct.class));
+    }
+
+    public void toViewSwitcher(View view) {
+        startActivity(new Intent(MainActivity.this, ViewSwitcherAct.class));
+    }
+
+    public void toImageSwitcher(View view) {
+        startActivity(new Intent(MainActivity.this, ImageSwitcherAct.class));
+    }
+
+    public void toTextSwitcher(View view) {
+        startActivity(new Intent(MainActivity.this, TextSwitcherAct.class));
+    }
 
     public void toGridLayout(View view) {
         startActivity(new Intent(MainActivity.this, GridLayoutAct.class));

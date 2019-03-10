@@ -29,12 +29,20 @@
     <string name="to_view_group">ViewGroup</string>
     <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
     <string name="to_frame_layout">|-- FrameLayout</string>
+    <string name="to_app_widget_host_view">|-- |-- AppWidgetHostView</string>
     <string name="to_calendar_view">|-- |-- CalendarView（日历视图）</string>
+    <string name="to_gesture_overlay_view">|-- |-- GestureOverlayView</string>
     <string name="to_date_picker">|-- |-- DatePicker（日期选择）</string>
+    <string name="to_media_controller">|-- |-- MediaController</string>
     <string name="to_horizontal_scroll_view">|-- |-- HorizontalScrollView（水平滑动视图）</string>
     <string name="to_scroll_view">|-- |-- ScrollView（竖直滑动视图）</string>
     <string name="to_tab_host">|-- |-- TabHost（选项卡布局）</string>
     <string name="to_time_picker">|-- |-- TimePicker（时间选择器）</string>
+    <string name="to_view_animator">|-- |-- ViewAnimator（视图动画，未完成）</string>
+    <string name="to_view_flipper">|-- |-- |-- ViewFlipper（试图翻转器，未完成）</string>
+    <string name="to_view_switcher">|-- |-- |-- ViewSwitcher（视图切换器，未完成）</string>
+    <string name="to_image_switcher">|-- |-- |-- ImageSwitcher（图片切换器）</string>
+    <string name="to_text_switcher">|-- |-- |-- TextSwitcher（文本切换器）</string>
     <string name="to_linear_layout">|-- LinearLayout(线性布局)</string>
     <string name="to_action_menu_view">|-- |-- ActionMenuView(未完成，API 21 引入)</string>
     <string name="to_number_picker">|-- |-- NumberPicker(数字[数组]选择器，API 11 引入)</string>
@@ -235,6 +243,18 @@
     <!-- TabHost Activity -->
     <string name="tab_host_description">TabHost是选项卡的最外层布局，具体使用请参考 https://blog.csdn.net/qq_38228830/article/details/80851532 。具体用例请参考TabWidget</string>
     <string name="tab_host_btn">toTabWidget</string>
+
+    <!-- ImageSwitcher Activity -->
+    <string name="image_switcher_description">
+        ImageSwitcher（图片切换器）用于实现图片切换的动画效果\n
+        使用参考： https://www.jianshu.com/p/ccc7aa90b0eb
+    </string>
+
+    <!-- TextSwitcher Activity -->
+    <string name="text_switcher_description">
+        TextSwitcher（文本切换器）用于实现文本切换的动画效果\n
+        使用参考： https://www.jianshu.com/p/ccc7aa90b0eb
+    </string>
 
     <!-- GridLayout Activity -->
     <string name="grid_layout_description">
