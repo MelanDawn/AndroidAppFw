@@ -190,6 +190,22 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/bt_height"
             android:gravity="center_vertical|start"
+            android:text="@string/to_absolute_layout"
+            android:textAllCaps="false"
+            android:onClick="toAbsoluteLayout"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_web_view"
+            android:textAllCaps="false"
+            android:onClick="toWebView"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
             android:text="@string/to_frame_layout"
             android:textAllCaps="false"
             android:onClick="toFrameLayout"/>

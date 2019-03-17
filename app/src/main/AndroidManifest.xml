@@ -74,6 +74,9 @@
 
         <activity android:name=".ui.activity.ViewGroupAct" />
 
+        <activity android:name=".ui.activity.AbsoluteLayoutAct" />
+        <activity android:name=".ui.activity.WebViewAct" />
+
         <activity android:name=".ui.activity.FrameLayoutAct" />
         <activity android:name=".ui.activity.AppWidgetHostViewAct" />
         <activity android:name=".ui.activity.CalendarViewAct" />

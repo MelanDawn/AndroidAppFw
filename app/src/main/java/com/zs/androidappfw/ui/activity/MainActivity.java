@@ -108,6 +108,14 @@ public class MainActivity extends BaseActivity {
         startActivity(new Intent(MainActivity.this, ViewGroupAct.class));
     }
 
+    public void toAbsoluteLayout(View view) {
+        startActivity(new Intent(MainActivity.this, AbsoluteLayoutAct.class));
+    }
+
+    public void toWebView(View view) {
+        startActivity(new Intent(MainActivity.this, WebViewAct.class));
+    }
+
     public void toFrameLayout(View view) {
         startActivity(new Intent(MainActivity.this, FrameLayoutAct.class));
     }

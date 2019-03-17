@@ -27,6 +27,8 @@
     <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
 
     <string name="to_view_group">ViewGroup</string>
+    <string name="to_absolute_layout">|-- AbsoluteLayout(绝对布局，API 3 过期)</string>
+    <string name="to_web_view">|-- |-- WebView</string>
     <string name="to_grid_layout">|-- GridLayout(网格布局，API 15 引入)</string>
     <string name="to_frame_layout">|-- FrameLayout</string>
     <string name="to_app_widget_host_view">|-- |-- AppWidgetHostView</string>
@@ -196,6 +198,19 @@
     <string name="switch_normal">默认配置</string>
     <string name="switch_disabled">disabled状态</string>
     <string name="switch_no_background">去掉背景，background=@null</string>
+
+    <!-- AbsoluteLayout Activity -->
+    <string name="absolute_layout_description">
+        AbsoluteLayout是采用（x，y）坐标点来决定组件位置的布局方式，在 API 3 中已经过期，不建议使用。
+    </string>
+
+    <!-- WebView Activity -->
+    <string name="web_view_description">
+        WebView描述
+    </string>
+    <string name="web_view_pre">上一页</string>
+    <string name="web_view_home">主页</string>
+    <string name="web_view_next">下一页</string>
 
     <!-- FrameLayout Activity -->
     <string name="frame_layout_description">
