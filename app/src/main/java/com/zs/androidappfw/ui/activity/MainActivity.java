@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.zs.androidappfw.R;
+import com.zs.androidappfw.ui.activity.animation.FrameAnimationAct;
 import com.zs.androidappfw.ui.base.BaseActivity;
 
 /**
@@ -226,5 +227,13 @@ public class MainActivity extends BaseActivity {
 
     public void toTwoLineListItem(View view) {
         startActivity(new Intent(MainActivity.this, TwoLineListItemAct.class));
+    }
+
+    public void toAnimationFrame(View view) {
+        startActivity(FrameAnimationAct.class);
+    }
+
+    private void startActivity(Class<?> cls) {
+        startActivity(new Intent(MainActivity.this, cls));
     }
 }

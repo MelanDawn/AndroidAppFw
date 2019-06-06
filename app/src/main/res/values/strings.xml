@@ -57,6 +57,7 @@
     <string name="to_relative_layout">|-- RelativeLayout（相对布局）</string>
     <string name="to_dialer_filter">|-- |-- DialerFilter（API 26 过期）</string>
     <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
+    <string name="to_animation_frame">帧动画</string>
 
     <!-- AbsSeekBar Activity -->
     <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>
@@ -406,5 +407,12 @@
     <string name="two_line_list_item_mode_two">mode=twoLine</string>
     <string name="two_line_list_item_mode_collapsing">mode=collapsing</string>
     <string name="two_line_list_item_layout">mode=oneLine，应用相对布局</string>
+
+    <!-- Animation Frame Actitivy -->
+    <string name="animation_frame_description">
+        帧动画\n
+        帧动画的原理：将一张张单独的图片连贯的进行播放产生视觉上的动画效果。\n
+        帧动画的内容和效果可以通过指定图片资源和图片显示时间决定。
+    </string>
 
 </resources>
