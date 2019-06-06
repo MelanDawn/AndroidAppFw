@@ -58,6 +58,7 @@
     <string name="to_dialer_filter">|-- |-- DialerFilter（API 26 过期）</string>
     <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
     <string name="to_animation_frame">帧动画</string>
+    <string name="to_animation_tween">补间动画</string>
 
     <!-- AbsSeekBar Activity -->
     <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>
@@ -408,11 +409,19 @@
     <string name="two_line_list_item_mode_collapsing">mode=collapsing</string>
     <string name="two_line_list_item_layout">mode=oneLine，应用相对布局</string>
 
-    <!-- Animation Frame Actitivy -->
+    <!-- Animation Frame Activity -->
     <string name="animation_frame_description">
         帧动画\n
         帧动画的原理：将一张张单独的图片连贯的进行播放产生视觉上的动画效果。\n
         帧动画的内容和效果可以通过指定图片资源和图片显示时间决定。
+    </string>
+
+    <!-- Animation Tween Activity -->
+    <string name="animation_tween_description">
+        补间动画\n
+        补间动画分为四种形式：alpha（透明度）、translate（位移）、scale（缩放）、rotate（旋转）。\n
+        补间动画一般采用 xml 实现，代码易书写和复用。\n
+        有疑问可以先查看Java文件注释，若不能解决则查找其它资料
     </string>
 
 </resources>

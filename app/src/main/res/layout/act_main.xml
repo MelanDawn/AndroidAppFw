@@ -435,5 +435,13 @@
             android:text="@string/to_animation_frame"
             android:textAllCaps="false"
             android:onClick="toAnimationFrame"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_animation_tween"
+            android:textAllCaps="false"
+            android:onClick="toAnimationTween"/>
     </LinearLayout>
 </ScrollView>

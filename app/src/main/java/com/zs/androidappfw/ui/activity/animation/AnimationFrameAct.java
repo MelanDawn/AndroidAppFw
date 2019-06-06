@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;
 
-public class FrameAnimationAct extends BaseActivity {
+public class AnimationFrameAct extends BaseActivity {
 
     private AnimationDrawable animationDrawable;
 
