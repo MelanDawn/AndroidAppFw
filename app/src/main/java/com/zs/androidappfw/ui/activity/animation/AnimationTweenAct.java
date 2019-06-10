@@ -1,6 +1,5 @@
 package com.zs.androidappfw.ui.activity.animation;
 
-import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.animation.Animation;
@@ -14,8 +13,6 @@ import com.zs.androidappfw.ui.base.BaseActivity;
 import java.util.List;
 
 public class AnimationTweenAct extends BaseActivity {
-
-
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +39,6 @@ public class AnimationTweenAct extends BaseActivity {
         // 缩放效果
         ImageView scaleIv = findViewById(R.id.animation_tween_scale_iv);
         Animation scaleAnimation = AnimationUtils.loadAnimation(AnimationTweenAct.this, R.anim.animation_tween_scale);
-
         scaleAnimation.setRepeatCount(Animation.INFINITE);
         scaleAnimation.setRepeatMode(Animation.RESTART);
         scaleIv.startAnimation(scaleAnimation);

@@ -59,6 +59,7 @@
     <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
     <string name="to_animation_frame">帧动画</string>
     <string name="to_animation_tween">补间动画</string>
+    <string name="to_animation_attribute">属性动画</string>
 
     <!-- AbsSeekBar Activity -->
     <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>
@@ -422,6 +423,13 @@
         补间动画分为四种形式：alpha（透明度）、translate（位移）、scale（缩放）、rotate（旋转）。\n
         补间动画一般采用 xml 实现，代码易书写和复用。\n
         有疑问可以先查看Java文件注释，若不能解决则查找其它资料
+    </string>
+
+    <!-- Animation Attribute Activity -->
+    <string name="animation_attribute_description">
+        属性动画\n
+        属性动画也有四种变换：alpha（透明度）、translate（位移）、scale（缩放）、rotate（旋转）。\n
+        属性动画由于牵扯到具体对象的属性，因此一般采用 java 实现，通过动态代码获取。xml 也可以实现但是不方便。
     </string>
 
 </resources>

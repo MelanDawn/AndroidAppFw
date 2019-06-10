@@ -94,6 +94,7 @@
 
         <activity android:name=".ui.activity.animation.AnimationFrameAct" />
         <activity android:name=".ui.activity.animation.AnimationTweenAct" />
+        <activity android:name=".ui.activity.animation.AnimationAttributeAct" />
 
     </application>
 

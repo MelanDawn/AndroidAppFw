@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.zs.androidappfw.R;
+import com.zs.androidappfw.ui.activity.animation.AnimationAttributeAct;
 import com.zs.androidappfw.ui.activity.animation.AnimationFrameAct;
 import com.zs.androidappfw.ui.activity.animation.AnimationTweenAct;
 import com.zs.androidappfw.ui.base.BaseActivity;
@@ -236,6 +237,10 @@ public class MainActivity extends BaseActivity {
 
     public void toAnimationTween(View view) {
         startActivity(AnimationTweenAct.class);
+    }
+
+    public void toAnimationAttribute(View view) {
+        startActivity(AnimationAttributeAct.class);
     }
 
     private void startActivity(Class<?> cls) {
