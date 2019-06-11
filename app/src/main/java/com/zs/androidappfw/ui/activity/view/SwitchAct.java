@@ -1,4 +1,4 @@
-package com.zs.androidappfw.ui.activity.view.viewgroup;
+package com.zs.androidappfw.ui.activity.view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

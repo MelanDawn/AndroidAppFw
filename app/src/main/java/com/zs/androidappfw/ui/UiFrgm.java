@@ -1,14 +1,11 @@
 package com.zs.androidappfw.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Chronometer;
-import android.widget.TableRow;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.activity.animation.AnimationAttributeAct;
@@ -48,11 +45,10 @@ import com.zs.androidappfw.ui.activity.view.viewgroup.ImageSwitcherAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.LinearLayoutAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.MediaControllerAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.NumberPickerAct;
-import com.zs.androidappfw.ui.activity.view.viewgroup.RadioGroupAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.RelativeLayoutAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.ScrollViewAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.SearchViewAct;
-import com.zs.androidappfw.ui.activity.view.viewgroup.SwitchAct;
+import com.zs.androidappfw.ui.activity.view.SwitchAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.TabHostAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.TabWidgetAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.TableLayoutAct;
@@ -66,7 +62,6 @@ import com.zs.androidappfw.ui.activity.view.viewgroup.ViewGroupAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.ViewSwitcherAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.WebViewAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.ZoomControlsAct;
-import com.zs.androidappfw.ui.base.BaseActivity;
 import com.zs.androidappfw.ui.base.BaseFragment;
 
 public class UiFrgm extends BaseFragment implements View.OnClickListener {
@@ -74,14 +69,9 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.frgm_main_ui, container, false);
-    }
-
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+        View view = inflater.inflate(R.layout.frgm_main_ui, container, false);
         initView(view);
+        return view;
     }
 
     private void initView(View view) {
@@ -315,9 +305,5 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
                 startActivity(AnimationAttributeAct.class);
                 break;
         }
-    }
-
-    private void startActivity(Class<? extends BaseActivity> cls) {
-        startActivity(new Intent(getActivity(), cls));
     }
 }

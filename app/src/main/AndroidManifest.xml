@@ -31,6 +31,9 @@
 
         <activity android:name=".ui.MainActivity"/>
 
+        <activity android:name=".ui.activity.fundamental.ActivityLifecycleAct"
+            android:configChanges = "orientation|screenSize"/>
+
         <activity android:name=".ui.activity.view.ImageViewAct" />
         <activity android:name=".ui.activity.view.ImageButtonAct" />
         <activity android:name=".ui.activity.view.QuickContactBadgeAct" />
@@ -52,7 +55,7 @@
         <activity android:name=".ui.activity.view.CompoundButtonAct" />
         <activity android:name=".ui.activity.view.CheckBoxAct" />
         <activity android:name=".ui.activity.view.RadioButtonAct" />
-        <activity android:name=".ui.activity.view.viewgroup.SwitchAct" />
+        <activity android:name=".ui.activity.view.SwitchAct" />
         <activity android:name=".ui.activity.view.ToggleButtonAct" />
 
         <activity android:name=".ui.activity.view.viewgroup.ViewGroupAct" />
