@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_bottom_tab_base"
+        android:title="@string/main_tab_base"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/main_bottom_tab_ui"
+        android:title="@string/main_tab_ui"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/main_bottom_tab_function"
+        android:title="@string/main_tab_function"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/main_bottom_tab_advanced"
+        android:title="@string/main_tab_advanced"
+        app:showAsAction="ifRoom" />
+</menu>

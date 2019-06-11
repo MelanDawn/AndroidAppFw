@@ -29,68 +29,68 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.activity.MainActivity"/>
+        <activity android:name=".ui.MainActivity"/>
 
-        <activity android:name=".ui.activity.ImageViewAct" />
-        <activity android:name=".ui.activity.ImageButtonAct" />
-        <activity android:name=".ui.activity.QuickContactBadgeAct" />
+        <activity android:name=".ui.activity.view.ImageViewAct" />
+        <activity android:name=".ui.activity.view.ImageButtonAct" />
+        <activity android:name=".ui.activity.view.QuickContactBadgeAct" />
 
-        <activity android:name=".ui.activity.ProgressBarAct" />
-        <activity android:name=".ui.activity.AbsSeekBarAct" />
-        <activity android:name=".ui.activity.RatingBarAct" />
-        <activity android:name=".ui.activity.SeekBarAct" />
+        <activity android:name=".ui.activity.view.ProgressBarAct" />
+        <activity android:name=".ui.activity.view.AbsSeekBarAct" />
+        <activity android:name=".ui.activity.view.RatingBarAct" />
+        <activity android:name=".ui.activity.view.SeekBarAct" />
 
-        <activity android:name=".ui.activity.TextViewAct" />
-        <activity android:name=".ui.activity.CheckedTextViewAct" />
-        <activity android:name=".ui.activity.ChronometerAct" />
-        <activity android:name=".ui.activity.TextClockAct" />
-        <activity android:name=".ui.activity.EditTextAct" />
-        <activity android:name=".ui.activity.AutoCompleteTextViewAct" />
-        <activity android:name=".ui.activity.MultiAutoCompleteTextViewAct" />
-        <activity android:name=".ui.activity.ExtractEditTextAct" />
-        <activity android:name=".ui.activity.ButtonAct" />
-        <activity android:name=".ui.activity.CompoundButtonAct" />
-        <activity android:name=".ui.activity.CheckBoxAct" />
-        <activity android:name=".ui.activity.RadioButtonAct" />
-        <activity android:name=".ui.activity.SwitchAct" />
-        <activity android:name=".ui.activity.ToggleButtonAct" />
+        <activity android:name=".ui.activity.view.TextViewAct" />
+        <activity android:name=".ui.activity.view.CheckedTextViewAct" />
+        <activity android:name=".ui.activity.view.ChronometerAct" />
+        <activity android:name=".ui.activity.view.TextClockAct" />
+        <activity android:name=".ui.activity.view.EditTextAct" />
+        <activity android:name=".ui.activity.view.AutoCompleteTextViewAct" />
+        <activity android:name=".ui.activity.view.MultiAutoCompleteTextViewAct" />
+        <activity android:name=".ui.activity.view.ExtractEditTextAct" />
+        <activity android:name=".ui.activity.view.ButtonAct" />
+        <activity android:name=".ui.activity.view.CompoundButtonAct" />
+        <activity android:name=".ui.activity.view.CheckBoxAct" />
+        <activity android:name=".ui.activity.view.RadioButtonAct" />
+        <activity android:name=".ui.activity.view.viewgroup.SwitchAct" />
+        <activity android:name=".ui.activity.view.ToggleButtonAct" />
 
-        <activity android:name=".ui.activity.ViewGroupAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ViewGroupAct" />
 
-        <activity android:name=".ui.activity.AbsoluteLayoutAct" />
-        <activity android:name=".ui.activity.WebViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.AbsoluteLayoutAct" />
+        <activity android:name=".ui.activity.view.viewgroup.WebViewAct" />
 
-        <activity android:name=".ui.activity.FrameLayoutAct" />
-        <activity android:name=".ui.activity.AppWidgetHostViewAct" />
-        <activity android:name=".ui.activity.CalendarViewAct" />
-        <activity android:name=".ui.activity.DatePickerAct" />
-        <activity android:name=".ui.activity.GestureOverlayViewAct" />
-        <activity android:name=".ui.activity.MediaControllerAct" />
-        <activity android:name=".ui.activity.HorizontalScrollViewAct" />
-        <activity android:name=".ui.activity.ScrollViewAct" />
-        <activity android:name=".ui.activity.TabHostAct" />
-        <activity android:name=".ui.activity.TimePickerAct" />
-        <activity android:name=".ui.activity.ViewAnimatorAct" />
-        <activity android:name=".ui.activity.ViewFlipperAct" />
-        <activity android:name=".ui.activity.ViewSwitcherAct" />
-        <activity android:name=".ui.activity.ImageSwitcherAct" />
-        <activity android:name=".ui.activity.TextSwitcherAct" />
+        <activity android:name=".ui.activity.view.viewgroup.FrameLayoutAct" />
+        <activity android:name=".ui.activity.view.viewgroup.AppWidgetHostViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.CalendarViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.DatePickerAct" />
+        <activity android:name=".ui.activity.view.viewgroup.GestureOverlayViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.MediaControllerAct" />
+        <activity android:name=".ui.activity.view.viewgroup.HorizontalScrollViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ScrollViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.TabHostAct" />
+        <activity android:name=".ui.activity.view.viewgroup.TimePickerAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ViewAnimatorAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ViewFlipperAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ViewSwitcherAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ImageSwitcherAct" />
+        <activity android:name=".ui.activity.view.viewgroup.TextSwitcherAct" />
 
-        <activity android:name=".ui.activity.GridLayoutAct" />
+        <activity android:name=".ui.activity.view.viewgroup.GridLayoutAct" />
 
-        <activity android:name=".ui.activity.LinearLayoutAct" />
-        <activity android:name=".ui.activity.ActionMenuViewAct" />
-        <activity android:name=".ui.activity.NumberPickerAct" />
-        <activity android:name=".ui.activity.RadioGroupAct" />
-        <activity android:name=".ui.activity.SearchViewAct" />
-        <activity android:name=".ui.activity.TabWidgetAct" />
-        <activity android:name=".ui.activity.TableLayoutAct" />
-        <activity android:name=".ui.activity.TableRowAct" />
-        <activity android:name=".ui.activity.ZoomControlsAct" />
+        <activity android:name=".ui.activity.view.viewgroup.LinearLayoutAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ActionMenuViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.NumberPickerAct" />
+        <activity android:name=".ui.activity.view.viewgroup.RadioGroupAct" />
+        <activity android:name=".ui.activity.view.viewgroup.SearchViewAct" />
+        <activity android:name=".ui.activity.view.viewgroup.TabWidgetAct" />
+        <activity android:name=".ui.activity.view.viewgroup.TableLayoutAct" />
+        <activity android:name=".ui.activity.view.viewgroup.TableRowAct" />
+        <activity android:name=".ui.activity.view.viewgroup.ZoomControlsAct" />
 
-        <activity android:name=".ui.activity.RelativeLayoutAct" />
-        <activity android:name=".ui.activity.DialerFilterAct" />
-        <activity android:name=".ui.activity.TwoLineListItemAct" />
+        <activity android:name=".ui.activity.view.viewgroup.RelativeLayoutAct" />
+        <activity android:name=".ui.activity.view.viewgroup.DialerFilterAct" />
+        <activity android:name=".ui.activity.view.viewgroup.TwoLineListItemAct" />
 
         <activity android:name=".ui.activity.animation.AnimationFrameAct" />
         <activity android:name=".ui.activity.animation.AnimationTweenAct" />

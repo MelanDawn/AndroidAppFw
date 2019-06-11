@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ProgressBar and its subclass -->
+        <Button
+            android:id="@+id/ui_to_progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_progress_bar"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/ui_to_abs_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_abs_seek_bar"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_rating_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_rating_bar"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_seek_bar"
+            android:textAllCaps="false"/>
+
+        <!-- ImageView and its subclass -->
+        <Button
+            android:id="@+id/ui_to_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_iv"
+            android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/ui_to_image_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_iv_btn"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_quick_contact_badge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_quick_contact_badge"
+            android:textAllCaps="false"/>
+
+        <!-- TextView and its subclass -->
+        <Button
+            android:id="@+id/ui_to_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tv"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_checked_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_checked_tv"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_chronometer"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_chronometer"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_text_clock"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_text_clock"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_et"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_auto_complete_tv"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_multi_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_multi_auto_complete_tv"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_extract_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_extract_et"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_btn"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_compound_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_compound_btn"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_check_box"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_check_box"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_radio_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_radio_btn"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_switch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_switch"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_toggle_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_toggle_btn"
+            android:textAllCaps="false"/>
+
+        <!-- ViewGroup and its subclass -->
+        <Button
+            android:id="@+id/ui_to_view_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_group"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_absolute_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_absolute_layout"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_web_view"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_frame_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_frame_layout"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_app_widget_host_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_app_widget_host_view"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_calendar_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_calendar_view"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_date_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_date_picker"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_time_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_time_picker"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_gesture_overlay_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_gesture_overlay_view"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_media_controller"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_media_controller"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_horizontal_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_horizontal_scroll_view"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_scroll_view"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_tab_host"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tab_host"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_view_animator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_animator"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_flipper"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_view_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_switcher"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_image_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_image_switcher"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_text_switcher"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_text_switcher"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_grid_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_grid_layout"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_linear_layout"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_action_menu_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_action_menu_view"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_purple"/>
+
+        <Button
+            android:id="@+id/ui_to_number_picker"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_number_picker"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_radio_group"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_search_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_search_view"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_purple"/>
+
+        <Button
+            android:id="@+id/ui_to_tab_widget"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tab_widget"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_table_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_table_layout"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_table_row"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_table_row"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_zoom_controls"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_zoom_controls"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_relative_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_relative_layout"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_dialer_filter"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_dialer_filter"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_two_line_list_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_two_line_list_item"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_animation_frame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_animation_frame"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_animation_tween"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_animation_tween"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_animation_attribute"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_animation_attribute"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+</ScrollView>

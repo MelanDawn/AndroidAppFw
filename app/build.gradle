@@ -44,6 +44,9 @@ dependencies {
     })
     implementation "com.android.support:appcompat-v7:${project.ANDROID_SUPPORT_LIBRARY_VERSION}"
     implementation "com.android.support:gridlayout-v7:${project.ANDROID_SUPPORT_LIBRARY_VERSION}"
+    implementation "com.android.support:support-v4:${project.ANDROID_SUPPORT_LIBRARY_VERSION}"
+    implementation "com.android.support:design:${project.ANDROID_SUPPORT_LIBRARY_VERSION}"
+
     testImplementation 'junit:junit:4.12'
     //https://github.com/mcxiaoke/android-volley
     implementation 'com.mcxiaoke.volley:library:1.0.19'

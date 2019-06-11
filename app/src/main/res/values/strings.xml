@@ -2,6 +2,11 @@
     <string name="app_name">AndroidAppFw</string>
 
     <!-- Main activity -->
+    <string name="main_tab_base">基础</string>
+    <string name="main_tab_ui">UI</string>
+    <string name="main_tab_function">功能</string>
+    <string name="main_tab_advanced">进阶</string>
+
     <string name="to_progress_bar">ProgressBar(不可交互)</string>
     <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)(抽象类)</string>
     <string name="to_rating_bar">|-- |-- RatingBar(比例进度条，五角星状)</string>
