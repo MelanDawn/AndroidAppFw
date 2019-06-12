@@ -441,4 +441,8 @@
         属性动画由于牵扯到具体对象的属性，因此一般采用 java 实现，通过动态代码获取。xml 也可以实现但是不方便。
     </string>
 
+    <!-- 自定义权限信息 -->
+    <string name="permlab_customization_permission_page">to enter customization permission page</string>
+    <string name="permdesc_customization_permission_page">Allows the app to enter customization permission page.</string>
+    <string name="customization_permission_desc">外部应用只有申请了必要的权限才能打开本页面</string>
 </resources>

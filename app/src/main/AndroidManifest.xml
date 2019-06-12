@@ -2,6 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.zs.androidappfw">
 
+    <!-- 自定义权限声明 start -->
+    <permission android:name="com.zs.androidappfw.permission.CUSTOMIZATION_PERMISSION_PAGE"
+        android:label="@string/permlab_customization_permission_page"
+        android:description="@string/permdesc_customization_permission_page"
+        android:permissionGroup="android.permission-group.CUSTOMIZATION_PERMISSION"
+        android:protectionLevel="signature" />
+    <!-- 自定义权限声明 end -->
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -101,6 +109,12 @@
         <activity android:name=".ui.activity.animation.AnimationTweenAct" />
         <activity android:name=".ui.activity.animation.AnimationAttributeAct" />
 
+        <!-- 自定义权限使用 start -->
+        <activity android:name=".ui.activity.advanced.CustomizationPermissionAct"
+            android:exported="true"
+            android:permission="com.zs.androidappfw.permission.CUSTOMIZATION_PERMISSION_PAGE"/>
+        <!-- 自定义权限使用 end -->
+        
     </application>
 
 </manifest>
