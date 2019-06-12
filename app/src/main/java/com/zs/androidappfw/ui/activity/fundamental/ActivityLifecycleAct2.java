@@ -5,22 +5,23 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.Button;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;
 import com.zs.androidappfw.utils.LUtil;
 
-public class ActivityLifecycleAct extends BaseActivity {
+public class ActivityLifecycleAct2 extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_activity_lifecycle);
+        setContentView(R.layout.act_activity_lifecycle2);
         LUtil.d(TAG, "onCreate");
     }
 
-    public void toActivityLifecycle2(View view) {
-        startActivity(new Intent(this, ActivityLifecycleAct2.class));
+    public void toActivityLifecycle1(View view) {
+        startActivity(new Intent(this, ActivityLifecycleAct.class));
     }
 
     @Override

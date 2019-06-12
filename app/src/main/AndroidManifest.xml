@@ -32,7 +32,9 @@
         <activity android:name=".ui.MainActivity"/>
 
         <activity android:name=".ui.activity.fundamental.ActivityLifecycleAct"
-            android:configChanges = "orientation|screenSize"/>
+            android:configChanges = "orientation|screenSize"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.activity.fundamental.ActivityLifecycleAct2" />
 
         <activity android:name=".ui.activity.view.ImageViewAct" />
         <activity android:name=".ui.activity.view.ImageButtonAct" />
