@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.activity.fundamental.ActivityLifecycleAct;
+import com.zs.androidappfw.ui.activity.fundamental.WindowSoftInputModeAct;
 import com.zs.androidappfw.ui.activity.view.ProgressBarAct;
 import com.zs.androidappfw.ui.base.BaseFragment;
 
@@ -24,6 +25,7 @@ public class BaseFrgm extends BaseFragment implements View.OnClickListener {
 
     private void initView(View view) {
         initAndSetClickListener(view, R.id.base_to_activity_lifecycle);
+        initAndSetClickListener(view, R.id.base_to_wsim);
     }
 
     private void initAndSetClickListener(View view, int id) {
@@ -35,6 +37,9 @@ public class BaseFrgm extends BaseFragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.base_to_activity_lifecycle:
                 startActivity(ActivityLifecycleAct.class);
+                break;
+            case R.id.base_to_wsim:
+                startActivity(WindowSoftInputModeAct.class);
                 break;
             case R.id.ui_to_progress_bar:
                 startActivity(ProgressBarAct.class);

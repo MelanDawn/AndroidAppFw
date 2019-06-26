@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_adjust_nothing"
+        android:onClick="toAdjustNothing"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_adjust_pan"
+        android:onClick="toAdjustPan"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_adjust_resize"
+        android:onClick="toAdjustResize"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_adjust_unspecified"
+        android:onClick="toAdjustUnspecified"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_state_always_hidden"
+        android:onClick="toStateAlwaysHidden"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_state_always_visible"
+        android:onClick="toStateAlwaysVisible"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_state_hidden"
+        android:onClick="toStateHidden"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_state_visible"
+        android:onClick="toStateVisible"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_state_unchanged"
+        android:onClick="toStateUnchanged"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_state_unspecified"
+        android:onClick="toStateUnspecified"
+        android:textAllCaps="false"/>
+
+</LinearLayout>

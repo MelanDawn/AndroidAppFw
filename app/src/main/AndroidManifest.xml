@@ -29,8 +29,7 @@
         tools:ignore="GoogleAppIndexingWarning">
 
         <activity android:name=".SplashActivity"
-            android:theme="@style/SplashTheme"
-            android:screenOrientation="portrait">
+            android:theme="@style/SplashTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -43,6 +42,28 @@
             android:configChanges = "orientation|screenSize"
             android:launchMode="singleTask"/>
         <activity android:name=".ui.activity.fundamental.ActivityLifecycleAct2" />
+
+        <activity android:name=".ui.activity.fundamental.WindowSoftInputModeAct" />
+        <activity android:name=".ui.activity.fundamental.WsimAdjustNothingAct"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity android:name=".ui.activity.fundamental.WsimAdjustPanAct"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.fundamental.WsimAdjustResizeAct"
+            android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activity.fundamental.WsimAdjustUnspecifiedAct"
+            android:windowSoftInputMode="adjustUnspecified" />
+        <activity android:name=".ui.activity.fundamental.WsimStateAlwaysHiddenAct"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".ui.activity.fundamental.WsimStateAlwaysVisibleAct"
+            android:windowSoftInputMode="stateAlwaysVisible" />
+        <activity android:name=".ui.activity.fundamental.WsimStateHiddenAct"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.activity.fundamental.WsimStateVisibleAct"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".ui.activity.fundamental.WsimStateUnchangedAct"
+            android:windowSoftInputMode="stateUnchanged" />
+        <activity android:name=".ui.activity.fundamental.WsimStateUnspecifiedAct"
+            android:windowSoftInputMode="stateUnspecified" />
 
         <activity android:name=".ui.activity.view.ImageViewAct" />
         <activity android:name=".ui.activity.view.ImageButtonAct" />

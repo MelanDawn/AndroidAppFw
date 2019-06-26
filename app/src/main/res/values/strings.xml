@@ -11,6 +11,8 @@
     <string name="to_activity_lifecycle1">to Activity生命周期页面1</string>
     <string name="to_activity_lifecycle2">to Activity生命周期页面2</string>
 
+    <string name="to_window_soft_input_mode">窗口软键盘模式</string>
+
     <string name="to_progress_bar">ProgressBar(不可交互)</string>
     <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)(抽象类)</string>
     <string name="to_rating_bar">|-- |-- RatingBar(比例进度条，五角星状)</string>
@@ -445,4 +447,17 @@
     <string name="permlab_customization_permission_page">to enter customization permission page</string>
     <string name="permdesc_customization_permission_page">Allows the app to enter customization permission page.</string>
     <string name="customization_permission_desc">外部应用只有申请了必要的权限才能打开本页面</string>
+
+    <!-- 窗口软键盘模式 -->
+    <string name="to_adjust_nothing">adjustNothing</string>
+    <string name="to_adjust_pan">adjustPan</string>
+    <string name="to_adjust_resize">adjustResize</string>
+    <string name="to_adjust_unspecified">adjustUnspecified</string>
+    <string name="to_state_always_hidden">stateAlwaysHidden</string>
+    <string name="to_state_always_visible">stateAlwaysVisible</string>
+    <string name="to_state_hidden">stateHidden</string>
+    <string name="to_state_visible">stateVisible</string>
+    <string name="to_state_unchanged">stateUnchanged</string>
+    <string name="to_state_unspecified">stateUnspecified</string>
+
 </resources>

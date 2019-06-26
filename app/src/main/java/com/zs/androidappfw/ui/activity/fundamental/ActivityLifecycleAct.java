@@ -82,4 +82,16 @@ public class ActivityLifecycleAct extends BaseActivity {
         super.onNewIntent(intent);
         LUtil.d(TAG, "onNewIntent");
     }
+
+    @Override
+    public void onAttachedToWindow() {
+        super.onAttachedToWindow();
+        LUtil.d(TAG, "onAttachedToWindow");
+    }
+
+    @Override
+    public void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        LUtil.d(TAG, "onDetachedFromWindow");
+    }
 }
