@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
         android:gravity="center_vertical|start"
-        android:text="@string/to_activity_lifecycle"
+        android:text="@string/to_activity_lifecycle_and_launch_mode"
         android:textAllCaps="false"/>
 
     <Button

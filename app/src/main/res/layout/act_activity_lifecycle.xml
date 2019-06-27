@@ -3,14 +3,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activity.fundamental.ActivityLifecycleAct">
+    tools:context=".ui.activity.fundamental.lifecycle.ActivityStandardAct">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
         android:gravity="center_vertical|start"
-        android:text="@string/to_activity_lifecycle2"
-        android:onClick="toActivityLifecycle2"
+        android:text="@string/to_activity_standard"
+        android:onClick="toActivityStandard"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_activity_single_top"
+        android:onClick="toActivitySingleTop"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_activity_single_task"
+        android:onClick="toActivitySingleTask"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_activity_single_task_affinity"
+        android:onClick="toActivitySingleTaskAffinity"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_activity_single_instance"
+        android:onClick="toActivitySingleInstance"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_activity_standard_config_changes"
+        android:onClick="toActivityStandardConfigChanges"
+        android:lines="1"
         android:textAllCaps="false"/>
 
 </LinearLayout>

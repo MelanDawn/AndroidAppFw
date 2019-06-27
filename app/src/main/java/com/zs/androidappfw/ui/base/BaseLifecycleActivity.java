@@ -1,26 +1,18 @@
-package com.zs.androidappfw.ui.activity.fundamental;
+package com.zs.androidappfw.ui.base;
 
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.view.View;
 
-import com.zs.androidappfw.R;
-import com.zs.androidappfw.ui.base.BaseActivity;
 import com.zs.androidappfw.utils.LUtil;
 
-public class ActivityLifecycleAct extends BaseActivity {
+public abstract class BaseLifecycleActivity extends BaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_activity_lifecycle);
         LUtil.d(TAG, "onCreate");
-    }
-
-    public void toActivityLifecycle2(View view) {
-        startActivity(new Intent(this, ActivityLifecycleAct2.class));
     }
 
     @Override
@@ -62,25 +54,25 @@ public class ActivityLifecycleAct extends BaseActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        LUtil.d(TAG, "onSaveInstanceState");
+        LUtil.d(TAG, "onSaveInstanceState" + " 参数："  +  outState.toString());
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        LUtil.d(TAG, "onRestoreInstanceState");
+        LUtil.d(TAG, "onRestoreInstanceState" + " 参数："  +  savedInstanceState.toString());
     }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        LUtil.d(TAG, "onConfigurationChanged");
+        LUtil.d(TAG, "onConfigurationChanged" + " 参数："  +  newConfig.toString());
     }
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        LUtil.d(TAG, "onNewIntent");
+        LUtil.d(TAG, "onNewIntent" + " 参数："  +  intent.toString());
     }
 
     @Override

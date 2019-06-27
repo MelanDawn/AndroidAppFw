@@ -38,10 +38,19 @@
 
         <activity android:name=".ui.MainActivity"/>
 
-        <activity android:name=".ui.activity.fundamental.ActivityLifecycleAct"
-            android:configChanges = "orientation|screenSize"
+        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleInstanceAct"
+            android:launchMode="singleInstance"/>
+        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleTaskAct"
             android:launchMode="singleTask"/>
-        <activity android:name=".ui.activity.fundamental.ActivityLifecycleAct2" />
+        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleTaskAffinityAct"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.zs.androidappfw.MySingleTask"/>
+        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleTopAct"
+            android:launchMode="singleTop" />
+        <activity android:name=".ui.activity.fundamental.lifecycle.ActivityStandardAct"
+            android:launchMode="standard" />
+        <activity android:name=".ui.activity.fundamental.lifecycle.ActivityStandardConfigChangesAct"
+            android:configChanges="orientation" />
 
         <activity android:name=".ui.activity.fundamental.WindowSoftInputModeAct" />
         <activity android:name=".ui.activity.fundamental.WsimAdjustNothingAct"
