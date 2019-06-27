@@ -3,9 +3,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/main_tab_advanced"/>
+    <Button
+        android:id="@+id/advanced_to_diy_permission"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/advanced_to_diy_permission"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/advanced_to_dispatch_touch_event"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/advanced_to_dispatch_touch_event"
+        android:textAllCaps="false"/>
 
 </LinearLayout>
