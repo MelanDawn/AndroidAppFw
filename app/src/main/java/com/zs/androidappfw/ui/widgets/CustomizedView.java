@@ -48,6 +48,6 @@ public class CustomizedView extends View {
         LUtil.d(TAG, "onTouchEvent start, " + ev.toString());
         boolean result = super.onTouchEvent(ev);
         LUtil.d(TAG, "onTouchEvent end: " + result);
-        return true;
+        return result;
     }
 }

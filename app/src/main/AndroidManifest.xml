@@ -145,7 +145,7 @@
             android:permission="com.zs.androidappfw.permission.CUSTOMIZATION_PERMISSION_PAGE"/>
         <!-- 自定义权限使用 end -->
 
-        <activity android:name=".ui.activity.advanced.TouchEventDispatchAct" />
+        <activity android:name=".ui.activity.advanced.DispatchTouchEventAct" />
         
     </application>
 

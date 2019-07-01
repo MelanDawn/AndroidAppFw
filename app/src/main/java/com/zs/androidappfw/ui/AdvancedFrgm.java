@@ -9,9 +9,7 @@ import android.view.ViewGroup;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.activity.advanced.CustomizationPermissionAct;
-import com.zs.androidappfw.ui.activity.advanced.TouchEventDispatchAct;
-import com.zs.androidappfw.ui.activity.view.AbsSeekBarAct;
-import com.zs.androidappfw.ui.activity.view.ProgressBarAct;
+import com.zs.androidappfw.ui.activity.advanced.DispatchTouchEventAct;
 import com.zs.androidappfw.ui.base.BaseFragment;
 
 public class AdvancedFrgm extends BaseFragment implements View.OnClickListener {
@@ -40,7 +38,7 @@ public class AdvancedFrgm extends BaseFragment implements View.OnClickListener {
                 startActivity(CustomizationPermissionAct.class);
                 break;
             case R.id.advanced_to_dispatch_touch_event:
-                startActivity(TouchEventDispatchAct.class);
+                startActivity(DispatchTouchEventAct.class);
                 break;
         }
     }

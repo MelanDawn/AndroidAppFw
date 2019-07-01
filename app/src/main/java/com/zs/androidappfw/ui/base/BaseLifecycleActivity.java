@@ -86,4 +86,10 @@ public abstract class BaseLifecycleActivity extends BaseActivity {
         super.onDetachedFromWindow();
         LUtil.d(TAG, "onDetachedFromWindow");
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        LUtil.d(TAG, " requestCode=" + requestCode + " resultCode=" + resultCode);
+    }
 }
