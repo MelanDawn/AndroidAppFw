@@ -146,6 +146,8 @@
         <!-- 自定义权限使用 end -->
 
         <activity android:name=".ui.activity.advanced.DispatchTouchEventAct" />
+
+        <activity android:name=".ui.activity.advanced.CustomizationViewAct" />
         
     </application>
 

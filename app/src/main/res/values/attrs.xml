@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 自定义View的自定义属性 -->
+    <declare-styleable name="MusicSwitchView">
+        <attr name="enabled" format="boolean" />
+        <attr name="progress_width" format="dimension" />
+        <!-- 1、可以支持多个类型用 | 隔开 -->
+        <attr name="progress_color" format="color|reference" />
+        <attr name="progress_default_color" format="color|reference" />
+        <attr name="switch_width" format="dimension" />
+        <attr name="switch_height" format="dimension" />
+        <attr name="background" format="reference" />
+
+        <!-- 自定义属性的单个属性总计 10 个类型，可以组合使用 -->
+        <attr name="type_boolean" format="boolean" />
+        <attr name="type_integer" format="integer" />
+        <attr name="type_float" format="float" />
+        <attr name="type_string" format="string" />
+        <!-- 2、 引用类型，采用@符号引用定义的资源类型 -->
+        <attr name="type_reference" format="reference" />
+        <!-- 3、 这里的type_color只有color类型没有reference类型，因此只能使用具体color值如"#FFFFFFFF"，不能使用已经定义好的R.color资源-->
+        <attr name="type_color" format="color" />
+        <!-- 4、 尺寸类型，带单位 -->
+        <attr name="type_dimension" format="dimension" />
+        <!-- 5、 百分数类型 -->
+        <attr name="type_fraction" format="fraction" />
+        <!-- 6、 枚举类型，例如线性布局的 orientation 属性的两个值 horizontal和vertical -->
+        <attr name="type_enum" format="enum" >
+            <!-- error: invalid value 'type_enum_value_1' for <enum>; must be an integer. -->
+            <!--<enum name="type_enum_name_1" value="type_enum_value_1" />-->
+            <enum name="type_enum_name_1" value="1" />
+            <enum name="type_enum_name_2" value="2" />
+        </attr>
+        <!-- 7、 flag类型，一般用于位运算，因此其值应该按照位运算按一定规则排列，例如 windowSoftInputMode 源码：frameworks/base/core/res/res/values/attrs.xml -->
+        <attr name="type_flags" format="flags">
+            <!-- invalid value 'type_flags_value_1' for <flag>; must be an integer. -->
+            <!-- <flag name="type_flags_name_1" value="type_flags_value_1" /> -->
+            <flag name="type_flags_name_1" value="1" />
+            <flag name="type_flags_name_2" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

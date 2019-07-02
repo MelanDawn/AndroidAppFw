@@ -83,6 +83,7 @@
     <!-- 进阶 -->
     <string name="advanced_to_diy_permission">自定义Activity</string>
     <string name="advanced_to_dispatch_touch_event">事件分发机制</string>
+    <string name="advanced_to_diy_view">自定义View</string>
 
     <!-- AbsSeekBar Activity -->
     <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>
@@ -471,5 +472,14 @@
     <string name="to_state_visible">stateVisible</string>
     <string name="to_state_unchanged">stateUnchanged</string>
     <string name="to_state_unspecified">stateUnspecified</string>
+
+    <!-- 自定义view -->
+    <string name="customization_view_request_layout">调用MusicSwitchView的 requestLayout（仅UI线程）</string>
+    <string name="customization_view_invalidate">调用MusicSwitchView的 invalidate（UI线程）</string>
+    <string name="customization_view_post_invalidate">调用MusicSwitchView的 postInvalidate（无线程限制）</string>
+
+    <string name="customization_view_no_attr_request_layout">调用CustomizedView的 requestLayout（仅UI线程）</string>
+    <string name="customization_view_no_attr_invalidate">调用CustomizedView的 invalidate（UI线程）</string>
+    <string name="customization_view_no_attr_post_invalidate">调用CustomizedView的 postInvalidate（无线程限制）</string>
 
 </resources>
