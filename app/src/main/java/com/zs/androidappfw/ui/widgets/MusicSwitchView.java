@@ -70,6 +70,22 @@ public class MusicSwitchView extends View {
         }
     }
 
+    public boolean start() {
+        if (mState == STATE_PAUSED) {
+            setState(STATE_STARTED);
+            return true;
+        }
+        return false;
+    }
+
+    public boolean pause() {
+        if (mState == STATE_STARTED) {
+            setState(STATE_PAUSED);
+            return true;
+        }
+        return false;
+    }
+
     public boolean isEnabled() {
         return mEnabled;
     }

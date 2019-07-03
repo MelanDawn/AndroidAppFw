@@ -30,14 +30,6 @@
         app:type_flags="type_flags_name_2" />
 
     <Button
-        android:id="@+id/customization_view_update_progress"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:background="@android:color/holo_blue_light"
-        android:textAllCaps="false"/>
-
-    <Button
         android:id="@+id/customization_view_request_layout_btn"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bt_height"
