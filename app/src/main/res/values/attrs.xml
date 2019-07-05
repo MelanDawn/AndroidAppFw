@@ -39,4 +39,9 @@
             <flag name="type_flags_name_2" value="2" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="TwoColumnLayout">
+        <attr name="twoColumnDistance" format="dimension" />
+        <attr name="twoRowDistance" format="dimension" />
+    </declare-styleable>
 </resources>

@@ -25,12 +25,16 @@ public class MusicSwitchView extends View {
     public static final int STATE_PAUSED = 2;
     public static final int STATE_FINISHED = 3;
 
+    private static final int PROGRESS_WIDTH = 2;
+    private static final int SWITCH_SIDE_LENGTH = 20;
+
     private int mState = STATE_PAUSED;
 
     private boolean mEnabled = false;
-    private int mProgressWidth = 5;
-    private int mSwitchWidth = 20;
-    private int mSwitchHeight = 20;
+    private int mProgressWidth = -1;
+    private int mSwitchWidth = -1;
+    private int mSwitchHeight = -1;
+    private int mSwitchSideLength = -1;
     private int mProgressColor = Color.GRAY;
     private int mProgressDefaultColor = Color.GREEN;
 
@@ -78,12 +82,10 @@ public class MusicSwitchView extends View {
         return false;
     }
 
-    public boolean pause() {
+    public void pause() {
         if (mState == STATE_STARTED) {
             setState(STATE_PAUSED);
-            return true;
         }
-        return false;
     }
 
     public boolean isEnabled() {
@@ -169,7 +171,7 @@ public class MusicSwitchView extends View {
         int switchHeight;
         int progressColor;
         int progressDefaultColor;
-        Drawable background = null;
+//        Drawable background = null;
 
         boolean typeBoolean = false;
         int typeInteger = -1;
@@ -211,9 +213,9 @@ public class MusicSwitchView extends View {
                     progressDefaultColor = typedArray.getColor(attr, Color.GRAY);
                     setProgressDefaultColor(progressDefaultColor);
                     break;
-                case R.styleable.MusicSwitchView_background:
-                    background = typedArray.getDrawable(attr);
-                    break;
+//                case R.styleable.MusicSwitchView_background:
+//                    background = typedArray.getDrawable(attr);
+//                    break;
 
                 case R.styleable.MusicSwitchView_type_boolean:
                     typeBoolean = typedArray.getBoolean(attr, false);
@@ -259,9 +261,9 @@ public class MusicSwitchView extends View {
         LUtil.d(TAG, "typeFlag=" + typeFlag);
         LUtil.d(TAG, "typeReference=" + typeReference);
 
-        if (background != null) {
-            setBackground(background);
-        }
+//        if (background != null) {
+//            setBackground(background);
+//        }
 
         typedArray.recycle();
 
@@ -274,8 +276,40 @@ public class MusicSwitchView extends View {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         LUtil.d(TAG, "onMeasure");
 
-        mInsideRadius = (float) (mSwitchWidth * Math.sqrt(2.0D));
-        mOutSideRadius = mInsideRadius + mProgressWidth;
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int height = MeasureSpec.getSize(heightMeasureSpec);
+
+        if (MeasureSpec.EXACTLY == widthMode || MeasureSpec.EXACTLY == heightMode) {
+            int paddingHorizontal = getPaddingLeft() + getPaddingRight();
+            int paddingVertical = getPaddingTop() + getPaddingBottom();
+            if (MeasureSpec.EXACTLY == widthMode && MeasureSpec.EXACTLY == heightMode) {
+                mOutSideRadius = Math.min(width, height);
+                if (paddingHorizontal > paddingVertical) {
+                    mOutSideRadius -= paddingHorizontal;
+                } else {
+                    mOutSideRadius -= paddingVertical;
+                }
+            } else if (MeasureSpec.EXACTLY == widthMode) {
+                mOutSideRadius = width - paddingHorizontal;
+            } else  {
+                mOutSideRadius = height - paddingVertical;
+            }
+            mOutSideRadius *= 0.5F; // 以上计算都是正方形边长，半径需要取半；
+            if (mProgressWidth < 0) setProgressWidth(PROGRESS_WIDTH);
+            mInsideRadius = mOutSideRadius - mProgressWidth;
+            mSwitchSideLength = (int)(mInsideRadius * 1.5F);
+        } else {
+            // AT_MOST or UNSPECIFIED
+            if (mProgressWidth < 0) setProgressWidth(PROGRESS_WIDTH);
+            if (mSwitchHeight < 0) setSwitchHeight(SWITCH_SIDE_LENGTH);
+            if (mSwitchWidth < 0) setSwitchWidth(SWITCH_SIDE_LENGTH);
+            mSwitchSideLength = Math.max(mSwitchHeight, mSwitchWidth);
+            mInsideRadius = (float) (mSwitchSideLength / Math.sqrt(2D));
+            mOutSideRadius = (float) (SWITCH_SIDE_LENGTH / Math.sqrt(2));
+        }
     }
 
     @Override
@@ -316,12 +350,14 @@ public class MusicSwitchView extends View {
         } else {
             drawable = mSwitchPaused;
         }
+        int right = Math.max(drawable.getIntrinsicWidth(), mSwitchSideLength/2);
+        int bottom = Math.max(drawable.getIntrinsicHeight(), mSwitchSideLength/2);
         canvas.save();
         // 截取drawable绘制区域
-        canvas.clipRect(mOutSideRadius - mInsideRadius / 2, mOutSideRadius - mInsideRadius / 2, mOutSideRadius + mInsideRadius / 2, mOutSideRadius + mInsideRadius / 2);
-        drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
+//        canvas.clipRect(mOutSideRadius - mInsideRadius / 2, mOutSideRadius - mInsideRadius / 2, mOutSideRadius + mInsideRadius / 2, mOutSideRadius + mInsideRadius / 2);
+        drawable.setBounds(0, 0, right, bottom);
         // 将 drawable 绘制的起始位置移动到让 drawable 处在当前view正中间的位置
-        canvas.translate(mOutSideRadius - drawable.getIntrinsicWidth() * 0.5F, mOutSideRadius - drawable.getIntrinsicHeight() * 0.5F);
+        canvas.translate(mOutSideRadius - right * 0.5F, mOutSideRadius - bottom * 0.5F);
         drawable.draw(canvas);
         canvas.restore();
     }

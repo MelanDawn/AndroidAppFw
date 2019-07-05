@@ -1,14 +1,12 @@
 package com.zs.androidappfw.ui.widgets;
 
 import android.content.Context;
-import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.zs.androidappfw.R;
 import com.zs.androidappfw.utils.LUtil;
 
 public class CustomizedView extends View {

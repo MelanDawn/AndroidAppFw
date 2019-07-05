@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
     <com.zs.androidappfw.ui.widgets.MusicSwitchView
         android:id="@+id/customization_view_msv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
         android:background="@android:color/holo_blue_light"
         app:enabled="true"
         app:progress_width="10dp"
@@ -53,6 +62,34 @@
         android:text="@string/customization_view_post_invalidate"
         android:textAllCaps="false"/>
 
+    <com.zs.androidappfw.ui.widgets.MusicSwitchView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@android:color/holo_blue_light"
+        app:enabled="true"
+        app:progress_width="3dp"
+        app:progress_default_color="@android:color/darker_gray"
+        app:progress_color="@android:color/holo_green_dark"
+        app:background="@android:color/holo_orange_dark" />
+
+    <com.zs.androidappfw.ui.widgets.MusicSwitchView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="20dp"
+        android:background="@android:color/holo_blue_light"
+        app:enabled="true"
+        app:progress_width="5dp"
+        app:progress_default_color="@android:color/darker_gray"
+        app:progress_color="@android:color/holo_green_dark"
+        app:background="@android:color/holo_orange_dark" />
+
     <com.zs.androidappfw.ui.widgets.CustomizedView
         android:id="@+id/customization_view_cv"
         android:layout_width="100dp"
@@ -82,4 +119,6 @@
         android:gravity="center_vertical|start"
         android:text="@string/customization_view_no_attr_post_invalidate"
         android:textAllCaps="false"/>
-</LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

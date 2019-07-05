@@ -84,6 +84,7 @@
     <string name="advanced_to_diy_permission">自定义Activity</string>
     <string name="advanced_to_dispatch_touch_event">事件分发机制</string>
     <string name="advanced_to_diy_view">自定义View</string>
+    <string name="advanced_to_diy_view_group">自定义ViewGroup</string>
 
     <!-- AbsSeekBar Activity -->
     <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>

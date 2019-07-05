@@ -26,4 +26,12 @@
         android:gravity="center_vertical|start"
         android:text="@string/advanced_to_diy_view"
         android:textAllCaps="false"/>
+
+    <Button
+        android:id="@+id/advanced_to_diy_view_group"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/advanced_to_diy_view_group"
+        android:textAllCaps="false"/>
 </LinearLayout>
