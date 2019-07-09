@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/act_iv_demo_v"
+    android:scaleGravity="top"
+    android:level="5000"
+    android:scaleHeight="50%"
+    android:scaleWidth="50%">
+    <!--android:level="10000"  API 24-->
+    <!--android:useIntrinsicSizeAsMinimum="false" 文档实际没有这个属性-->
+</scale>

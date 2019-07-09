@@ -18,6 +18,18 @@
 
     <string name="to_window_soft_input_mode">窗口软键盘模式</string>
 
+    <string name="to_drawable">Drawable</string>
+    <string name="to_drawable_bitmap">BitmapDrawable</string>
+    <string name="to_drawable_nine_patch">NinePatchDrawable</string>
+    <string name="to_drawable_layer">LayerDrawable</string>
+    <string name="to_drawable_state_list">StateListDrawable</string>
+    <string name="to_drawable_level_list">LevelListDrawable</string>
+    <string name="to_drawable_transition">TransitionDrawable</string>
+    <string name="to_drawable_inset">InsetDrawable</string>
+    <string name="to_drawable_clip">ClipDrawable</string>
+    <string name="to_drawable_scale">ScaleDrawable</string>
+    <string name="to_drawable_shape">ShapeDrawable</string>
+
     <!-- UI -->
     <string name="to_progress_bar">ProgressBar(不可交互)</string>
     <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)(抽象类)</string>
@@ -483,4 +495,67 @@
     <string name="customization_view_no_attr_invalidate">调用CustomizedView的 invalidate（UI线程）</string>
     <string name="customization_view_no_attr_post_invalidate">调用CustomizedView的 postInvalidate（无线程限制）</string>
 
+    <!-- drawable -->
+    <string name="drawable_bitmap_dsc">
+        bitmap（位图）资源：Android 平台支持 png、jpg、gif（无法自动播放）三种格式。\n
+        bitmap 可以通过 xml 添加部分需要的属性，通过资源文件的 bitmap 标签即可。
+    </string>
+    <string name="drawable_nine_patch_dsc">
+        9patch图片\n
+        用于不规则图片按照某种规则进行缩放图片功能
+    </string>
+    <string name="drawable_layer_dsc">
+        图层列表：\n
+        用于管理其他可绘制对象，列表内的所有item按照顺序绘制，最后一个在最上方。\n
+        可以实现不同图层错位（阴影、旋转等）效果\n
+        还可以实现闪屏页，避免不同机型缩放问题，如下图
+    </string>
+    <string name="drawable_state_list_dsc">
+        状态列表：\n
+        首先定义不同组合状态对应的drawable的item，\n
+        然后当组件状态变化时重新匹配已配置的item，\n
+        匹配成功则自动切换至对应的item的drawable视图，否则不可见或不显示
+    </string>
+    <string name="drawable_level_list_dsc">
+        级别列表：\n
+        首先定义不同级别范围对应的drawable的item，\n
+        然后通过java代码根据需要来更改level值，并重新匹配\n
+        匹配成功则自动切换至对应的item的drawable视图，否则不可见或不显示
+    </string>
+    <string name="drawable_transition_dsc">
+        TransitionDrawable（可绘制对象切换）\n
+        与 level 有关\n
+        定义的item会以指定的时间间隔切换，ImageView的大小不会因实际Drawable大小的变化而变化，因此可能会出现拉伸。经测试，即使ImageView添加了scaleType属性，仍然无法解决拉伸问题。
+    </string>
+    <string name="drawable_inset_dsc">
+        InsetDrawable（嵌入可绘制对象）\n
+        它的最重要的用途是什么呢？
+        样例ImageView为wrap_content，上下inset=10，左右inset=30，可以看到ImageView比实际图片大小更大。
+    </string>
+    <string name="drawable_clip_dsc">
+        ClipDrawable（裁剪可绘制对象）\n
+        与 level 有关\n
+        竖直裁剪方向时，按照gravity指定的内容进行裁剪，例如样例为竖直方向，gravity=center，因此裁剪上下保留中间；\n
+        水平裁剪方向时，同理。
+    </string>
+    <string name="drawable_scale_dsc">
+        ScaleDrawable（缩放可绘制对象）\n
+        与 level 有关\n
+        缩放可绘制对象，但不会影响ImageView的大小
+    </string>
+    <string name="drawable_shape_dsc">
+        ShapeDrawable（形状可绘制对象）\n
+        自定义形状：矩形、圆、线、环。\n
+        大小：size\n
+        纯色填充：solid\n
+        渐变色填充：gradient\n
+        边框：stroke\n
+        圆角：corners\n
+        内边距：padding\n
+    </string>
+    <string name="drawable_level_list_0">设置level=0</string>
+    <string name="drawable_level_list_5">设置level=5</string>
+    <string name="drawable_level_list_15">设置level=15</string>
+    <string name="drawable_level_list_25">设置level=25</string>
+    <string name="drawable_shape_padding_dsc">shape padding 生效必须是组件有内容的情况，例如下面的ImageView并无效果，TextView有效果，没有使用该padding shape的TextView也没有效果</string>
 </resources>

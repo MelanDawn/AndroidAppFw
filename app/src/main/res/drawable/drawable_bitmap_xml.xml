@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/act_iv_demo_h"
+    android:gravity="center"
+    android:dither="true"
+    android:autoMirrored="true"
+    android:alpha="0.5"
+    android:antialias="true"
+    android:filter="true"
+    android:mipMap="true"
+    android:tileMode="disabled"
+    android:tileModeX="disabled"
+    android:tileModeY="disabled"
+    android:tint="@android:color/holo_green_light"
+    android:tintMode="multiply">
+    <!-- tintMode 是指定 tint 颜色与 src 图片共同效果-->
+</bitmap>

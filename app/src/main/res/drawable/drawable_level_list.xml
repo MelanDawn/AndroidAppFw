@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- private int mLevel = 0; 通过 ImageView 源码可知，默认level = 0 -->
+    <item android:drawable="@drawable/act_iv_demo_h"
+        android:maxLevel="10"
+        android:minLevel="1"/>
+    <item android:drawable="@drawable/act_iv_demo_v"
+        android:maxLevel="20"
+        android:minLevel="11"/>
+    <item android:drawable="@drawable/act_iv_demo_mini"
+        android:maxLevel="30"
+        android:minLevel="21"/>
+    <!-- 默认值，由于默认level = 0，如果所有level的范围都不包含0，那么 ImageView 初始化时不显示图片 -->
+    <item android:drawable="@drawable/drawable_bitmap_jpg" />
+</level-list>

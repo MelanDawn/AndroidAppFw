@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:id="@+id/transition_drawable_v"
+        android:drawable="@drawable/act_iv_demo_v"/>
+    <item android:id="@+id/transition_drawable_h"
+        android:drawable="@drawable/act_iv_demo_h"
+        android:gravity="center"/>
+</transition>

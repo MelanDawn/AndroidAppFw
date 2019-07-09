@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/act_iv_demo_v"
+    android:insetTop="10dp"
+    android:insetBottom="10dp"
+    android:insetLeft="30dp"
+    android:insetRight="30dp">
+    <!-- android:inset="10dp" API 21 以上 -->
+
+</inset>

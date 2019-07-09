@@ -74,6 +74,19 @@
         <activity android:name=".ui.activity.fundamental.WsimStateUnspecifiedAct"
             android:windowSoftInputMode="stateUnspecified" />
 
+        <activity android:name=".ui.activity.fundamental.drawable.DrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.BitmapDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.NinePatchDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.LayerDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.StateListDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.LevelListDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.TransitionDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.InsetDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.ClipDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.ScaleDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.ShapeDrawableAct" />
+        <activity android:name=".ui.activity.fundamental.drawable.AnimationDrawableAct" />
+
         <activity android:name=".ui.activity.view.ImageViewAct" />
         <activity android:name=".ui.activity.view.ImageButtonAct" />
         <activity android:name=".ui.activity.view.QuickContactBadgeAct" />

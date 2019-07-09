@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drawable_shape_dsc"
+            android:layout_marginBottom="10dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/drawable_shape_default"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/drawable_shape_size"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/drawable_shape_solid"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/drawable_shape_stroke"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/drawable_shape_corners"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="@string/app_name"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/drawable_shape_gradient"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/drawable_shape_padding_dsc"
+            android:layout_marginBottom="10dp"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/drawable_shape_padding"
+            android:background="@android:color/holo_orange_light"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/app_name"
+            android:background="@drawable/drawable_shape_padding"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@string/app_name"
+            android:background="@android:color/holo_orange_light"/>
+
+    </LinearLayout>
+</ScrollView>

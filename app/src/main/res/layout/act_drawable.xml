@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_bitmap"
+        android:onClick="toDrawableBitmap"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_nine_patch"
+        android:onClick="toNinePatchDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_layer"
+        android:onClick="toLayerDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_state_list"
+        android:onClick="toStateListDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_level_list"
+        android:onClick="toLevelDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_transition"
+        android:onClick="toTransitionDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_inset"
+        android:onClick="toInsertDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_clip"
+        android:onClick="toClipDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_scale"
+        android:onClick="toScaleDrawable"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_drawable_shape"
+        android:onClick="toShapeDrawable"
+        android:textAllCaps="false"/>
+</LinearLayout>
