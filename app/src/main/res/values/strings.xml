@@ -30,6 +30,8 @@
     <string name="to_drawable_scale">ScaleDrawable</string>
     <string name="to_drawable_shape">ShapeDrawable</string>
 
+    <string name="to_font">Font</string>
+
     <!-- UI -->
     <string name="to_progress_bar">ProgressBar(不可交互)</string>
     <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)(抽象类)</string>
@@ -558,4 +560,13 @@
     <string name="drawable_level_list_15">设置level=15</string>
     <string name="drawable_level_list_25">设置level=25</string>
     <string name="drawable_shape_padding_dsc">shape padding 生效必须是组件有内容的情况，例如下面的ImageView并无效果，TextView有效果，没有使用该padding shape的TextView也没有效果</string>
+
+    <string name="font_dsc">
+        字体样式（宋体、微软雅黑等）\n\n
+        TextView的typeface属性用于设置系统自带的字体别名；\n
+        TextView的fontFamily属性用于引用在res/font/目录下的ttf字体文件；\n
+        res/font目录下的ttf字体文件可以通过java代码动态设置；\n
+        字体文件还可以放在assets/fonts目录下，通过java代码动态设置；\n\n
+        typeface是绿色，fontFamily是橘色，动态设置时红色。\n
+    </string>
 </resources>

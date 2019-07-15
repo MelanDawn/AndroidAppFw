@@ -27,4 +27,12 @@
         android:text="@string/to_drawable"
         android:textAllCaps="false"/>
 
+    <Button
+        android:id="@+id/base_to_font"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bt_height"
+        android:gravity="center_vertical|start"
+        android:text="@string/to_font"
+        android:textAllCaps="false"/>
+
 </LinearLayout>
