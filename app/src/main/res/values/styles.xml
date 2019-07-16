@@ -8,11 +8,17 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowNoTitle">true</item>
     </style>
-    
-    <style name="SplashTheme" parent="@style/AppTheme">
+
+    <!-- 直接继承自系统内建的主题，通过 parent 关键字标识-->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowBackground">@drawable/splash</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- 直接继承自自定义的主题，通过“.”的形式实现继承，不推荐用 parent-->
+    <style name="SplashTheme.Demo">
         <item name="windowNoTitle">true</item>
     </style>
 
