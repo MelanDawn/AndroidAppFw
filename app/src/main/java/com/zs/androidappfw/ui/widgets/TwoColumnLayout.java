@@ -162,12 +162,31 @@ public class TwoColumnLayout extends ViewGroup {
     }
 
     @Override
+    protected void onFinishInflate() {
+        super.onFinishInflate();
+        // 父视图及自身内部子视图全部填充完毕时回调。
+        LUtil.d(TAG, "onFinishInflate");
+    }
+
+    @Override
+    public void setLayoutParams(LayoutParams params) {
+        super.setLayoutParams(params);
+        LUtil.d(TAG, "setLayoutParams");
+    }
+
+    @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
+        LUtil.d(TAG, "generateLayoutParams attrs");
+        int len = attrs.getAttributeCount();
+        for (int i = 0; i < len; i++) {
+            LUtil.d(TAG, attrs.getAttributeName(i) + "-->" + attrs.getAttributeNameResource(i));
+        }
         return new MyLayoutParams(getContext(), attrs);
     }
 
     @Override
     protected ViewGroup.LayoutParams generateLayoutParams(ViewGroup.LayoutParams lp) {
+        LUtil.d(TAG, "generateLayoutParams lp");
         return new MyLayoutParams(lp);
     }
 
@@ -188,6 +207,12 @@ public class TwoColumnLayout extends ViewGroup {
 
         MyLayoutParams(LayoutParams lp) {
             super(lp);
+        }
+
+        @Override
+        public void resolveLayoutDirection(int layoutDirection) {
+            super.resolveLayoutDirection(layoutDirection);
+            LUtil.d(TAG, "MyLayoutParams resolveLayoutDirection");
         }
     }
 }
