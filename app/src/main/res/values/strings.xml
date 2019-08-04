@@ -63,6 +63,7 @@
     <string name="to_switch">|-- |-- |-- Switch(拨动开关)</string>
     <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
 
+    <string name="to_space">Space（API 14）</string>
     <string name="to_view_stub">ViewStub</string>
 
     <string name="to_view_group">ViewGroup</string>
@@ -260,6 +261,11 @@
     <string name="switch_normal">默认配置</string>
     <string name="switch_disabled">disabled状态</string>
     <string name="switch_no_background">去掉背景，background=@null</string>
+
+    <!-- Space Activity -->
+    <string name="space_description">
+        Space 用于在组件中间占位，不绘制任何内容，因此无法设置背景色。
+    </string>
 
     <!-- ViewStub Activity -->
     <string name="view_stub_description">

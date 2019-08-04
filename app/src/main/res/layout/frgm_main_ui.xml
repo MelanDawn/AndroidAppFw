@@ -219,6 +219,14 @@
             android:textAllCaps="false"/>
 
         <Button
+            android:id="@+id/ui_to_space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_space"
+            android:textAllCaps="false"/>
+
+        <Button
             android:id="@+id/ui_to_view_stub"
             android:layout_width="match_parent"
             android:layout_height="@dimen/bt_height"

@@ -28,6 +28,7 @@ import com.zs.androidappfw.ui.activity.view.QuickContactBadgeAct;
 import com.zs.androidappfw.ui.activity.view.RadioButtonAct;
 import com.zs.androidappfw.ui.activity.view.RatingBarAct;
 import com.zs.androidappfw.ui.activity.view.SeekBarAct;
+import com.zs.androidappfw.ui.activity.view.SpaceAct;
 import com.zs.androidappfw.ui.activity.view.TextClockAct;
 import com.zs.androidappfw.ui.activity.view.TextViewAct;
 import com.zs.androidappfw.ui.activity.view.ToggleButtonAct;
@@ -139,6 +140,7 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
         initAndSetClickListener(view, R.id.ui_to_relative_layout);
         initAndSetClickListener(view, R.id.ui_to_dialer_filter);
         initAndSetClickListener(view, R.id.ui_to_two_line_list_item);
+        initAndSetClickListener(view, R.id.ui_to_space);
         initAndSetClickListener(view, R.id.ui_to_view_stub);
 
         initAndSetClickListener(view, R.id.ui_to_animation_frame);
@@ -324,6 +326,9 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.ui_to_two_line_list_item:
                 startActivity(TwoLineListItemAct.class);
+                break;
+            case R.id.ui_to_space:
+                startActivity(SpaceAct.class);
                 break;
             case R.id.ui_to_view_stub:
                 startActivity(ViewStubAct.class);
