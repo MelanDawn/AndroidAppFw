@@ -210,9 +210,63 @@ public class TwoColumnLayout extends ViewGroup {
         }
 
         @Override
+        protected void setBaseAttributes(TypedArray a, int widthAttr, int heightAttr) {
+            super.setBaseAttributes(a, widthAttr, heightAttr);
+            LUtil.d(TAG, "setBaseAttributes");
+        }
+
+        @Override
+        public boolean isMarginRelative() {
+            LUtil.d(TAG, "isMarginRelative");
+            return super.isMarginRelative();
+        }
+
+        @Override
+        public int getLayoutDirection() {
+            LUtil.d(TAG, "MyLayoutParams resolveLayoutDirection");
+            return super.getLayoutDirection();
+        }
+
+        @Override
+        public void setLayoutDirection(int layoutDirection) {
+            super.setLayoutDirection(layoutDirection);
+            LUtil.d(TAG, "setLayoutDirection");
+        }
+
+        @Override
         public void resolveLayoutDirection(int layoutDirection) {
             super.resolveLayoutDirection(layoutDirection);
             LUtil.d(TAG, "MyLayoutParams resolveLayoutDirection");
+        }
+
+        @Override
+        public int getMarginEnd() {
+            LUtil.d(TAG, "getMarginEnd");
+            return super.getMarginEnd();
+        }
+
+        @Override
+        public int getMarginStart() {
+            LUtil.d(TAG, "getMarginStart");
+            return super.getMarginStart();
+        }
+
+        @Override
+        public void setMarginEnd(int end) {
+            super.setMarginEnd(end);
+            LUtil.d(TAG, "setMarginEnd");
+        }
+
+        @Override
+        public void setMarginStart(int start) {
+            super.setMarginStart(start);
+            LUtil.d(TAG, "setMarginStart");
+        }
+
+        @Override
+        public void setMargins(int left, int top, int right, int bottom) {
+            super.setMargins(left, top, right, bottom);
+            LUtil.d(TAG, "setMargins");
         }
     }
 }
