@@ -57,6 +57,8 @@
     <string name="to_switch">|-- |-- |-- Switch(拨动开关)</string>
     <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
 
+    <string name="to_view_stub">ViewStub</string>
+
     <string name="to_view_group">ViewGroup</string>
     <string name="to_absolute_layout">|-- AbsoluteLayout(绝对布局，API 3 过期)</string>
     <string name="to_web_view">|-- |-- WebView</string>
@@ -240,6 +242,15 @@
     <string name="switch_normal">默认配置</string>
     <string name="switch_disabled">disabled状态</string>
     <string name="switch_no_background">去掉背景，background=@null</string>
+
+    <!-- ViewStub Activity -->
+    <string name="view_stub_description">
+        ViewStub 包裹视图资源，但不会加载。\n
+        1、ViewStub 创建时，setVisibility(GONE);\n
+	    2、重写 onMeasure() 尺寸=== 0；重写 onDraw() 不绘制任何内容；\n
+        3、仅在调用 setVisibility 或 inflate 时会加载资源，可以延迟加载或者不加载，特定地方可以减少加载的内容或可能不加载，因此可以增强性能。
+    </string>
+    <string name="view_stub_inflate">加载ViewStub布局</string>
 
     <!-- AbsoluteLayout Activity -->
     <string name="absolute_layout_description">

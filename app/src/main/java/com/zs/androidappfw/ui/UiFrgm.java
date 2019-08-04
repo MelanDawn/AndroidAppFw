@@ -31,6 +31,7 @@ import com.zs.androidappfw.ui.activity.view.SeekBarAct;
 import com.zs.androidappfw.ui.activity.view.TextClockAct;
 import com.zs.androidappfw.ui.activity.view.TextViewAct;
 import com.zs.androidappfw.ui.activity.view.ToggleButtonAct;
+import com.zs.androidappfw.ui.activity.view.ViewStubAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.AbsoluteLayoutAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.ActionMenuViewAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.AppWidgetHostViewAct;
@@ -127,6 +128,8 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
         initAndSetClickListener(view, R.id.ui_to_relative_layout);
         initAndSetClickListener(view, R.id.ui_to_dialer_filter);
         initAndSetClickListener(view, R.id.ui_to_two_line_list_item);
+        initAndSetClickListener(view, R.id.ui_to_view_stub);
+
         initAndSetClickListener(view, R.id.ui_to_animation_frame);
         initAndSetClickListener(view, R.id.ui_to_animation_tween);
         initAndSetClickListener(view, R.id.ui_to_animation_attribute);
@@ -295,6 +298,10 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
             case R.id.ui_to_two_line_list_item:
                 startActivity(TwoLineListItemAct.class);
                 break;
+            case R.id.ui_to_view_stub:
+                startActivity(ViewStubAct.class);
+                break;
+
             case R.id.ui_to_animation_frame:
                 startActivity(AnimationFrameAct.class);
                 break;

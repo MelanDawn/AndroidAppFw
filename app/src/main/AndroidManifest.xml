@@ -113,6 +113,8 @@
         <activity android:name=".ui.activity.view.SwitchAct" />
         <activity android:name=".ui.activity.view.ToggleButtonAct" />
 
+        <activity android:name=".ui.activity.view.ViewStubAct" />
+
         <activity android:name=".ui.activity.view.viewgroup.ViewGroupAct" />
 
         <activity android:name=".ui.activity.view.viewgroup.AbsoluteLayoutAct" />

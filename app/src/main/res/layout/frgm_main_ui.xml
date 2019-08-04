@@ -177,6 +177,14 @@
             android:text="@string/to_toggle_btn"
             android:textAllCaps="false"/>
 
+        <Button
+            android:id="@+id/ui_to_view_stub"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_view_stub"
+            android:textAllCaps="false"/>
+
         <!-- ViewGroup and its subclass -->
         <Button
             android:id="@+id/ui_to_view_group"
