@@ -32,6 +32,11 @@ import com.zs.androidappfw.ui.activity.view.TextClockAct;
 import com.zs.androidappfw.ui.activity.view.TextViewAct;
 import com.zs.androidappfw.ui.activity.view.ToggleButtonAct;
 import com.zs.androidappfw.ui.activity.view.ViewStubAct;
+import com.zs.androidappfw.ui.activity.view.tag.BlinkAct;
+import com.zs.androidappfw.ui.activity.view.tag.IncludeAct;
+import com.zs.androidappfw.ui.activity.view.tag.MergeAct;
+import com.zs.androidappfw.ui.activity.view.tag.RequestFocusAct;
+import com.zs.androidappfw.ui.activity.view.tag.TagAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.AbsoluteLayoutAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.ActionMenuViewAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.AppWidgetHostViewAct;
@@ -76,6 +81,12 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
     }
 
     private void initView(View view) {
+        initAndSetClickListener(view, R.id.ui_to_tag_blink);
+        initAndSetClickListener(view, R.id.ui_to_tag_include);
+        initAndSetClickListener(view, R.id.ui_to_tag_merge);
+        initAndSetClickListener(view, R.id.ui_to_tag_request_focus);
+        initAndSetClickListener(view, R.id.ui_to_tag_tag);
+
         initAndSetClickListener(view, R.id.ui_to_progress_bar);
         initAndSetClickListener(view, R.id.ui_to_abs_seek_bar);
         initAndSetClickListener(view, R.id.ui_to_rating_bar);
@@ -142,6 +153,22 @@ public class UiFrgm extends BaseFragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.ui_to_tag_blink:
+                startActivity(BlinkAct.class);
+                break;
+            case R.id.ui_to_tag_include:
+                startActivity(IncludeAct.class);
+                break;
+            case R.id.ui_to_tag_merge:
+                startActivity(MergeAct.class);
+                break;
+            case R.id.ui_to_tag_request_focus:
+                startActivity(RequestFocusAct.class);
+                break;
+            case R.id.ui_to_tag_tag:
+                startActivity(TagAct.class);
+                break;
+
             case R.id.ui_to_progress_bar:
                 startActivity(ProgressBarAct.class);
                 break;

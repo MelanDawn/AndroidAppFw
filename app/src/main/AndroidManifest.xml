@@ -89,6 +89,12 @@
 
         <activity android:name=".ui.activity.fundamental.font.FontActivity" />
 
+        <activity android:name=".ui.activity.view.tag.BlinkAct" />
+        <activity android:name=".ui.activity.view.tag.IncludeAct" />
+        <activity android:name=".ui.activity.view.tag.MergeAct" />
+        <activity android:name=".ui.activity.view.tag.RequestFocusAct" />
+        <activity android:name=".ui.activity.view.tag.TagAct" />
+
         <activity android:name=".ui.activity.view.ImageViewAct" />
         <activity android:name=".ui.activity.view.ImageButtonAct" />
         <activity android:name=".ui.activity.view.QuickContactBadgeAct" />

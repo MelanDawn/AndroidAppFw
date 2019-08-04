@@ -8,6 +8,47 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <!-- tag -->
+        <Button
+            android:id="@+id/ui_to_tag_blink"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tag_blink"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_tag_include"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tag_include"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_tag_merge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tag_merge"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_tag_request_focus"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tag_request_focus"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:id="@+id/ui_to_tag_tag"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bt_height"
+            android:gravity="center_vertical|start"
+            android:text="@string/to_tag_tag"
+            android:textAllCaps="false"/>
+
         <!-- ProgressBar and its subclass -->
         <Button
             android:id="@+id/ui_to_progress_bar"

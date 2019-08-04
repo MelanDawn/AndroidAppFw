@@ -33,6 +33,12 @@
     <string name="to_font">Font</string>
 
     <!-- UI -->
+    <string name="to_tag_blink">blink</string>
+    <string name="to_tag_include">include</string>
+    <string name="to_tag_merge">merge</string>
+    <string name="to_tag_request_focus">requestFocus</string>
+    <string name="to_tag_tag">tag</string>
+
     <string name="to_progress_bar">ProgressBar(不可交互)</string>
     <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)(抽象类)</string>
     <string name="to_rating_bar">|-- |-- RatingBar(比例进度条，五角星状)</string>
@@ -101,6 +107,18 @@
     <string name="advanced_to_dispatch_touch_event">事件分发机制</string>
     <string name="advanced_to_diy_view">自定义View</string>
     <string name="advanced_to_diy_view_group">自定义ViewGroup</string>
+
+    <string name="tag_blink_description">被blink包裹的视图全体闪烁</string>
+    <string name="tag_include_description">引入视图，复用视图代码</string>
+    <string name="tag_merge_description">被引入的视图，可减少布局层次</string>
+    <string name="tag_request_focus_description">
+        为该标签的父视图请求焦点，经测试 LinearLayout 无法获取、TextView无法获取、EditText都可以获取，
+        因此可以认为是输入框可以，可能存在其他视图也可以。</string>
+    <string name="tag_tag_description">
+        1、tag标签用于给View提供额外的信息，一个tag是一个信息，可以添加多个tag，以key-value形式；\n
+        2、取值时也需要通过 getTag(R.id.key) 形式获取value；\n
+        3、View自身可以设置 android:tag属性，这个tag属性也是一个额外信息，两者意义相同，但tag标签可以提供更多信息。
+    </string>
 
     <!-- AbsSeekBar Activity -->
     <string name="abs_seek_bar_description">抽象类，可拖动进度条基类</string>

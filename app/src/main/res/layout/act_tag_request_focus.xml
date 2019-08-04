@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/tag_request_focus_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tag_request_focus_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tag_request_focus_description">
+            <requestFocus />
+        </TextView>
+
+        <EditText
+            android:id="@+id/tag_request_focus_et_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:autofillHints="@string/app_name"
+            android:hint="@string/app_name"
+            android:text="@string/app_name">
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/tag_request_focus_et_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:autofillHints="@string/app_name"
+            android:hint="@string/app_name"
+            android:text="@string/app_name">
+            <requestFocus />
+        </EditText>
+
+        <requestFocus />
+    </LinearLayout>
+</ScrollView>
