@@ -164,7 +164,7 @@ public class TwoColumnLayout extends ViewGroup {
     @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
-        // 父视图及自身内部子视图全部填充完毕时回调。
+        // 当前视图填充完毕（并且所有子视图已经填充完毕）
         LUtil.d(TAG, "onFinishInflate");
     }
 
@@ -197,6 +197,8 @@ public class TwoColumnLayout extends ViewGroup {
 
     static class MyLayoutParams extends MarginLayoutParams {
 
+        private static final String TAG = MyLayoutParams.class.getSimpleName();
+
         MyLayoutParams(Context c, AttributeSet attrs) {
             super(c, attrs);
         }
@@ -223,7 +225,7 @@ public class TwoColumnLayout extends ViewGroup {
 
         @Override
         public int getLayoutDirection() {
-            LUtil.d(TAG, "MyLayoutParams resolveLayoutDirection");
+            LUtil.d(TAG, "MyLayoutParams getLayoutDirection");
             return super.getLayoutDirection();
         }
 
@@ -236,7 +238,7 @@ public class TwoColumnLayout extends ViewGroup {
         @Override
         public void resolveLayoutDirection(int layoutDirection) {
             super.resolveLayoutDirection(layoutDirection);
-            LUtil.d(TAG, "MyLayoutParams resolveLayoutDirection");
+            LUtil.d(TAG, "MyLayoutParams resolveLayoutDirection " + layoutDirection);
         }
 
         @Override

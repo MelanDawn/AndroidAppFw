@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.zs.androidappfw.config.Config;
 import com.zs.androidappfw.ui.MainActivity;
+import com.zs.androidappfw.ui.base.BaseActivity;
 import com.zs.androidappfw.utils.LUtil;
 
 import java.lang.ref.WeakReference;
@@ -19,7 +19,7 @@ import java.lang.ref.WeakReference;
  *
  */
 
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
     private static final String TAG = "SplashActivity";
 

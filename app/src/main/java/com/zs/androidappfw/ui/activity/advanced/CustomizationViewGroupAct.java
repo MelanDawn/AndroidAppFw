@@ -10,14 +10,19 @@ import android.widget.ScrollView;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;
+import com.zs.androidappfw.ui.widgets.TwoColumnLayout;
 import com.zs.androidappfw.utils.LUtil;
+
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class CustomizationViewGroupAct extends BaseActivity {
 
+    private TwoColumnLayout twoColumnLayout;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_customization_view_group);
+        twoColumnLayout = findViewById(R.id.customization_view_group_tcl);
     }
 
     @Override
@@ -35,6 +40,7 @@ public class CustomizationViewGroupAct extends BaseActivity {
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
         LUtil.d(TAG, "onWindowFocusChanged");
+        LUtil.d(TAG, "" + twoColumnLayout.getLayoutParams());
         View view = getWindow().getDecorView();
         ViewParent viewParent = view.getParent();
         while(viewParent != null) {
