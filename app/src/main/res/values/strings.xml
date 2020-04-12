@@ -32,6 +32,8 @@
 
     <string name="to_font">Font</string>
 
+    <string name="to_file_system">FileSystem</string>
+
     <!-- UI -->
     <string name="to_tag_blink">blink</string>
     <string name="to_tag_include">include</string>

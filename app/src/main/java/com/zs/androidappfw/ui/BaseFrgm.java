@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zs.androidappfw.R;
+import com.zs.androidappfw.ui.activity.fundamental.FileSystemAct;
 import com.zs.androidappfw.ui.activity.fundamental.drawable.DrawableAct;
 import com.zs.androidappfw.ui.activity.fundamental.font.FontActivity;
 import com.zs.androidappfw.ui.activity.fundamental.lifecycle.ActivityStandardAct;
@@ -30,6 +31,7 @@ public class BaseFrgm extends BaseFragment implements View.OnClickListener {
         initAndSetClickListener(view, R.id.base_to_wsim);
         initAndSetClickListener(view, R.id.base_to_drawable);
         initAndSetClickListener(view, R.id.base_to_font);
+        initAndSetClickListener(view, R.id.base_to_file_system);
     }
 
     private void initAndSetClickListener(View view, int id) {
@@ -50,6 +52,9 @@ public class BaseFrgm extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.base_to_font:
                 startActivity(FontActivity.class);
+                break;
+            case R.id.base_to_file_system:
+                startActivity(FileSystemAct.class);
                 break;
         }
     }
