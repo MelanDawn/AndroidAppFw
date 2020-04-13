@@ -89,6 +89,7 @@
 
         <activity android:name=".ui.activity.fundamental.font.FontActivity" />
 
+        <activity android:name=".ui.activity.fundamental.DeviceInfoAct" />
         <activity android:name=".ui.activity.fundamental.FileSystemAct" />
 
         <activity android:name=".ui.activity.view.tag.BlinkAct" />
