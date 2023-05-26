@@ -3,7 +3,8 @@ package com.zs.androidappfw.ui.activity.view;
 // Created by zhangs on 2019/2/23.
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 

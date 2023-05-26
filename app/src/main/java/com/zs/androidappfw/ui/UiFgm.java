@@ -1,11 +1,12 @@
 package com.zs.androidappfw.ui;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.activity.animation.AnimationAttributeAct;
@@ -29,6 +30,7 @@ import com.zs.androidappfw.ui.activity.view.RadioButtonAct;
 import com.zs.androidappfw.ui.activity.view.RatingBarAct;
 import com.zs.androidappfw.ui.activity.view.SeekBarAct;
 import com.zs.androidappfw.ui.activity.view.SpaceAct;
+import com.zs.androidappfw.ui.activity.view.SwitchAct;
 import com.zs.androidappfw.ui.activity.view.TextClockAct;
 import com.zs.androidappfw.ui.activity.view.TextViewAct;
 import com.zs.androidappfw.ui.activity.view.ToggleButtonAct;
@@ -55,7 +57,6 @@ import com.zs.androidappfw.ui.activity.view.viewgroup.NumberPickerAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.RelativeLayoutAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.ScrollViewAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.SearchViewAct;
-import com.zs.androidappfw.ui.activity.view.SwitchAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.TabHostAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.TabWidgetAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.TableLayoutAct;
@@ -71,12 +72,12 @@ import com.zs.androidappfw.ui.activity.view.viewgroup.WebViewAct;
 import com.zs.androidappfw.ui.activity.view.viewgroup.ZoomControlsAct;
 import com.zs.androidappfw.ui.base.BaseFragment;
 
-public class UiFrgm extends BaseFragment implements View.OnClickListener {
+public class UiFgm extends BaseFragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frgm_main_ui, container, false);
+        View view = inflater.inflate(R.layout.fgm_main_ui, container, false);
         initView(view);
         return view;
     }

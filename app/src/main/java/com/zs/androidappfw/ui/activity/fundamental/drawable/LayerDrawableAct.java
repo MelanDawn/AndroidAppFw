@@ -1,12 +1,11 @@
 package com.zs.androidappfw.ui.activity.fundamental.drawable;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;
-//import com.zs.androidappfw.utils.LUtil;
 
 public class LayerDrawableAct extends BaseActivity {
 

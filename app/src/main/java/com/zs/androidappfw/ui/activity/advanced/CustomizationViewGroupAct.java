@@ -1,19 +1,17 @@
 package com.zs.androidappfw.ui.activity.advanced;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.view.ViewPager;
+
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
-import android.widget.ScrollView;
+
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;
 import com.zs.androidappfw.ui.widgets.TwoColumnLayout;
 import com.zs.androidappfw.utils.LUtil;
-
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class CustomizationViewGroupAct extends BaseActivity {
 

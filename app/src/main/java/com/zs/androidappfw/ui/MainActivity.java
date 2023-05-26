@@ -1,18 +1,16 @@
 package com.zs.androidappfw.ui;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.view.MenuItem;
-import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.ui.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,26 +20,26 @@ import java.util.List;
  *
  */
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_main);
 
-        final ViewPager viewPager = findViewById(R.id.main_view_pager);
+        final ViewPager2 viewPager = findViewById(R.id.main_view_pager);
         final BottomNavigationView navigationView = findViewById(R.id.main_navigation_view);
 
         List<Fragment> fragmentList = new ArrayList<>();
-        fragmentList.add(new BaseFrgm());
-        fragmentList.add(new UiFrgm());
-        fragmentList.add(new FunctionFrgm());
-        fragmentList.add(new AdvancedFrgm());
-        TabFragmentPagerAdapter adapter = new TabFragmentPagerAdapter(getSupportFragmentManager(), fragmentList);
+        fragmentList.add(new BaseFgm());
+        fragmentList.add(new UiFgm());
+        fragmentList.add(new FunctionFgm());
+        fragmentList.add(new AdvancedFgm());
+        TabFragmentPagerAdapter adapter = new TabFragmentPagerAdapter(this, fragmentList);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
         viewPager.setOffscreenPageLimit(fragmentList.size() - 1);
 
-        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
             @Override
             public void onPageScrolled(int i, float v, int i1) {
 
@@ -58,52 +56,39 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.main_bottom_tab_base:
-                        viewPager.setCurrentItem(0);
-                        break;
-                    case R.id.main_bottom_tab_ui:
-                        viewPager.setCurrentItem(1);
-                        break;
-                    case R.id.main_bottom_tab_function:
-                        viewPager.setCurrentItem(2);
-                        break;
-                    case R.id.main_bottom_tab_advanced:
-                        viewPager.setCurrentItem(3);
-                        break;
-                    default:
-                        break;
-                }
-                return true;
+        navigationView.setOnItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.main_bottom_tab_base) {
+                viewPager.setCurrentItem(0);
+            } else if (id == R.id.main_bottom_tab_ui) {
+                viewPager.setCurrentItem(1);
+            } else if (id == R.id.main_bottom_tab_function) {
+                viewPager.setCurrentItem(2);
+            } else if (id == R.id.main_bottom_tab_advanced) {
+                viewPager.setCurrentItem(3);
             }
+            return true;
         });
     }
 }
 
-class TabFragmentPagerAdapter extends FragmentPagerAdapter {
-    private List<Fragment> mList;
+class TabFragmentPagerAdapter extends FragmentStateAdapter {
+    private final List<Fragment> mList;
 
 
-    TabFragmentPagerAdapter(FragmentManager fm, List<Fragment> list) {
-        super(fm);
+    TabFragmentPagerAdapter(FragmentActivity activity, List<Fragment> list) {
+        super(activity);
         this.mList = list;
     }
 
+    @NonNull
     @Override
-    public void setPrimaryItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        super.setPrimaryItem(container, position, object);
+    public Fragment createFragment(int position) {
+        return mList.get(position);
     }
 
     @Override
-    public Fragment getItem(int arg0) {
-        return mList.get(arg0);
-    }
-
-    @Override
-    public int getCount() {
+    public int getItemCount() {
         return mList.size();
     }
 }

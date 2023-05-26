@@ -2,7 +2,6 @@ package com.zs.androidappfw.ui.activity.view.viewgroup;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +9,8 @@ import android.widget.CheckedTextView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.ViewSwitcher;
+
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;

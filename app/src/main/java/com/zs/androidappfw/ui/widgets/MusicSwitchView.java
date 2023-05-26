@@ -1,6 +1,7 @@
 package com.zs.androidappfw.ui.widgets;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -8,11 +9,11 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.content.res.AppCompatResources;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.utils.LUtil;
@@ -267,8 +268,8 @@ public class MusicSwitchView extends View {
 
         typedArray.recycle();
 
-        mSwitchStared = AppCompatResources.getDrawable(context, R.drawable.music_view_doing);
-        mSwitchPaused = AppCompatResources.getDrawable(context, R.drawable.music_view_paused);
+        mSwitchStared = Resources.getSystem().getDrawable(R.drawable.music_view_doing, null);
+        mSwitchPaused = Resources.getSystem().getDrawable(R.drawable.music_view_paused, null);
     }
 
     @Override
@@ -381,7 +382,8 @@ public class MusicSwitchView extends View {
     }
 
     @Override
-    public @NonNull String toString() {
+    public @NonNull
+    String toString() {
         StringBuilder sb = new StringBuilder(128);
         sb.append(TAG);
         sb.append('{');

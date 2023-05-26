@@ -2,16 +2,17 @@ package com.zs.androidappfw.ui.activity.fundamental;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+
 import com.zs.androidappfw.ui.base.BaseFragment;
 import com.zs.androidappfw.utils.LUtil;
 
-public class FragmentLifecycleFrgm extends BaseFragment {
+public class FragmentLifecycleFgm extends BaseFragment {
 
     @Override
     public void onAttach(Context context) {

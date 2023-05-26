@@ -3,7 +3,8 @@ package com.zs.androidappfw.ui.base;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.utils.LUtil;
 

@@ -1,11 +1,12 @@
 package com.zs.androidappfw.ui;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.activity.advanced.CustomizationPermissionAct;
@@ -14,12 +15,12 @@ import com.zs.androidappfw.ui.activity.advanced.CustomizationViewGroupAct;
 import com.zs.androidappfw.ui.activity.advanced.DispatchTouchEventAct;
 import com.zs.androidappfw.ui.base.BaseFragment;
 
-public class AdvancedFrgm extends BaseFragment implements View.OnClickListener {
+public class AdvancedFgm extends BaseFragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.frgm_main_advanced, container, false);
+        View view = inflater.inflate(R.layout.fgm_main_advanced, container, false);
         initView(view);
         return view;
     }

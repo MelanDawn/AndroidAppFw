@@ -2,8 +2,9 @@ package com.zs.androidappfw.ui.activity.fundamental.lifecycle;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseLifecycleActivity;

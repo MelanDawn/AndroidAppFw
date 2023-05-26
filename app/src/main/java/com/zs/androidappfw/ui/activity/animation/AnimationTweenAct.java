@@ -1,11 +1,12 @@
 package com.zs.androidappfw.ui.activity.animation;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;

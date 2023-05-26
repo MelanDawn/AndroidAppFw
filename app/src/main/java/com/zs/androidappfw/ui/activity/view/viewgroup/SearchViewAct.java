@@ -3,7 +3,8 @@ package com.zs.androidappfw.ui.activity.view.viewgroup;
 // Created by zhangs on 2019/2/28.
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.ui.base.BaseActivity;
