@@ -41,12 +41,12 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    runtimeOnly 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'androidx.gridlayout:gridlayout:1.0.0'
-    implementation 'com.google.android.material:material:1.7.0'
+    runtimeOnly "androidx.appcompat:appcompat:${project.ANDROIDX_APPCOMPAT_VERSION}"
+    runtimeOnly "androidx.gridlayout:gridlayout:${project.ANDROIDX_GRIDLAYOUT_VERSION}"
+    implementation "com.google.android.material:material:${project.ANDROID_MATERIAL_VERSION}"
 
-    androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation "androidx.test:runner:${project.ANDROIDX_TEST_RUNNER_VERSION}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${project.ANDROIDX_TEST_ESPRESSO_CORE_VERSION}"
     testImplementation "junit:junit:${project.JUNIT_VERSION}"
 
     // https://mvnrepository.com/artifact/com.android.volley/volley

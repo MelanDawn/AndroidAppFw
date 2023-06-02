@@ -22,13 +22,13 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
+    androidTestImplementation "androidx.test:runner:${project.ANDROIDX_TEST_RUNNER_VERSION}"
+    androidTestImplementation "androidx.test.espresso:espresso-core:${project.ANDROIDX_TEST_ESPRESSO_CORE_VERSION}"
     testImplementation "junit:junit:${project.JUNIT_VERSION}"
-    androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     //umeng
-    implementation  'com.umeng.umsdk:common:9.6.1'// 必选
-    implementation  'com.umeng.umsdk:asms:1.8.0'// 必选
+    implementation 'com.umeng.umsdk:common:9.6.1'// 必选
+    implementation 'com.umeng.umsdk:asms:1.8.0'// 必选
     implementation 'com.umeng.umsdk:utdid:1.5.2.3'
     implementation 'com.umeng.umsdk:push:6.5.9'
 }

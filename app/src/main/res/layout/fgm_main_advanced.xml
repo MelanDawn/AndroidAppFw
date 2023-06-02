@@ -5,33 +5,21 @@
 
     <Button
         android:id="@+id/advanced_to_diy_permission"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/advanced_to_diy_permission"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/advanced_to_diy_permission" />
 
     <Button
         android:id="@+id/advanced_to_dispatch_touch_event"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/advanced_to_dispatch_touch_event"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/advanced_to_dispatch_touch_event" />
 
     <Button
         android:id="@+id/advanced_to_diy_view"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/advanced_to_diy_view"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/advanced_to_diy_view" />
 
     <Button
         android:id="@+id/advanced_to_diy_view_group"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/advanced_to_diy_view_group"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/advanced_to_diy_view_group" />
 </LinearLayout>

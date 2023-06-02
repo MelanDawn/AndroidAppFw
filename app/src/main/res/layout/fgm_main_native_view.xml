@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- tag -->
+        <Button
+            android:id="@+id/native_view_to_tag_blink"
+            style="@style/BaseButton"
+            android:text="@string/to_tag_blink" />
+
+        <Button
+            android:id="@+id/native_view_to_tag_include"
+            style="@style/BaseButton"
+            android:text="@string/to_tag_include" />
+
+        <Button
+            android:id="@+id/native_view_to_tag_merge"
+            style="@style/BaseButton"
+            android:text="@string/to_tag_merge" />
+
+        <Button
+            android:id="@+id/native_view_to_tag_request_focus"
+            style="@style/BaseButton"
+            android:text="@string/to_tag_request_focus" />
+
+        <Button
+            android:id="@+id/native_view_to_tag_tag"
+            style="@style/BaseButton"
+            android:text="@string/to_tag_tag" />
+
+        <!-- ProgressBar and its subclass -->
+        <Button
+            android:id="@+id/native_view_to_progress_bar"
+            style="@style/BaseButton"
+            android:text="@string/to_progress_bar" />
+        <Button
+            android:id="@+id/native_view_to_abs_seek_bar"
+            style="@style/BaseButton"
+            android:fontFamily="@font/timesi"
+            android:text="@string/to_abs_seek_bar" />
+
+        <Button
+            android:id="@+id/native_view_to_rating_bar"
+            style="@style/BaseButton"
+            android:text="@string/to_rating_bar" />
+
+        <Button
+            android:id="@+id/native_view_to_seek_bar"
+            style="@style/BaseButton"
+            android:text="@string/to_seek_bar" />
+
+        <!-- ImageView and its subclass -->
+        <Button
+            android:id="@+id/native_view_to_image_view"
+            style="@style/BaseButton"
+            android:text="@string/to_iv" />
+        <Button
+            android:id="@+id/native_view_to_image_button"
+            style="@style/BaseButton"
+            android:text="@string/to_iv_btn" />
+
+        <Button
+            android:id="@+id/native_view_to_quick_contact_badge"
+            style="@style/BaseButton"
+            android:text="@string/to_quick_contact_badge" />
+
+        <!-- TextView and its subclass -->
+        <Button
+            android:id="@+id/native_view_to_text_view"
+            style="@style/BaseButton"
+            android:text="@string/to_tv" />
+
+        <Button
+            android:id="@+id/native_view_to_checked_text_view"
+            style="@style/BaseButton"
+            android:text="@string/to_checked_tv" />
+
+        <Button
+            android:id="@+id/native_view_to_chronometer"
+            style="@style/BaseButton"
+            android:text="@string/to_chronometer" />
+
+        <Button
+            android:id="@+id/native_view_to_text_clock"
+            style="@style/BaseButton"
+            android:text="@string/to_text_clock" />
+
+        <Button
+            android:id="@+id/native_view_to_edit_text"
+            style="@style/BaseButton"
+            android:text="@string/to_et" />
+
+        <Button
+            android:id="@+id/native_view_to_auto_complete_text_view"
+            style="@style/BaseButton"
+            android:text="@string/to_auto_complete_tv" />
+
+        <Button
+            android:id="@+id/native_view_to_multi_auto_complete_text_view"
+            style="@style/BaseButton"
+            android:text="@string/to_multi_auto_complete_tv" />
+
+        <Button
+            android:id="@+id/native_view_to_extract_edit_text"
+            style="@style/BaseButton"
+            android:text="@string/to_extract_et" />
+
+        <Button
+            android:id="@+id/native_view_to_button"
+            style="@style/BaseButton"
+            android:text="@string/to_btn" />
+
+        <Button
+            android:id="@+id/native_view_to_compound_button"
+            style="@style/BaseButton"
+            android:fontFamily="@font/timesi"
+            android:text="@string/to_compound_btn" />
+
+        <Button
+            android:id="@+id/native_view_to_check_box"
+            style="@style/BaseButton"
+            android:text="@string/to_check_box" />
+
+        <Button
+            android:id="@+id/native_view_to_radio_btn"
+            style="@style/BaseButton"
+            android:text="@string/to_radio_btn" />
+
+        <Button
+            android:id="@+id/native_view_to_switch"
+            style="@style/BaseButton"
+            android:text="@string/to_switch" />
+
+        <Button
+            android:id="@+id/native_view_to_toggle_btn"
+            style="@style/BaseButton"
+            android:text="@string/to_toggle_btn" />
+
+        <Button
+            android:id="@+id/native_view_to_space"
+            style="@style/BaseButton"
+            android:text="@string/to_space" />
+
+        <Button
+            android:id="@+id/native_view_to_view_stub"
+            style="@style/BaseButton"
+            android:text="@string/to_view_stub" />
+
+        <!-- ViewGroup and its subclass -->
+        <Button
+            android:id="@+id/native_view_to_view_group"
+            style="@style/BaseButton"
+            android:text="@string/to_view_group" />
+
+        <Button
+            android:id="@+id/native_view_to_absolute_layout"
+            style="@style/BaseButton"
+            android:text="@string/to_absolute_layout" />
+
+        <Button
+            android:id="@+id/native_view_to_web_view"
+            style="@style/BaseButton"
+            android:text="@string/to_web_view" />
+
+        <Button
+            android:id="@+id/native_view_to_frame_layout"
+            style="@style/BaseButton"
+            android:text="@string/to_frame_layout" />
+
+        <Button
+            android:id="@+id/native_view_to_app_widget_host_view"
+            style="@style/BaseButton"
+            android:text="@string/to_app_widget_host_view" />
+
+        <Button
+            android:id="@+id/native_view_to_calendar_view"
+            style="@style/BaseButton"
+            android:text="@string/to_calendar_view" />
+
+        <Button
+            android:id="@+id/native_view_to_date_picker"
+            style="@style/BaseButton"
+            android:text="@string/to_date_picker" />
+
+        <Button
+            android:id="@+id/native_view_to_time_picker"
+            style="@style/BaseButton"
+            android:text="@string/to_time_picker" />
+
+        <Button
+            android:id="@+id/native_view_to_gesture_overlay_view"
+            style="@style/BaseButton"
+            android:text="@string/to_gesture_overlay_view" />
+
+        <Button
+            android:id="@+id/native_view_to_media_controller"
+            style="@style/BaseButton"
+            android:text="@string/to_media_controller" />
+
+        <Button
+            android:id="@+id/native_view_to_horizontal_scroll_view"
+            style="@style/BaseButton"
+            android:text="@string/to_horizontal_scroll_view" />
+
+        <Button
+            android:id="@+id/native_view_to_scroll_view"
+            style="@style/BaseButton"
+            android:text="@string/to_scroll_view" />
+
+        <Button
+            android:id="@+id/native_view_to_tab_host"
+            style="@style/BaseButton"
+            android:text="@string/to_tab_host" />
+
+        <Button
+            android:id="@+id/native_view_to_view_animator"
+            style="@style/BaseButton"
+            android:text="@string/to_view_animator" />
+
+        <Button
+            android:id="@+id/native_view_to_view_flipper"
+            style="@style/BaseButton"
+            android:text="@string/to_view_flipper" />
+
+        <Button
+            android:id="@+id/native_view_to_view_switcher"
+            style="@style/BaseButton"
+            android:text="@string/to_view_switcher" />
+
+        <Button
+            android:id="@+id/native_view_to_image_switcher"
+            style="@style/BaseButton"
+            android:text="@string/to_image_switcher" />
+
+        <Button
+            android:id="@+id/native_view_to_text_switcher"
+            style="@style/BaseButton"
+            android:text="@string/to_text_switcher" />
+
+        <Button
+            android:id="@+id/native_view_to_grid_layout"
+            style="@style/BaseButton"
+            android:text="@string/to_grid_layout" />
+
+        <Button
+            android:id="@+id/native_view_to_linear_layout"
+            style="@style/BaseButton"
+            android:text="@string/to_linear_layout" />
+
+        <Button
+            android:id="@+id/native_view_to_action_menu_view"
+            style="@style/BaseButton"
+            android:text="@string/to_action_menu_view" 
+            android:background="@android:color/holo_purple"/>
+
+        <Button
+            android:id="@+id/native_view_to_number_picker"
+            style="@style/BaseButton"
+            android:text="@string/to_number_picker" />
+
+        <Button
+            android:id="@+id/native_view_to_radio_group"
+            style="@style/BaseButton"
+            android:text="@string/to_radio_group" />
+
+        <Button
+            android:id="@+id/native_view_to_search_view"
+            style="@style/BaseButton"
+            android:text="@string/to_search_view" 
+            android:background="@android:color/holo_purple"/>
+
+        <Button
+            android:id="@+id/native_view_to_tab_widget"
+            style="@style/BaseButton"
+            android:text="@string/to_tab_widget" />
+
+        <Button
+            android:id="@+id/native_view_to_table_layout"
+            style="@style/BaseButton"
+            android:text="@string/to_table_layout" />
+
+        <Button
+            android:id="@+id/native_view_to_table_row"
+            style="@style/BaseButton"
+            android:text="@string/to_table_row" />
+
+        <Button
+            android:id="@+id/native_view_to_zoom_controls"
+            style="@style/BaseButton"
+            android:text="@string/to_zoom_controls" />
+
+        <Button
+            android:id="@+id/native_view_to_relative_layout"
+            style="@style/BaseButton"
+            android:text="@string/to_relative_layout" />
+
+        <Button
+            android:id="@+id/native_view_to_dialer_filter"
+            style="@style/BaseButton"
+            android:text="@string/to_dialer_filter" />
+
+        <Button
+            android:id="@+id/native_view_to_two_line_list_item"
+            style="@style/BaseButton"
+            android:text="@string/to_two_line_list_item" />
+
+        <Button
+            android:id="@+id/native_view_to_animation_frame"
+            style="@style/BaseButton"
+            android:text="@string/to_animation_frame" />
+
+        <Button
+            android:id="@+id/native_view_to_animation_tween"
+            style="@style/BaseButton"
+            android:text="@string/to_animation_tween" />
+
+        <Button
+            android:id="@+id/native_view_to_animation_attribute"
+            style="@style/BaseButton"
+            android:text="@string/to_animation_attribute" />
+    </LinearLayout>
+</ScrollView>

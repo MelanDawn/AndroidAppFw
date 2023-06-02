@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <com.zs.androidappfw.ui.widgets.MusicSwitchView
+    <com.zs.androidappfw.widgets.MusicSwitchView
         android:id="@+id/customization_view_msv"
         android:layout_width="200dp"
         android:layout_height="200dp"
@@ -62,7 +62,7 @@
         android:text="@string/customization_view_post_invalidate"
         android:textAllCaps="false"/>
 
-    <com.zs.androidappfw.ui.widgets.MusicSwitchView
+    <com.zs.androidappfw.widgets.MusicSwitchView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
@@ -75,7 +75,7 @@
         app:progress_color="@android:color/holo_green_dark"
         app:background="@android:color/holo_orange_dark" />
 
-    <com.zs.androidappfw.ui.widgets.MusicSwitchView
+    <com.zs.androidappfw.widgets.MusicSwitchView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="10dp"
@@ -90,7 +90,7 @@
         app:progress_color="@android:color/holo_green_dark"
         app:background="@android:color/holo_orange_dark" />
 
-    <com.zs.androidappfw.ui.widgets.CustomizedView
+    <com.zs.androidappfw.widgets.CustomizedView
         android:id="@+id/customization_view_cv"
         android:layout_width="100dp"
         android:layout_height="100dp"

@@ -11,6 +11,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zs.androidappfw.R;
+import com.zs.androidappfw.base.BaseFragmentActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +21,7 @@ import java.util.List;
  *
  */
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends BaseFragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +32,9 @@ public class MainActivity extends FragmentActivity {
 
         List<Fragment> fragmentList = new ArrayList<>();
         fragmentList.add(new BaseFgm());
-        fragmentList.add(new UiFgm());
-        fragmentList.add(new FunctionFgm());
+        fragmentList.add(new NativeViewFgm());
         fragmentList.add(new AdvancedFgm());
+        fragmentList.add(new FunctionFgm());
         TabFragmentPagerAdapter adapter = new TabFragmentPagerAdapter(this, fragmentList);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
@@ -62,9 +63,9 @@ public class MainActivity extends FragmentActivity {
                 viewPager.setCurrentItem(0);
             } else if (id == R.id.main_bottom_tab_ui) {
                 viewPager.setCurrentItem(1);
-            } else if (id == R.id.main_bottom_tab_function) {
-                viewPager.setCurrentItem(2);
             } else if (id == R.id.main_bottom_tab_advanced) {
+                viewPager.setCurrentItem(2);
+            } else if (id == R.id.main_bottom_tab_function) {
                 viewPager.setCurrentItem(3);
             }
             return true;
@@ -74,7 +75,6 @@ public class MainActivity extends FragmentActivity {
 
 class TabFragmentPagerAdapter extends FragmentStateAdapter {
     private final List<Fragment> mList;
-
 
     TabFragmentPagerAdapter(FragmentActivity activity, List<Fragment> list) {
         super(activity);

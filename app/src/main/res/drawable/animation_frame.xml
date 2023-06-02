@@ -2,12 +2,12 @@
 <animation-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:drawable="@drawable/act_iv_demo_mini"
-        android:duration="200" />
+        android:duration="400" />
     <item
         android:drawable="@drawable/act_iv_demo_h"
-        android:duration="200" />
+        android:duration="400" />
     <item
         android:drawable="@drawable/act_iv_demo_v"
-        android:duration="200" />
+        android:duration="400" />
 
 </animation-list>

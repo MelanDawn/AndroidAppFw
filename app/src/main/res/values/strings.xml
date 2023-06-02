@@ -16,6 +16,9 @@
     <string name="to_activity_single_instance">to singleInstance Activity</string>
     <string name="to_activity_standard_config_changes">to standard configChanges Activity（屏幕旋转配置）</string>
 
+    <string name="to_fragment_lifecycle_and_dynamic">Fragment`s Lifecycle Dynamic</string>
+    <string name="to_fragment_lifecycle_and_static">Fragment`s Lifecycle Static</string>
+
     <string name="to_window_soft_input_mode">窗口软键盘模式</string>
 
     <string name="to_drawable">Drawable</string>
@@ -43,7 +46,7 @@
     <string name="to_tag_tag">tag</string>
 
     <string name="to_progress_bar">ProgressBar(不可交互)</string>
-    <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)(抽象类)</string>
+    <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)</string>
     <string name="to_rating_bar">|-- |-- RatingBar(比例进度条，五角星状)</string>
     <string name="to_seek_bar">|-- |-- SeekBar(拖动进度条)</string>
 
@@ -60,7 +63,7 @@
     <string name="to_multi_auto_complete_tv">|-- |-- |-- MultiAutoCompleteTextView(多次提示输入框)</string>
     <string name="to_extract_et">|-- |-- ExtractEditText(非UI视图组件)</string>
     <string name="to_btn">|-- Button</string>
-    <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)（抽象类）</string>
+    <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)</string>
     <string name="to_check_box">|-- |-- |-- CheckBox(复选框)</string>
     <string name="to_radio_btn">|-- |-- |-- RadioButton(单选框)</string>
     <string name="to_switch">|-- |-- |-- Switch(拨动开关)</string>
@@ -497,7 +500,7 @@
     <!-- Animation Tween Activity -->
     <string name="animation_tween_description">
         补间动画\n
-        补间动画分为四种形式：alpha（透明度）、translate（位移）、scale（缩放）、rotate（旋转）。\n
+        补间动画分为四种形式：alpha（透明度）、translate（位移）、scale（缩放）、rotate（旋转）。可组合使用。\n
         补间动画一般采用 xml 实现，代码易书写和复用。\n
         有疑问可以先查看Java文件注释，若不能解决则查找其它资料
     </string>
@@ -505,7 +508,7 @@
     <!-- Animation Attribute Activity -->
     <string name="animation_attribute_description">
         属性动画\n
-        属性动画也有四种变换：alpha（透明度）、translate（位移）、scale（缩放）、rotate（旋转）。\n
+        属性动画也有四种变换：alpha（透明度）、translate（位移）、scale（缩放）、rotate（旋转）。可组合使用。\n
         属性动画由于牵扯到具体对象的属性，因此一般采用 java 实现，通过动态代码获取。xml 也可以实现但是不方便。
     </string>
 
@@ -607,4 +610,41 @@
         字体文件还可以放在assets/fonts目录下，通过java代码动态设置；\n\n
         typeface是绿色，fontFamily是橘色，动态设置时红色。\n
     </string>
+
+    <string name="to_wcn">WcnTools</string>
+
+    <!-- Wcn activity -->
+    <string name="wcn_tab_wifi">WiFi</string>
+    <string name="wcn_tab_bt">BT</string>
+    <string name="wcn_tab_lbs">LBS</string>
+    <string name="wcn_tab_nfc">NFC</string>
+    <string name="wcn_tab_uwb">UWB</string>
+
+    <string name="wcn_to_lm">LocationManager</string>
+    <string name="wcn_to_geocode">Geocoder</string>
+
+    <string name="wcn_lm_print_simple_method">printSimpleMethod</string>
+    <string name="wcn_lm_remove_all">Remove All Request</string>
+    <string name="wcn_lm_request_updates_gnss_1">Request Location GNSS1 1s</string>
+    <string name="wcn_lm_request_updates_gnss_2">Request Location GNSS2 2s</string>
+    <string name="wcn_lm_request_updates_gnss_3">Request Location GNSS3 3s</string>
+    <string name="wcn_lm_request_updates_gnss_4">Request Location GNSS4 4s</string>
+    <string name="wcn_lm_request_updates_gnss_5">Request Location GNSS5 5s</string>
+    <string name="wcn_lm_request_updates_network_1">Request Location NETWORK1 1s</string>
+    <string name="wcn_lm_request_updates_network_2">Request Location NETWORK2 30s</string>
+    <string name="wcn_lm_request_updates_network_3">Request Location NETWORK3 40s</string>
+    <string name="wcn_lm_request_updates_network_4">Request Location NETWORK4 50s</string>
+    <string name="wcn_lm_request_updates_passive">Request Location PASSIVE</string>
+    <string name="wcn_lm_request_updates_fused">Request Location FUSED</string>
+    <string name="wcn_lm_request_updates_mock">Request Location MOCK</string>
+    <string name="wcn_lm_send_extra_command">Send extra Command</string>
+    <string name="wcn_lm_add_nmea_listener">addNmeaListener</string>
+    <string name="wcn_lm_register_gnss_status_cb">registerGnssStatusCallback</string>
+    <string name="wcn_lm_register_gnss_navigation_message_cb">registerGnssNavigationMessageCallback</string>
+    <string name="wcn_lm_register_gnss_measurement_event_cb">registerGnssMeasurementsCallback</string>
+    <string name="wcn_lm_add_proximity_alert">AddProximityAlert</string>
+    <string name="wcn_lm_remove_proximity_alert">RemoveProximityAlert</string>
+    <string name="wcn_lm_add_test_provider">AddTestProvider</string>
+    <string name="wcn_lm_remove_test_provider">RemoveTestProvider</string>
+    <string name="wcn_lm_set_test_provider_location">SetTestProviderLocation</string>
 </resources>

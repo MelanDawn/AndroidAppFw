@@ -10,7 +10,16 @@
         android:text="@string/animation_tween_description"/>
 
     <ImageView
-        android:id="@+id/animation_tween_iv"
+        android:id="@+id/animation_tween_alpha_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/act_iv_demo_h"
+        android:scaleType="center"
+        android:contentDescription="@string/app_name"/>
+
+    <ImageView
+        android:id="@+id/animation_tween_translate_iv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
@@ -19,35 +28,28 @@
         android:contentDescription="@string/app_name"/>
 
     <ImageView
-        android:id="@+id/animation_tween_alpha_iv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:src="@drawable/act_iv_demo_h"
-        android:scaleType="center"
-        android:contentDescription="@string/app_name"/>
-    <ImageView
         android:id="@+id/animation_tween_scale_iv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:src="@drawable/act_iv_demo_mini"
-        android:scaleType="center"
-        android:contentDescription="@string/app_name"/>
-    <ImageView
-        android:id="@+id/animation_tween_rotate_iv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:src="@drawable/act_iv_demo_v"
         android:scaleType="center"
         android:contentDescription="@string/app_name"/>
+
     <ImageView
-        android:id="@+id/animation_tween_translate_iv"
+        android:id="@+id/animation_tween_rotate_iv"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:src="@drawable/act_iv_demo_mini"
+        android:scaleType="center"
+        android:contentDescription="@string/app_name"/>
+    <ImageView
+        android:id="@+id/animation_tween_iv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:src="@drawable/act_iv_demo_v"
         android:scaleType="center"
         android:contentDescription="@string/app_name"/>
 

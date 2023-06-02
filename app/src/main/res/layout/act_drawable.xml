@@ -4,82 +4,52 @@
     android:layout_height="match_parent">
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_bitmap"
-        android:onClick="toDrawableBitmap"
-        android:textAllCaps="false"/>
+        android:onClick="toDrawableBitmap" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_nine_patch"
-        android:onClick="toNinePatchDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toNinePatchDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_layer"
-        android:onClick="toLayerDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toLayerDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_state_list"
-        android:onClick="toStateListDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toStateListDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_level_list"
-        android:onClick="toLevelDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toLevelDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_transition"
-        android:onClick="toTransitionDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toTransitionDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_inset"
-        android:onClick="toInsertDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toInsertDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_clip"
-        android:onClick="toClipDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toClipDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_scale"
-        android:onClick="toScaleDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toScaleDrawable" />
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
+        style="@style/BaseButton"
         android:text="@string/to_drawable_shape"
-        android:onClick="toShapeDrawable"
-        android:textAllCaps="false"/>
+        android:onClick="toShapeDrawable" />
 </LinearLayout>

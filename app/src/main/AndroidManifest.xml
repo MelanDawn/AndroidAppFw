@@ -19,6 +19,18 @@
     <!-- QuickContactBadge -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
+    <!-- bluetooth -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tools:ignore="ProtectedPermissions" />
+    <!-- location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -40,147 +52,157 @@
 
         <activity android:name=".ui.MainActivity"/>
 
-        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleInstanceAct"
+        <activity android:name=".ui.lifecycle.ActivitySingleInstanceAct"
             android:launchMode="singleInstance"/>
-        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleTaskAct"
+        <activity android:name=".ui.lifecycle.ActivitySingleTaskAct"
             android:launchMode="singleTask"/>
-        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleTaskAffinityAct"
+        <activity android:name=".ui.lifecycle.ActivitySingleTaskAffinityAct"
             android:exported="true"
             android:launchMode="singleTask"
             android:taskAffinity="com.zs.androidappfw.MySingleTask"/>
-        <activity android:name=".ui.activity.fundamental.lifecycle.ActivitySingleTopAct"
+        <activity android:name=".ui.lifecycle.ActivitySingleTopAct"
             android:launchMode="singleTop" />
-        <activity android:name=".ui.activity.fundamental.lifecycle.ActivityStandardAct"
+        <activity android:name=".ui.lifecycle.ActivityStandardAct"
             android:launchMode="standard" />
-        <activity android:name=".ui.activity.fundamental.lifecycle.ActivityStandardConfigChangesAct"
+        <activity android:name=".ui.lifecycle.ActivityStandardConfigChangesAct"
+            android:configChanges="orientation" />
+        <activity android:name=".ui.lifecycle.FragmentDynamicAct"
+            android:configChanges="orientation" />
+        <activity android:name=".ui.lifecycle.FragmentStaticAct"
             android:configChanges="orientation" />
 
-        <activity android:name=".ui.activity.fundamental.WindowSoftInputModeAct" />
-        <activity android:name=".ui.activity.fundamental.WsimAdjustNothingAct"
+        <activity android:name=".ui.wsim.WindowSoftInputModeAct" />
+        <activity android:name=".ui.wsim.WsimAdjustNothingAct"
             android:windowSoftInputMode="adjustNothing" />
-        <activity android:name=".ui.activity.fundamental.WsimAdjustPanAct"
+        <activity android:name=".ui.wsim.WsimAdjustPanAct"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".ui.activity.fundamental.WsimAdjustResizeAct"
+        <activity android:name=".ui.wsim.WsimAdjustResizeAct"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".ui.activity.fundamental.WsimAdjustUnspecifiedAct"
+        <activity android:name=".ui.wsim.WsimAdjustUnspecifiedAct"
             android:exported="true"
             android:windowSoftInputMode="adjustUnspecified" />
-        <activity android:name=".ui.activity.fundamental.WsimStateAlwaysHiddenAct"
+        <activity android:name=".ui.wsim.WsimStateAlwaysHiddenAct"
             android:exported="true"
             android:windowSoftInputMode="stateAlwaysHidden" />
-        <activity android:name=".ui.activity.fundamental.WsimStateAlwaysVisibleAct"
+        <activity android:name=".ui.wsim.WsimStateAlwaysVisibleAct"
             android:windowSoftInputMode="stateAlwaysVisible" />
-        <activity android:name=".ui.activity.fundamental.WsimStateHiddenAct"
+        <activity android:name=".ui.wsim.WsimStateHiddenAct"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".ui.activity.fundamental.WsimStateVisibleAct"
+        <activity android:name=".ui.wsim.WsimStateVisibleAct"
             android:windowSoftInputMode="stateVisible" />
-        <activity android:name=".ui.activity.fundamental.WsimStateUnchangedAct"
+        <activity android:name=".ui.wsim.WsimStateUnchangedAct"
             android:windowSoftInputMode="stateUnchanged" />
-        <activity android:name=".ui.activity.fundamental.WsimStateUnspecifiedAct"
+        <activity android:name=".ui.wsim.WsimStateUnspecifiedAct"
             android:windowSoftInputMode="stateUnspecified" />
 
-        <activity android:name=".ui.activity.fundamental.drawable.DrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.BitmapDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.NinePatchDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.LayerDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.StateListDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.LevelListDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.TransitionDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.InsetDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.ClipDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.ScaleDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.ShapeDrawableAct" />
-        <activity android:name=".ui.activity.fundamental.drawable.AnimationDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.DrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.BitmapDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.NinePatchDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.LayerDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.StateListDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.LevelListDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.TransitionDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.InsetDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.ClipDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.ScaleDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.ShapeDrawableAct" />
+        <activity android:name=".ui.fundamental.drawable.AnimationDrawableAct" />
 
-        <activity android:name=".ui.activity.fundamental.font.FontActivity" />
+        <activity android:name=".ui.fundamental.font.FontActivity" />
 
-        <activity android:name=".ui.activity.fundamental.DeviceInfoAct" />
-        <activity android:name=".ui.activity.fundamental.FileSystemAct" />
+        <activity android:name=".ui.fundamental.DeviceInfoAct" />
+        <activity android:name=".ui.fundamental.FileSystemAct" />
 
-        <activity android:name=".ui.activity.view.tag.BlinkAct" />
-        <activity android:name=".ui.activity.view.tag.IncludeAct" />
-        <activity android:name=".ui.activity.view.tag.MergeAct" />
-        <activity android:name=".ui.activity.view.tag.RequestFocusAct" />
-        <activity android:name=".ui.activity.view.tag.TagAct" />
+        <activity android:name=".ui.view.tag.BlinkAct" />
+        <activity android:name=".ui.view.tag.IncludeAct" />
+        <activity android:name=".ui.view.tag.MergeAct" />
+        <activity android:name=".ui.view.tag.RequestFocusAct" />
+        <activity android:name=".ui.view.tag.TagAct" />
 
-        <activity android:name=".ui.activity.view.ImageViewAct" />
-        <activity android:name=".ui.activity.view.ImageButtonAct" />
-        <activity android:name=".ui.activity.view.QuickContactBadgeAct" />
+        <activity android:name=".ui.view.ImageViewAct" />
+        <activity android:name=".ui.view.ImageButtonAct" />
+        <activity android:name=".ui.view.QuickContactBadgeAct" />
 
-        <activity android:name=".ui.activity.view.ProgressBarAct" />
-        <activity android:name=".ui.activity.view.AbsSeekBarAct" />
-        <activity android:name=".ui.activity.view.RatingBarAct" />
-        <activity android:name=".ui.activity.view.SeekBarAct" />
+        <activity android:name=".ui.view.ProgressBarAct" />
+        <activity android:name=".ui.view.AbsSeekBarAct" />
+        <activity android:name=".ui.view.RatingBarAct" />
+        <activity android:name=".ui.view.SeekBarAct" />
 
-        <activity android:name=".ui.activity.view.TextViewAct" />
-        <activity android:name=".ui.activity.view.CheckedTextViewAct" />
-        <activity android:name=".ui.activity.view.ChronometerAct" />
-        <activity android:name=".ui.activity.view.TextClockAct" />
-        <activity android:name=".ui.activity.view.EditTextAct" />
-        <activity android:name=".ui.activity.view.AutoCompleteTextViewAct" />
-        <activity android:name=".ui.activity.view.MultiAutoCompleteTextViewAct" />
-        <activity android:name=".ui.activity.view.ExtractEditTextAct" />
-        <activity android:name=".ui.activity.view.ButtonAct" />
-        <activity android:name=".ui.activity.view.CompoundButtonAct" />
-        <activity android:name=".ui.activity.view.CheckBoxAct" />
-        <activity android:name=".ui.activity.view.RadioButtonAct" />
-        <activity android:name=".ui.activity.view.SwitchAct" />
-        <activity android:name=".ui.activity.view.ToggleButtonAct" />
+        <activity android:name=".ui.view.TextViewAct" />
+        <activity android:name=".ui.view.CheckedTextViewAct" />
+        <activity android:name=".ui.view.ChronometerAct" />
+        <activity android:name=".ui.view.TextClockAct" />
+        <activity android:name=".ui.view.EditTextAct" />
+        <activity android:name=".ui.view.AutoCompleteTextViewAct" />
+        <activity android:name=".ui.view.MultiAutoCompleteTextViewAct" />
+        <activity android:name=".ui.view.ExtractEditTextAct" />
+        <activity android:name=".ui.view.ButtonAct" />
+        <activity android:name=".ui.view.CompoundButtonAct" />
+        <activity android:name=".ui.view.CheckBoxAct" />
+        <activity android:name=".ui.view.RadioButtonAct" />
+        <activity android:name=".ui.view.SwitchAct" />
+        <activity android:name=".ui.view.ToggleButtonAct" />
 
-        <activity android:name=".ui.activity.view.SpaceAct" />
-        <activity android:name=".ui.activity.view.ViewStubAct" />
+        <activity android:name=".ui.view.SpaceAct" />
+        <activity android:name=".ui.view.ViewStubAct" />
 
-        <activity android:name=".ui.activity.view.viewgroup.ViewGroupAct" />
+        <activity android:name=".ui.view.viewgroup.ViewGroupAct" />
 
-        <activity android:name=".ui.activity.view.viewgroup.AbsoluteLayoutAct" />
-        <activity android:name=".ui.activity.view.viewgroup.WebViewAct" />
+        <activity android:name=".ui.view.viewgroup.AbsoluteLayoutAct" />
+        <activity android:name=".ui.view.viewgroup.WebViewAct" />
 
-        <activity android:name=".ui.activity.view.viewgroup.FrameLayoutAct" />
-        <activity android:name=".ui.activity.view.viewgroup.AppWidgetHostViewAct" />
-        <activity android:name=".ui.activity.view.viewgroup.CalendarViewAct" />
-        <activity android:name=".ui.activity.view.viewgroup.DatePickerAct" />
-        <activity android:name=".ui.activity.view.viewgroup.GestureOverlayViewAct" />
-        <activity android:name=".ui.activity.view.viewgroup.MediaControllerAct" />
-        <activity android:name=".ui.activity.view.viewgroup.HorizontalScrollViewAct" />
-        <activity android:name=".ui.activity.view.viewgroup.ScrollViewAct" />
-        <activity android:name=".ui.activity.view.viewgroup.TabHostAct" />
-        <activity android:name=".ui.activity.view.viewgroup.TimePickerAct" />
-        <activity android:name=".ui.activity.view.viewgroup.ViewAnimatorAct" />
-        <activity android:name=".ui.activity.view.viewgroup.ViewFlipperAct" />
-        <activity android:name=".ui.activity.view.viewgroup.ViewSwitcherAct" />
-        <activity android:name=".ui.activity.view.viewgroup.ImageSwitcherAct" />
-        <activity android:name=".ui.activity.view.viewgroup.TextSwitcherAct" />
+        <activity android:name=".ui.view.viewgroup.FrameLayoutAct" />
+        <activity android:name=".ui.view.viewgroup.AppWidgetHostViewAct" />
+        <activity android:name=".ui.view.viewgroup.CalendarViewAct" />
+        <activity android:name=".ui.view.viewgroup.DatePickerAct" />
+        <activity android:name=".ui.view.viewgroup.GestureOverlayViewAct" />
+        <activity android:name=".ui.view.viewgroup.MediaControllerAct" />
+        <activity android:name=".ui.view.viewgroup.HorizontalScrollViewAct" />
+        <activity android:name=".ui.view.viewgroup.ScrollViewAct" />
+        <activity android:name=".ui.view.viewgroup.TabHostAct" />
+        <activity android:name=".ui.view.viewgroup.TimePickerAct" />
+        <activity android:name=".ui.view.viewgroup.ViewAnimatorAct" />
+        <activity android:name=".ui.view.viewgroup.ViewFlipperAct" />
+        <activity android:name=".ui.view.viewgroup.ViewSwitcherAct" />
+        <activity android:name=".ui.view.viewgroup.ImageSwitcherAct" />
+        <activity android:name=".ui.view.viewgroup.TextSwitcherAct" />
 
-        <activity android:name=".ui.activity.view.viewgroup.GridLayoutAct" />
+        <activity android:name=".ui.view.viewgroup.GridLayoutAct" />
 
-        <activity android:name=".ui.activity.view.viewgroup.LinearLayoutAct" />
-        <activity android:name=".ui.activity.view.viewgroup.ActionMenuViewAct" />
-        <activity android:name=".ui.activity.view.viewgroup.NumberPickerAct" />
-        <activity android:name=".ui.activity.view.viewgroup.RadioGroupAct" />
-        <activity android:name=".ui.activity.view.viewgroup.SearchViewAct" />
-        <activity android:name=".ui.activity.view.viewgroup.TabWidgetAct" />
-        <activity android:name=".ui.activity.view.viewgroup.TableLayoutAct" />
-        <activity android:name=".ui.activity.view.viewgroup.TableRowAct" />
-        <activity android:name=".ui.activity.view.viewgroup.ZoomControlsAct" />
+        <activity android:name=".ui.view.viewgroup.LinearLayoutAct" />
+        <activity android:name=".ui.view.viewgroup.ActionMenuViewAct" />
+        <activity android:name=".ui.view.viewgroup.NumberPickerAct" />
+        <activity android:name=".ui.view.viewgroup.RadioGroupAct" />
+        <activity android:name=".ui.view.viewgroup.SearchViewAct" />
+        <activity android:name=".ui.view.viewgroup.TabWidgetAct" />
+        <activity android:name=".ui.view.viewgroup.TableLayoutAct" />
+        <activity android:name=".ui.view.viewgroup.TableRowAct" />
+        <activity android:name=".ui.view.viewgroup.ZoomControlsAct" />
 
-        <activity android:name=".ui.activity.view.viewgroup.RelativeLayoutAct" />
-        <activity android:name=".ui.activity.view.viewgroup.DialerFilterAct" />
-        <activity android:name=".ui.activity.view.viewgroup.TwoLineListItemAct" />
+        <activity android:name=".ui.view.viewgroup.RelativeLayoutAct" />
+        <activity android:name=".ui.view.viewgroup.DialerFilterAct" />
+        <activity android:name=".ui.view.viewgroup.TwoLineListItemAct" />
 
-        <activity android:name=".ui.activity.animation.AnimationFrameAct" />
-        <activity android:name=".ui.activity.animation.AnimationTweenAct" />
-        <activity android:name=".ui.activity.animation.AnimationAttributeAct" />
+        <activity android:name=".ui.animation.AnimationFrameAct" />
+        <activity android:name=".ui.animation.AnimationTweenAct" />
+        <activity android:name=".ui.animation.AnimationAttributeAct" />
 
         <!-- 自定义权限使用 start -->
-        <activity android:name=".ui.activity.advanced.CustomizationPermissionAct"
+        <activity android:name=".ui.advanced.CustomizationPermissionAct"
             android:exported="true"
             android:permission="com.zs.androidappfw.permission.CUSTOMIZATION_PERMISSION_PAGE"/>
         <!-- 自定义权限使用 end -->
 
-        <activity android:name=".ui.activity.advanced.DispatchTouchEventAct" />
+        <activity android:name=".ui.advanced.DispatchTouchEventAct" />
 
-        <activity android:name=".ui.activity.advanced.CustomizationViewAct" />
-        <activity android:name=".ui.activity.advanced.CustomizationViewGroupAct" />
+        <activity android:name=".ui.advanced.CustomizationViewAct" />
+        <activity android:name=".ui.advanced.CustomizationViewGroupAct" />
+
+        <activity android:name=".wcn.WcnActivity" />
+        <activity android:name=".wcn.bt.ClassicBtAct" />
+        <activity android:name=".wcn.bt.BleAct" />
+        <activity android:name=".wcn.lbs.LocationManagerAct" />
+        <activity android:name=".wcn.lbs.GeocodeAct" />
 
     </application>
 

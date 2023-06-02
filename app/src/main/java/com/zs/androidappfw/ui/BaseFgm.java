@@ -9,13 +9,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.ui.activity.fundamental.DeviceInfoAct;
-import com.zs.androidappfw.ui.activity.fundamental.FileSystemAct;
-import com.zs.androidappfw.ui.activity.fundamental.WindowSoftInputModeAct;
-import com.zs.androidappfw.ui.activity.fundamental.drawable.DrawableAct;
-import com.zs.androidappfw.ui.activity.fundamental.font.FontActivity;
-import com.zs.androidappfw.ui.activity.fundamental.lifecycle.ActivityStandardAct;
-import com.zs.androidappfw.ui.base.BaseFragment;
+import com.zs.androidappfw.ui.fundamental.DeviceInfoAct;
+import com.zs.androidappfw.ui.fundamental.FileSystemAct;
+import com.zs.androidappfw.ui.lifecycle.FragmentDynamicAct;
+import com.zs.androidappfw.ui.wsim.WindowSoftInputModeAct;
+import com.zs.androidappfw.ui.fundamental.drawable.DrawableAct;
+import com.zs.androidappfw.ui.fundamental.font.FontActivity;
+import com.zs.androidappfw.ui.lifecycle.ActivityStandardAct;
+import com.zs.androidappfw.base.BaseFragment;
 
 public class BaseFgm extends BaseFragment implements View.OnClickListener {
 
@@ -29,6 +30,7 @@ public class BaseFgm extends BaseFragment implements View.OnClickListener {
 
     private void initView(View view) {
         initAndSetClickListener(view, R.id.base_to_activity_lifecycle);
+        initAndSetClickListener(view, R.id.base_to_fragment_lifecycle);
         initAndSetClickListener(view, R.id.base_to_wsim);
         initAndSetClickListener(view, R.id.base_to_drawable);
         initAndSetClickListener(view, R.id.base_to_font);
@@ -45,6 +47,9 @@ public class BaseFgm extends BaseFragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.base_to_activity_lifecycle:
                 startActivity(ActivityStandardAct.class);
+                break;
+                case R.id.base_to_fragment_lifecycle:
+                    startFragmentActivity(FragmentDynamicAct.class);
                 break;
             case R.id.base_to_wsim:
                 startActivity(WindowSoftInputModeAct.class);

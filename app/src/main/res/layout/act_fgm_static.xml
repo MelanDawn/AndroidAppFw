@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/fragment_static_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/app_name"/>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:name="com.zs.androidappfw.ui.lifecycle.FragmentLifecycleFgm"
+        android:id="@+id/fragment_static_fm"
+        android:background="@android:color/holo_green_light"
+        android:tag="fragment_static"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

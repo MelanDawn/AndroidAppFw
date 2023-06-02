@@ -3,10 +3,12 @@
     android:duration="2000"
     android:fillAfter="false"
     android:fillBefore="false"
-    android:repeatMode="restart"
+    android:repeatMode="reverse"
     android:shareInterpolator="true"
     android:startOffset="@android:integer/config_mediumAnimTime">
     <alpha
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"
         android:fromAlpha="1.0"
         android:toAlpha="0.0"/>
 </set>

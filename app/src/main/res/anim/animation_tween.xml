@@ -10,7 +10,7 @@
         android:repeatCount="infinite"
         android:repeatMode="reverse"
         android:fromAlpha="1.0"
-        android:toAlpha="0.0"/>
+        android:toAlpha="0.1"/>
     <scale
         android:repeatCount="infinite"
         android:repeatMode="reverse"
@@ -20,4 +20,16 @@
         android:toYScale="0.5"
         android:pivotX="50%"
         android:pivotY="50%"/>
+    <rotate
+        android:repeatCount="infinite"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:fromDegrees="0"
+        android:toDegrees="270" />
+    <translate
+        android:repeatCount="infinite"
+        android:fromXDelta="5"
+        android:fromYDelta="5"
+        android:toXDelta="200"
+        android:toYDelta="100"/>
 </set>

@@ -9,11 +9,11 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.ui.activity.advanced.CustomizationPermissionAct;
-import com.zs.androidappfw.ui.activity.advanced.CustomizationViewAct;
-import com.zs.androidappfw.ui.activity.advanced.CustomizationViewGroupAct;
-import com.zs.androidappfw.ui.activity.advanced.DispatchTouchEventAct;
-import com.zs.androidappfw.ui.base.BaseFragment;
+import com.zs.androidappfw.ui.advanced.CustomizationPermissionAct;
+import com.zs.androidappfw.ui.advanced.CustomizationViewAct;
+import com.zs.androidappfw.ui.advanced.CustomizationViewGroupAct;
+import com.zs.androidappfw.ui.advanced.DispatchTouchEventAct;
+import com.zs.androidappfw.base.BaseFragment;
 
 public class AdvancedFgm extends BaseFragment implements View.OnClickListener {
 

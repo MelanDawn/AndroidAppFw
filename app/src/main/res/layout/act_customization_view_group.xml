@@ -9,7 +9,7 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="wrap_content"-->
         <!--android:orientation="vertical">-->
-<com.zs.androidappfw.ui.widgets.TwoColumnLayout
+<com.zs.androidappfw.widgets.TwoColumnLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/customization_view_group_tcl"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/holo_green_dark"/>
-</com.zs.androidappfw.ui.widgets.TwoColumnLayout>
+</com.zs.androidappfw.widgets.TwoColumnLayout>
 
         <!--<com.zs.androidappfw.ui.widgets.TwoColumnLayout-->
             <!--android:layout_width="200dp"-->

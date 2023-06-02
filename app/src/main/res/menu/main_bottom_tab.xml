@@ -11,11 +11,11 @@
         android:title="@string/main_tab_ui"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/main_bottom_tab_function"
-        android:title="@string/main_tab_function"
-        app:showAsAction="ifRoom" />
-    <item
         android:id="@+id/main_bottom_tab_advanced"
         android:title="@string/main_tab_advanced"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/main_bottom_tab_function"
+        android:title="@string/main_tab_function"
         app:showAsAction="ifRoom" />
 </menu>

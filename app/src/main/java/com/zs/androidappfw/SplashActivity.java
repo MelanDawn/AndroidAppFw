@@ -10,7 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.config.Config;
 import com.zs.androidappfw.ui.MainActivity;
-import com.zs.androidappfw.ui.base.BaseActivity;
+import com.zs.androidappfw.base.BaseActivity;
 import com.zs.androidappfw.utils.LUtil;
 
 import java.lang.ref.WeakReference;

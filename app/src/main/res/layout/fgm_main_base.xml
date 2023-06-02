@@ -5,50 +5,37 @@
 
     <Button
         android:id="@+id/base_to_activity_lifecycle"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_activity_lifecycle_and_launch_mode"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/to_activity_lifecycle_and_launch_mode" />
+
+    <Button
+        android:id="@+id/base_to_fragment_lifecycle"
+        style="@style/BaseButton"
+        android:text="@string/to_fragment_lifecycle_and_dynamic" />
 
     <Button
         android:id="@+id/base_to_wsim"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_window_soft_input_mode"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/to_window_soft_input_mode" />
 
     <Button
         android:id="@+id/base_to_drawable"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_drawable"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/to_drawable" />
 
     <Button
         android:id="@+id/base_to_font"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_font"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/to_font" />
 
     <Button
         android:id="@+id/base_to_file_system"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_file_system"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/to_file_system" />
 
     <Button
         android:id="@+id/base_to_device_info"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/to_device_info"
-        android:textAllCaps="false"/>
+        style="@style/BaseButton"
+        android:text="@string/to_device_info" />
 
 </LinearLayout>

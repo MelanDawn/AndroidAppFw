@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/fragment_lifecycle_to_static"
+        style="@style/BaseButton"
+        android:text="@string/to_fragment_lifecycle_and_static" />
+
+    <FrameLayout
+        android:id="@+id/fragment_lifecycle_dynamic_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_green_light">
+    </FrameLayout>
+
+</LinearLayout>

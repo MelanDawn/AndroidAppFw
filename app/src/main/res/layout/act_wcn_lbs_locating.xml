@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="printSimpleMethod"
+            android:text="@string/wcn_lm_print_simple_method" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="removeAll"
+            android:text="@string/wcn_lm_remove_all" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesAPI1"
+            android:text="@string/wcn_lm_request_updates_gnss_1" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesAPI2"
+            android:text="@string/wcn_lm_request_updates_gnss_2" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesAPI3"
+            android:text="@string/wcn_lm_request_updates_gnss_3" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesAPI4"
+            android:text="@string/wcn_lm_request_updates_gnss_4" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesAPI5"
+            android:text="@string/wcn_lm_request_updates_gnss_5" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesNetwork1"
+            android:text="@string/wcn_lm_request_updates_network_1" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesNetwork2"
+            android:text="@string/wcn_lm_request_updates_network_2" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesNetwork3"
+            android:text="@string/wcn_lm_request_updates_network_3" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesNetwork4"
+            android:text="@string/wcn_lm_request_updates_network_4" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesPassive"
+            android:text="@string/wcn_lm_request_updates_passive" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesFused"
+            android:text="@string/wcn_lm_request_updates_fused" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="requestUpdatesMock"
+            android:text="@string/wcn_lm_request_updates_mock" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="sendExtraCommand"
+            android:text="@string/wcn_lm_send_extra_command" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="addNmeaListener"
+            android:text="@string/wcn_lm_add_nmea_listener" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="registerGnssStatusCallback"
+            android:text="@string/wcn_lm_register_gnss_status_cb" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="registerGnssNavigationMessageCallback"
+            android:text="@string/wcn_lm_register_gnss_navigation_message_cb" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="registerGnssMeasurementsCallback"
+            android:text="@string/wcn_lm_register_gnss_measurement_event_cb" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="addProximityAlert"
+            android:text="@string/wcn_lm_add_proximity_alert" />
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="removeProximityAlert"
+            android:text="@string/wcn_lm_remove_proximity_alert" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="addTestProvider"
+            android:text="@string/wcn_lm_add_test_provider"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="removeTestProvider"
+            android:text="@string/wcn_lm_remove_test_provider"/>
+
+        <Button
+            style="@style/BaseButton"
+            android:onClick="setTestProviderLocation"
+            android:text="@string/wcn_lm_set_test_provider_location"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@android:color/holo_red_light"/>
+    </LinearLayout>
+</ScrollView>
