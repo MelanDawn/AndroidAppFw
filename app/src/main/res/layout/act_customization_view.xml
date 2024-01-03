@@ -1,124 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/common_item_title" />
 
-    <com.zs.androidappfw.widgets.MusicSwitchView
-        android:id="@+id/customization_view_msv"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="20dp"
-        android:background="@android:color/holo_blue_light"
-        app:enabled="true"
-        app:progress_width="10dp"
-        app:progress_default_color="@android:color/darker_gray"
-        app:progress_color="@android:color/holo_green_dark"
-        app:background="@android:color/holo_orange_dark"
-        app:switch_height="30dp"
-        app:switch_width="30dp"
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
 
-        app:type_boolean="false"
-        app:type_integer="2"
-        app:type_float="3.2"
-        app:type_string="@string/app_name"
-        app:type_reference="@string/app_name"
-        app:type_color="@android:color/holo_purple"
-        app:type_dimension="5dp"
-        app:type_fraction="20%"
-        app:type_enum="type_enum_name_1"
-        app:type_flags="type_flags_name_2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/customization_view_request_layout_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/customization_view_request_layout"
-        android:textAllCaps="false"/>
+        <com.zs.androidappfw.widgets.MusicSwitchView
+            android:id="@+id/customization_view_msv"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp"
+            android:background="@android:color/holo_blue_light"
+            app:enabled="true"
+            app:progress_width="10dp"
+            app:progress_default_color="@android:color/darker_gray"
+            app:progress_color="@android:color/holo_green_dark"
+            app:background="@android:color/holo_orange_dark"
+            app:switch_height="30dp"
+            app:switch_width="30dp"
 
-    <Button
-        android:id="@+id/customization_view_invalidate_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/customization_view_invalidate"
-        android:textAllCaps="false"/>
+            app:type_boolean="false"
+            app:type_integer="2"
+            app:type_float="3.2"
+            app:type_string="@string/app_name"
+            app:type_reference="@string/app_name"
+            app:type_color="@android:color/holo_purple"
+            app:type_dimension="5dp"
+            app:type_fraction="20%"
+            app:type_enum="type_enum_name_1"
+            app:type_flags="type_flags_name_2" />
 
-    <Button
-        android:id="@+id/customization_view_post_invalidate_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/customization_view_post_invalidate"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/customization_view_request_layout_btn"
+            style="@style/BaseButton"
+            android:text="@string/customization_view_request_layout"/>
 
-    <com.zs.androidappfw.widgets.MusicSwitchView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:background="@android:color/holo_blue_light"
-        app:enabled="true"
-        app:progress_width="3dp"
-        app:progress_default_color="@android:color/darker_gray"
-        app:progress_color="@android:color/holo_green_dark"
-        app:background="@android:color/holo_orange_dark" />
+        <Button
+            android:id="@+id/customization_view_invalidate_btn"
+            style="@style/BaseButton"
+            android:text="@string/customization_view_invalidate"/>
 
-    <com.zs.androidappfw.widgets.MusicSwitchView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10dp"
-        android:paddingStart="10dp"
-        android:paddingEnd="20dp"
-        android:background="@android:color/holo_blue_light"
-        app:enabled="true"
-        app:progress_width="5dp"
-        app:progress_default_color="@android:color/darker_gray"
-        app:progress_color="@android:color/holo_green_dark"
-        app:background="@android:color/holo_orange_dark" />
+        <Button
+            android:id="@+id/customization_view_post_invalidate_btn"
+            style="@style/BaseButton"
+            android:text="@string/customization_view_post_invalidate"/>
 
-    <com.zs.androidappfw.widgets.CustomizedView
-        android:id="@+id/customization_view_cv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:background="@android:color/holo_orange_dark" />
+        <com.zs.androidappfw.widgets.MusicSwitchView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/holo_blue_light"
+            app:enabled="true"
+            app:progress_width="3dp"
+            app:progress_default_color="@android:color/darker_gray"
+            app:progress_color="@android:color/holo_green_dark"
+            app:background="@android:color/holo_orange_dark" />
 
-    <Button
-        android:id="@+id/customization_view_no_attr_request_layout_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/customization_view_no_attr_request_layout"
-        android:textAllCaps="false"/>
+        <com.zs.androidappfw.widgets.MusicSwitchView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="20dp"
+            android:background="@android:color/holo_blue_light"
+            app:enabled="true"
+            app:progress_width="5dp"
+            app:progress_default_color="@android:color/darker_gray"
+            app:progress_color="@android:color/holo_green_dark"
+            app:background="@android:color/holo_orange_dark" />
 
-    <Button
-        android:id="@+id/customization_view_no_attr_invalidate_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/customization_view_no_attr_invalidate"
-        android:textAllCaps="false"/>
+        <com.zs.androidappfw.widgets.CustomizedView
+            android:id="@+id/customization_view_cv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_orange_dark" />
 
-    <Button
-        android:id="@+id/customization_view_no_attr_post_invalidate_btn"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/bt_height"
-        android:gravity="center_vertical|start"
-        android:text="@string/customization_view_no_attr_post_invalidate"
-        android:textAllCaps="false"/>
+        <Button
+            android:id="@+id/customization_view_no_attr_request_layout_btn"
+            style="@style/BaseButton"
+            android:text="@string/customization_view_no_attr_request_layout" />
 
-    </LinearLayout>
-</ScrollView>
+        <Button
+            android:id="@+id/customization_view_no_attr_invalidate_btn"
+            style="@style/BaseButton"
+            android:text="@string/customization_view_no_attr_invalidate"/>
+
+        <Button
+            android:id="@+id/customization_view_no_attr_post_invalidate_btn"
+            style="@style/BaseButton"
+            android:text="@string/customization_view_no_attr_post_invalidate"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

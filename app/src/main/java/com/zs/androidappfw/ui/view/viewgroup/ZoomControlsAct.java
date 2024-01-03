@@ -10,19 +10,24 @@ import android.widget.ZoomControls;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.LUtil;
 
 
 // Created by zhangs on 2019/2/28.
 
-public class ZoomControlsAct extends BaseActivity {
+public class ZoomControlsAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_zoom_controls);
 
         test();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_vg_zoom_controls;
     }
 
     private void test() {
@@ -34,14 +39,14 @@ public class ZoomControlsAct extends BaseActivity {
         zc.setOnZoomOutClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LUtil.d(TAG, "setOnZoomOutClickListener " + tv.getTextSize());
+                LUtil.d(mTag, "setOnZoomOutClickListener " + tv.getTextSize());
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, px2sp(ZoomControlsAct.this, tv.getTextSize()) - 2);
             }
         });
         zc.setOnZoomInClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                LUtil.d(TAG, "setOnZoomInClickListener " + tv.getTextSize());
+                LUtil.d(mTag, "setOnZoomInClickListener " + tv.getTextSize());
                 tv.setTextSize(TypedValue.COMPLEX_UNIT_SP, px2sp(ZoomControlsAct.this, tv.getTextSize()) + 2);
             }
         });

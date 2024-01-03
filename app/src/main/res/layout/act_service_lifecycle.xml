@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_item_title" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_bind_service"
+        android:onClick="bindService" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_unbind_service"
+        android:onClick="unbindService" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_start_service"
+        android:onClick="startService" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_stop_service"
+        android:onClick="stopService" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_bind_started_service"
+        android:onClick="bindStartedService" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_unbind_started_service"
+        android:onClick="unbindStartedService" />
+
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_start_bond_service"
+        android:onClick="startBondService" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/service_stop_bond_service"
+        android:onClick="stopBondService" />
+
+</LinearLayout>

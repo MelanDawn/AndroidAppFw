@@ -9,13 +9,13 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.widgets.CustomizedView;
 import com.zs.androidappfw.widgets.MusicSwitchView;
 
 import java.lang.ref.WeakReference;
 
-public class CustomizationViewAct extends BaseActivity {
+public class CustomizationViewAct extends BaseTitleActivity {
 
     private final ViewHandler mHandler = new ViewHandler(new WeakReference<>(CustomizationViewAct.this));
 
@@ -86,6 +86,11 @@ public class CustomizationViewAct extends BaseActivity {
                 }).start();
             }
         });
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_diy_view;
     }
 
     @Override

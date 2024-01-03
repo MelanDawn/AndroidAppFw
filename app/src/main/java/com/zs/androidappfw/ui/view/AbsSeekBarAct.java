@@ -5,15 +5,20 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
 
 // Created by zhangs on 2019/2/26.
 
-public class AbsSeekBarAct extends BaseActivity {
+public class AbsSeekBarAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_abs_seek_bar);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_view_abs_seek_bar;
     }
 }

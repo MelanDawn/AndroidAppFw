@@ -20,7 +20,7 @@ public class NetworkState {
 
     private static NetworkState sInstance = new NetworkState();
 
-    private BroadcastReceiver mNetworkReceiver = new BroadcastReceiver() {
+    private final BroadcastReceiver mNetworkReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
             if (intent != null && ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())){

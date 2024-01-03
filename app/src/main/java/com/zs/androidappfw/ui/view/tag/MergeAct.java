@@ -5,13 +5,18 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class MergeAct extends BaseActivity {
+public class MergeAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_tag_merge);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_tag_merge;
     }
 }

@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class LevelListDrawableAct extends BaseActivity {
+public class LevelListDrawableAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -44,5 +44,10 @@ public class LevelListDrawableAct extends BaseActivity {
                 imageView.setImageLevel(25);
             }
         });
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable_level_list;
     }
 }

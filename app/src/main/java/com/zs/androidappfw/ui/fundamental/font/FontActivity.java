@@ -7,9 +7,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class FontActivity extends BaseActivity {
+public class FontActivity extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,5 +32,10 @@ public class FontActivity extends BaseActivity {
 
         Typeface typeface4 = Typeface.createFromAsset(this.getAssets(), "fonts/timesi.ttf");
         textView4.setTypeface(typeface4);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_font;
     }
 }

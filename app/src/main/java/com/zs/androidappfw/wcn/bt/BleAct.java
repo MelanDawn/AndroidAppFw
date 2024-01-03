@@ -25,14 +25,14 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.LUtil;
 import com.zs.androidappfw.wcn.utils.BluetoothUtils;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BleAct extends BaseActivity {
+public class BleAct extends BaseTitleActivity {
 
     private BluetoothAdapter mAdapter;
 
@@ -55,6 +55,11 @@ public class BleAct extends BaseActivity {
         mAdapter = BluetoothUtils.getInstance(this);
         mBleAdvertiser = mAdapter.getBluetoothLeAdvertiser();
         mBleScanner = mAdapter.getBluetoothLeScanner();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_feature_ble;
     }
 
     public void startAdvertising(View v) {
@@ -119,7 +124,7 @@ public class BleAct extends BaseActivity {
             mBleAdvertiser.startAdvertisingSet(parameters, data, response, params, periodicData,
                     100, 100, mAdvertisingSetCb);
         } else {
-            LUtil.w(TAG, "sdk version < 26, not support");
+            LUtil.w(mTag, "sdk version < 26, not support");
         }
     }
 
@@ -127,7 +132,7 @@ public class BleAct extends BaseActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             mBleAdvertiser.stopAdvertisingSet(mAdvertisingSetCb);
         } else {
-            LUtil.w(TAG, "sdk version < 26, not support");
+            LUtil.w(mTag, "sdk version < 26, not support");
         }
     }
 

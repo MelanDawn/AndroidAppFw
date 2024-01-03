@@ -10,9 +10,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class AnimationAttributeAct extends BaseActivity {
+public class AnimationAttributeAct extends BaseTitleActivity {
 
     AnimatorSet attributeSet;
     ObjectAnimator alphaAnimation;
@@ -92,6 +92,11 @@ public class AnimationAttributeAct extends BaseActivity {
         attributeSet.setDuration(3000);
         attributeSet.playTogether(alphaAnim, scaleXAnim, scaleYAnim, rotateAnim, transXAnim, transYAnim);
         attributeSet.start();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_animation_attribute;
     }
 
     @Override

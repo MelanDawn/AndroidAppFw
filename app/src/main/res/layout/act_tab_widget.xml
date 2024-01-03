@@ -1,81 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/common_item_title" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:autoLink="web"
-            android:text="@string/tab_widget_description"/>
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
 
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/holo_red_light"/>
-        <TextView
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@android:color/darker_gray"
-            android:text="@string/tab_widget_demo_1"/>
-        <TabHost
-            android:id="@+id/tab_host"
-            android:layout_width="match_parent"
-            android:layout_height="200dp">
+            android:orientation="vertical">
 
-            <LinearLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autoLink="web"
+                android:text="@string/tab_widget_description"/>
+
+            <View
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="2dp"
+                android:background="@android:color/holo_red_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:text="@string/tab_widget_demo_1"/>
+            <TabHost
+                android:id="@+id/tab_host"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
 
-                <TabWidget
-                    android:id="@android:id/tabs"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:divider="@color/colorPrimary"
-                    android:showDividers="end"
-                    android:tabStripEnabled="true"
-                    android:tabStripLeft="@android:color/holo_green_light"
-                    android:tabStripRight="@android:color/holo_blue_light">
-                </TabWidget>
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-                <FrameLayout
-                    android:id="@android:id/tabcontent"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1">
-                    <LinearLayout
-                        android:id="@+id/tab_widget_demo_1_content_1"
+                    <TabWidget
+                        android:id="@android:id/tabs"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <ImageView
+                        android:layout_height="wrap_content"
+                        android:divider="@color/colorPrimary"
+                        android:showDividers="end"
+                        android:tabStripEnabled="true"
+                        android:tabStripLeft="@android:color/holo_green_light"
+                        android:tabStripRight="@android:color/holo_blue_light">
+                    </TabWidget>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+                        <LinearLayout
+                            android:id="@+id/tab_widget_demo_1_content_1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/act_iv_demo_h"
-                            android:scaleType="fitCenter"
-                            android:contentDescription="@string/app_name"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:id="@+id/tab_widget_demo_1_content_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-                        <ImageView
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/act_iv_demo_h"
+                                android:scaleType="fitCenter"
+                                android:contentDescription="@string/app_name"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/tab_widget_demo_1_content_2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:src="@drawable/act_iv_demo_v"
-                            android:scaleType="fitCenter"
-                            android:contentDescription="@string/app_name"/>
-                    </LinearLayout>
-                </FrameLayout>
-            </LinearLayout>
-        </TabHost>
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/act_iv_demo_v"
+                                android:scaleType="fitCenter"
+                                android:contentDescription="@string/app_name"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </TabHost>
 
-    </LinearLayout>
-</ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -5,10 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include
+        android:id="@+id/wcn_title"
+        layout="@layout/common_item_title" />
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/wcn_view_pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@+id/wcn_title"
         android:layout_above="@id/wcn_navigation_view"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

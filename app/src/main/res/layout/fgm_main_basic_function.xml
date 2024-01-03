@@ -4,37 +4,52 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/base_to_activity_lifecycle"
+        android:id="@+id/basic_function_to_activity_lifecycle"
         style="@style/BaseButton"
         android:text="@string/to_activity_lifecycle_and_launch_mode" />
 
     <Button
-        android:id="@+id/base_to_fragment_lifecycle"
+        android:id="@+id/basic_function_to_fragment_lifecycle"
         style="@style/BaseButton"
         android:text="@string/to_fragment_lifecycle_and_dynamic" />
 
     <Button
-        android:id="@+id/base_to_wsim"
+        android:id="@+id/basic_function_to_service"
+        style="@style/BaseButton"
+        android:text="@string/to_service" />
+
+    <Button
+        android:id="@+id/basic_function_to_broadcast_receiver"
+        style="@style/BaseButton"
+        android:text="@string/to_broadcast_receiver" />
+
+    <Button
+        android:id="@+id/basic_function_to_content_provider"
+        style="@style/BaseButton"
+        android:text="@string/to_content_provider" />
+
+    <Button
+        android:id="@+id/basic_function_to_wsim"
         style="@style/BaseButton"
         android:text="@string/to_window_soft_input_mode" />
 
     <Button
-        android:id="@+id/base_to_drawable"
+        android:id="@+id/basic_function_to_drawable"
         style="@style/BaseButton"
         android:text="@string/to_drawable" />
 
     <Button
-        android:id="@+id/base_to_font"
+        android:id="@+id/basic_function_to_font"
         style="@style/BaseButton"
         android:text="@string/to_font" />
 
     <Button
-        android:id="@+id/base_to_file_system"
+        android:id="@+id/basic_function_to_file_system"
         style="@style/BaseButton"
         android:text="@string/to_file_system" />
 
     <Button
-        android:id="@+id/base_to_device_info"
+        android:id="@+id/basic_function_to_device_info"
         style="@style/BaseButton"
         android:text="@string/to_device_info" />
 

@@ -1,15 +1,15 @@
 package com.zs.androidappfw.ui.view;
 
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.ViewStub;
 
-import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import androidx.annotation.Nullable;
 
-public class ViewStubAct extends BaseActivity {
+import com.zs.androidappfw.R;
+import com.zs.androidappfw.base.BaseTitleActivity;
+
+public class ViewStubAct extends BaseTitleActivity {
 
     ViewStub viewStub;
     @Override
@@ -18,6 +18,11 @@ public class ViewStubAct extends BaseActivity {
         setContentView(R.layout.act_view_stub);
 
         viewStub = findViewById(R.id.view_stub_vs);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_view_view_stub;
     }
 
     public void inflateViewStub(View view) {

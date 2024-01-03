@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class TransitionDrawableAct extends BaseActivity {
+public class TransitionDrawableAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,5 +18,10 @@ public class TransitionDrawableAct extends BaseActivity {
         ImageView imageView = findViewById(R.id.drawable_transition_iv);
         TransitionDrawable transitionDrawable = (TransitionDrawable) imageView.getDrawable();
         transitionDrawable.startTransition(500);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable_transition;
     }
 }

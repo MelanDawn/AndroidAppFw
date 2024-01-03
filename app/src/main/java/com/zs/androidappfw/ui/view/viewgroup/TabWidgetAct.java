@@ -1,24 +1,29 @@
 package com.zs.androidappfw.ui.view.viewgroup;
 
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import android.widget.TabHost;
 
+import androidx.annotation.Nullable;
+
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.LUtil;
 
 
 // Created by zhangs on 2019/2/28.
 
-public class TabWidgetAct extends BaseActivity {
+public class TabWidgetAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_tab_widget);
 
         test();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_vg_tab_widget;
     }
 
     private void test() {
@@ -36,7 +41,7 @@ public class TabWidgetAct extends BaseActivity {
             @Override
             public void onTabChanged(String s) {
                 // 这个字符串的值时TabSpec的tag，这两个例子中是 one、two中的一个。
-                LUtil.d(TAG, "onTabChanged param = " + s);
+                LUtil.d(mTag, "onTabChanged param = " + s);
             }
         });
     }

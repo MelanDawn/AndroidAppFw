@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<blink xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/common_item_title" />
 
-        <TextView
-            android:layout_width="wrap_content"
+    <blink android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="@string/tag_blink_description"/>
+            android:background="@android:color/holo_green_light"
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/act_iv_demo_v"
-            android:scaleType="centerInside"
-            android:contentDescription="@string/app_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="@string/tag_blink_description"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/app_name"
-            android:textSize="14sp"
-            android:textColor="@color/colorAccent"/>
-    </LinearLayout>
-</blink>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/act_iv_demo_v"
+                android:scaleType="centerInside"
+                android:contentDescription="@string/app_name"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="14sp"
+                android:textColor="@color/colorAccent"/>
+        </LinearLayout>
+    </blink>
+</LinearLayout>

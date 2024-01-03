@@ -1,31 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/common_item_title" />
 
-        <ProgressBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:progress="30"/>
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
 
-        <View
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/holo_red_light" />
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <ProgressBar
-            android:id="@+id/progress_bar_2"
-            style="@android:style/Widget.ProgressBar.Horizontal"
-            android:layout_width="272dp"
-            android:layout_height="14dp"
-            android:layout_gravity="center_horizontal"
-            android:progress="30"
-            android:max="100"
-            android:progressDrawable="@drawable/act_progress_bar_shape"/>
-    </LinearLayout>
-</ScrollView>
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:progress="30"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_red_light" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar_2"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="272dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center_horizontal"
+                android:progress="30"
+                android:max="100"
+                android:progressDrawable="@drawable/act_progress_bar_shape"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

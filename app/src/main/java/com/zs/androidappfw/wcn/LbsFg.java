@@ -23,7 +23,7 @@ public class LbsFg extends BaseFragment implements View.OnClickListener {
         return view;
     }
 
-    private void initView(View view) {
+    protected void initView(View view) {
         initAndSetClickListener(view, R.id.fg_wcn_lbs_lm);
         initAndSetClickListener(view, R.id.fg_wcn_lbs_geo);
     }

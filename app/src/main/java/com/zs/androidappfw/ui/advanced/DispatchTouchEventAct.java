@@ -6,10 +6,10 @@ import android.view.MotionEvent;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.LUtil;
 
-public class DispatchTouchEventAct extends BaseActivity {
+public class DispatchTouchEventAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -18,18 +18,23 @@ public class DispatchTouchEventAct extends BaseActivity {
     }
 
     @Override
+    protected int getTitleResId() {
+        return R.string.title_dispatch_touch_event;
+    }
+
+    @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
-        LUtil.d(TAG, "dispatchTouchEvent start, " + ev.toString());
+        LUtil.d(mTag, "dispatchTouchEvent start, " + ev.toString());
         boolean result = super.dispatchTouchEvent(ev);
-        LUtil.d(TAG, "dispatchTouchEvent end: " + result);
+        LUtil.d(mTag, "dispatchTouchEvent end: " + result);
         return result;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
-        LUtil.d(TAG, "onTouchEvent start, " + ev.toString());
+        LUtil.d(mTag, "onTouchEvent start, " + ev.toString());
         boolean result = super.onTouchEvent(ev);
-        LUtil.d(TAG, "onTouchEvent end: " + result);
+        LUtil.d(mTag, "onTouchEvent end: " + result);
         return result;
     }
 }

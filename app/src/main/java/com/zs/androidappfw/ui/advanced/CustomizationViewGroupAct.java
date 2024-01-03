@@ -9,11 +9,11 @@ import android.view.ViewParent;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.widgets.TwoColumnLayout;
 import com.zs.androidappfw.utils.LUtil;
 
-public class CustomizationViewGroupAct extends BaseActivity {
+public class CustomizationViewGroupAct extends BaseTitleActivity {
 
     private TwoColumnLayout twoColumnLayout;
     @Override
@@ -24,6 +24,11 @@ public class CustomizationViewGroupAct extends BaseActivity {
     }
 
     @Override
+    protected int getTitleResId() {
+        return R.string.title_diy_view_group;
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
     }
@@ -31,18 +36,18 @@ public class CustomizationViewGroupAct extends BaseActivity {
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
-        LUtil.d(TAG, "onAttachedToWindow");
+        LUtil.d(mTag, "onAttachedToWindow");
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-        LUtil.d(TAG, "onWindowFocusChanged");
-        LUtil.d(TAG, "" + twoColumnLayout.getLayoutParams());
+        LUtil.d(mTag, "onWindowFocusChanged");
+        LUtil.d(mTag, "" + twoColumnLayout.getLayoutParams());
         View view = getWindow().getDecorView();
         ViewParent viewParent = view.getParent();
         while(viewParent != null) {
-            LUtil.d(TAG, "parent=" + viewParent.getParent() + " v=" + viewParent.toString());
+            LUtil.d(mTag, "parent=" + viewParent.getParent() + " v=" + viewParent.toString());
             viewParent = viewParent.getParent();
         }
 
@@ -52,11 +57,11 @@ public class CustomizationViewGroupAct extends BaseActivity {
     private void printView(View view) {
         ViewGroup viewGroup = null;
         if (!(view instanceof ViewGroup)) {
-            LUtil.d(TAG, "w=" + view.getWidth() + " h=" + view.getHeight() + " parent=" + view.getParent() + " v=" + view.toString());
+            LUtil.d(mTag, "w=" + view.getWidth() + " h=" + view.getHeight() + " parent=" + view.getParent() + " v=" + view.toString());
             return;
         }
         viewGroup = (ViewGroup) view;
-        LUtil.d(TAG,"w=" + view.getWidth() + " h=" + view.getHeight() + " parent=" + viewGroup.getParent() + " v=" + viewGroup.toString());
+        LUtil.d(mTag,"w=" + view.getWidth() + " h=" + view.getHeight() + " parent=" + viewGroup.getParent() + " v=" + viewGroup.toString());
         int count = viewGroup.getChildCount();
         for (int i = 0; i < count; i++) {
             View v = viewGroup.getChildAt(i);

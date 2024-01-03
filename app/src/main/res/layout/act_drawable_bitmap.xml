@@ -1,51 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/common_item_title" />
 
-        <TextView
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/drawable_bitmap_dsc"
-            android:layout_marginBottom="10dp"/>
+            android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/act_iv_demo_v"
-            android:contentDescription="@string/app_name"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/drawable_bitmap_dsc"
+                android:layout_marginBottom="10dp"/>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:src="@drawable/drawable_bitmap_xml"
-            android:contentDescription="@string/app_name"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/act_iv_demo_v"
+                android:contentDescription="@string/app_name"/>
 
-        <ImageView
-            android:id="@+id/drawable_png"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/app_name"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/drawable_bitmap_xml"
+                android:contentDescription="@string/app_name"/>
 
-        <ImageView
-            android:id="@+id/drawable_jpg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/app_name"/>
+            <ImageView
+                android:id="@+id/drawable_png"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_name"/>
 
-        <ImageView
-            android:id="@+id/drawable_gif"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:contentDescription="@string/app_name"/>
-    </LinearLayout>
-</ScrollView>
+            <ImageView
+                android:id="@+id/drawable_jpg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_name"/>
+
+            <ImageView
+                android:id="@+id/drawable_gif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_name"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

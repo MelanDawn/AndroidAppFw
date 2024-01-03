@@ -1,65 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/common_item_title" />
 
-        <TextView
-            android:layout_width="wrap_content"
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:textColor="@android:color/black"
-            android:text="@string/btn_description"/>
+            android:orientation="vertical">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/holo_red_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:text="@string/btn_description"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:text="@string/btn_normal"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_red_light"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/holo_red_light"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:text="@string/btn_normal"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:textAllCaps="false"
-            android:text="@string/btn_not_upper"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_red_light"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/holo_red_light"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:textAllCaps="false"
+                android:text="@string/btn_not_upper"/>
 
-        <Button
-            android:id="@+id/btn_diy_shape"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:textAllCaps="false"
-            android:background="@drawable/act_btn_shape"
-            android:text="@string/btn_shape"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_red_light"/>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@android:color/holo_red_light"/>
+            <Button
+                android:id="@+id/btn_diy_shape"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:textAllCaps="false"
+                android:background="@drawable/act_btn_shape"
+                android:text="@string/btn_shape"/>
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/btn_height"
-            android:textAllCaps="false"
-            android:text="@string/btn_control_diy_shape"
-            android:onClick="controlDiyBtn"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/holo_red_light"/>
 
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/btn_height"
+                android:textAllCaps="false"
+                android:text="@string/btn_control_diy_shape"
+                android:onClick="controlDiyBtn"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

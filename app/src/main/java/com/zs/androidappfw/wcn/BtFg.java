@@ -23,7 +23,7 @@ public class BtFg extends BaseFragment implements View.OnClickListener {
         return view;
     }
 
-    private void initView(View view) {
+    protected void initView(View view) {
         initAndSetClickListener(view, R.id.fg_wcn_bt_classic);
         initAndSetClickListener(view, R.id.fg_wcn_bt_ble);
     }

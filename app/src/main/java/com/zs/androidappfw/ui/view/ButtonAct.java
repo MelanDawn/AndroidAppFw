@@ -3,15 +3,15 @@ package com.zs.androidappfw.ui.view;
 // Created by zhangs on 2019/2/23.
 
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 
-import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import androidx.annotation.Nullable;
 
-public class ButtonAct extends BaseActivity {
+import com.zs.androidappfw.R;
+import com.zs.androidappfw.base.BaseTitleActivity;
+
+public class ButtonAct extends BaseTitleActivity {
 
     Button diyBtn;
     @Override
@@ -20,6 +20,11 @@ public class ButtonAct extends BaseActivity {
         setContentView(R.layout.act_btn);
 
         diyBtn = findViewById(R.id.btn_diy_shape);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_view_button;
     }
 
     public void controlDiyBtn(View view) {

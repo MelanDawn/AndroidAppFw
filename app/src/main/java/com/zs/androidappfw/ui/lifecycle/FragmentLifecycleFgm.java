@@ -17,6 +17,7 @@ public class FragmentLifecycleFgm extends BaseLifecycleFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
+        super.onCreateView(inflater, container, savedInstanceState);
         return inflater.inflate(R.layout.fgm_lifecycle, container, false);
     }
 }

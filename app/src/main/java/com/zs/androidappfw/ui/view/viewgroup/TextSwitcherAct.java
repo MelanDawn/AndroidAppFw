@@ -2,8 +2,6 @@ package com.zs.androidappfw.ui.view.viewgroup;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,13 +10,15 @@ import android.widget.ImageSwitcher;
 import android.widget.TextSwitcher;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
 
 // Created by zhangs on 2019/3/10.
 
-public class TextSwitcherAct extends BaseActivity {
+public class TextSwitcherAct extends BaseTitleActivity {
 
     private int mIndex;
 
@@ -28,6 +28,11 @@ public class TextSwitcherAct extends BaseActivity {
         setContentView(R.layout.act_text_switcher);
 
         test();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_vg_text_switcher;
     }
 
     public void test() {

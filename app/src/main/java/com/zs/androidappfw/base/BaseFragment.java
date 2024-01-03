@@ -22,7 +22,7 @@ public abstract class BaseFragment extends Fragment {
         return TAG;
     }
 
-    protected void startActivity(Class<? extends BaseActivity> cls) {
+    protected void startActivity(Class<? extends BaseTitleActivity> cls) {
         startActivity(new Intent(getActivity(), cls));
     }
 

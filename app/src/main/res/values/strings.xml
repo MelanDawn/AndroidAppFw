@@ -16,10 +16,46 @@
     <string name="to_activity_single_instance">to singleInstance Activity</string>
     <string name="to_activity_standard_config_changes">to standard configChanges Activity（屏幕旋转配置）</string>
 
+    <string name="title_activity_standard">Standard Activity</string>
+    <string name="title_activity_standard_config_changes">Standard Config Activity</string>
+    <string name="title_activity_single_top">SingleTop Activity</string>
+    <string name="title_activity_single_task">SingleTask Activity</string>
+    <string name="title_activity_single_task_affinity">SingleTask Affinity Activity</string>
+    <string name="title_activity_single_instance">SingleInstance Activity</string>
+
     <string name="to_fragment_lifecycle_and_dynamic">Fragment`s Lifecycle Dynamic</string>
     <string name="to_fragment_lifecycle_and_static">Fragment`s Lifecycle Static</string>
 
+    <string name="title_fragment_dynamic">Dynamic Fragment</string>
+    <string name="title_fragment_static">Static Fragment</string>
+
+    <string name="to_service">Service`s Lifecycle</string>
+    <string name="title_service_lifecycle">Service Lifecycle</string>
+    <string name="service_bind_service">BindService</string>
+    <string name="service_unbind_service">UnbindService</string>
+    <string name="service_start_service">StartService</string>
+    <string name="service_stop_service">StopService</string>
+    <string name="service_bind_started_service">BindStartedService</string>
+    <string name="service_unbind_started_service">UnbindStartedService</string>
+    <string name="service_start_bond_service">StartBondService</string>
+    <string name="service_stop_bond_service">StopBondService</string>
+
+    <string name="to_broadcast_receiver">BroadcastReceiver`s Lifecycle</string>
+    <string name="title_broadcast_receiver_lifecycle">BroadcastReceiverLifecycle</string>
+    <string name="broadcast_receiver_register">registerBroadcastReceiver</string>
+    <string name="broadcast_receiver_unregister">unregisterBroadcastReceiver</string>
+    <string name="broadcast_receiver_send">sendBroadcast</string>
+    <string name="broadcast_receiver_send_with_component">sendBroadcastWithComponent</string>
+
+    <string name="to_content_provider">ContentProvider`s Lifecycle</string>
+    <string name="title_content_provider_lifecycle">ContentProviderLifecycle</string>
+    <string name="content_provider_add_to_book">AddToBook</string>
+    <string name="content_provider_query_from_book">queryFromBook</string>
+    <string name="content_provider_update_book">updateBook</string>
+    <string name="content_provider_delete_from_book">deleteFromBook</string>
+
     <string name="to_window_soft_input_mode">窗口软键盘模式</string>
+    <string name="title_window_soft_input_method">WindowSoftInputMethod</string>
 
     <string name="to_drawable">Drawable</string>
     <string name="to_drawable_bitmap">BitmapDrawable</string>
@@ -33,10 +69,26 @@
     <string name="to_drawable_scale">ScaleDrawable</string>
     <string name="to_drawable_shape">ShapeDrawable</string>
 
+    <string name="title_drawable">WindowSoftInputMethod</string>
+    <string name="title_drawable_bitmap">BitmapDrawable</string>
+    <string name="title_drawable_nine_patch">NinePatchDrawable</string>
+    <string name="title_drawable_layer">LayerDrawable</string>
+    <string name="title_drawable_state_list">StateListDrawable</string>
+    <string name="title_drawable_level_list">LevelListDrawable</string>
+    <string name="title_drawable_transition">TransitionDrawable</string>
+    <string name="title_drawable_inset">InsetDrawable</string>
+    <string name="title_drawable_clip">ClipDrawable</string>
+    <string name="title_drawable_scale">ScaleDrawable</string>
+    <string name="title_drawable_shape">ShapeDrawable</string>
+
     <string name="to_font">Font</string>
+    <string name="title_font">ShapeDrawable</string>
 
     <string name="to_file_system">FileSystem</string>
+    <string name="title_file_system">FileSystem</string>
+
     <string name="to_device_info">DeviceInfo</string>
+    <string name="title_device_info">DeviceInfo</string>
 
     <!-- UI -->
     <string name="to_tag_blink">blink</string>
@@ -45,32 +97,65 @@
     <string name="to_tag_request_focus">requestFocus</string>
     <string name="to_tag_tag">tag</string>
 
+    <string name="title_tag_blink">Blink</string>
+    <string name="title_tag_include">Include</string>
+    <string name="title_tag_merge">Merge</string>
+    <string name="title_tag_request_focus">RequestFocus</string>
+    <string name="title_tag_tag">Tag</string>
+
     <string name="to_progress_bar">ProgressBar(不可交互)</string>
     <string name="to_abs_seek_bar">|-- AbsSeekBar(拖动进度条，可交互)</string>
-    <string name="to_rating_bar">|-- |-- RatingBar(比例进度条，五角星状)</string>
     <string name="to_seek_bar">|-- |-- SeekBar(拖动进度条)</string>
+    <string name="to_rating_bar">|-- |-- RatingBar(比例进度条，五角星状)</string>
 
-    <string name="to_iv">ImageView</string>
-    <string name="to_iv_btn">|-- ImageButton(图片按钮)</string>
+    <string name="title_view_progress_bar">ProgressBar</string>
+    <string name="title_view_abs_seek_bar">AbsSeekBar</string>
+    <string name="title_view_seek_bar">SeekBar</string>
+    <string name="title_view_rating_bar">RatingBar</string>
+
+    <string name="to_imageview">ImageView</string>
+    <string name="to_image_button">|-- ImageButton(图片按钮)</string>
     <string name="to_quick_contact_badge">|-- QuickContactBadge(联系人快捷方式)</string>
 
-    <string name="to_tv">TextView</string>
-    <string name="to_checked_tv">|-- CheckedTextView(带选择框的文本)</string>
+    <string name="title_view_imageview">ImageView</string>
+    <string name="title_view_image_button">ImageButton</string>
+    <string name="title_view_quick_contact_badge">QuickContactBadge</string>
+
+    <string name="to_textview">TextView</string>
+    <string name="to_checked_textview">|-- CheckedTextView(带选择框的文本)</string>
     <string name="to_chronometer">|-- Chronometer(计时器)</string>
     <string name="to_text_clock">|-- TextClock(文本时钟, API 17 开始替代DigitalClock)</string>
-    <string name="to_et">|-- EditText</string>
+    <string name="to_edittext">|-- EditText</string>
     <string name="to_auto_complete_tv">|-- |-- AutoCompleteTextView(单次提示输入框)</string>
     <string name="to_multi_auto_complete_tv">|-- |-- |-- MultiAutoCompleteTextView(多次提示输入框)</string>
-    <string name="to_extract_et">|-- |-- ExtractEditText(非UI视图组件)</string>
-    <string name="to_btn">|-- Button</string>
+    <string name="to_extract_edittext">|-- |-- ExtractEditText(非UI视图组件)</string>
+    <string name="to_button">|-- Button</string>
     <string name="to_compound_btn">|-- |-- CompoundButton(复合按钮)</string>
     <string name="to_check_box">|-- |-- |-- CheckBox(复选框)</string>
     <string name="to_radio_btn">|-- |-- |-- RadioButton(单选框)</string>
     <string name="to_switch">|-- |-- |-- Switch(拨动开关)</string>
     <string name="to_toggle_btn">|-- |-- |-- ToggleButton(开关按钮)</string>
 
+    <string name="title_view_textview">TextView</string>
+    <string name="title_view_checked_textview">CheckedTextView</string>
+    <string name="title_view_chronometer">Chronometer</string>
+    <string name="title_view_text_clock">TextClock</string>
+    <string name="title_view_edittext">EditText</string>
+    <string name="title_view_auto_complete_tv">AutoCompleteTextView</string>
+    <string name="title_view_multi_auto_complete_tv">MultiAutoCompleteTextView</string>
+    <string name="title_view_extract_edittext">ExtractEditText</string>
+    <string name="title_view_button">Button</string>
+    <string name="title_view_compound_btn">CompoundButton</string>
+    <string name="title_view_check_box">CheckBox</string>
+    <string name="title_view_radio_button">RadioButton</string>
+    <string name="title_view_switch">Switch</string>
+    <string name="title_view_toggle_button">ToggleButton</string>
+
     <string name="to_space">Space（API 14）</string>
     <string name="to_view_stub">ViewStub</string>
+
+    <string name="title_view_space">Space</string>
+    <string name="title_view_view_stub">ViewStub</string>
 
     <string name="to_view_group">ViewGroup</string>
     <string name="to_absolute_layout">|-- AbsoluteLayout(绝对布局，API 3 过期)</string>
@@ -103,11 +188,52 @@
     <string name="to_relative_layout">|-- RelativeLayout（相对布局）</string>
     <string name="to_dialer_filter">|-- |-- DialerFilter（API 26 过期）</string>
     <string name="to_two_line_list_item">|-- |-- TwoLineListItem（API 17 过期）</string>
-    <string name="to_animation_frame">帧动画</string>
-    <string name="to_animation_tween">补间动画</string>
-    <string name="to_animation_attribute">属性动画</string>
+
+    <string name="title_vg_view_group">ViewGroup</string>
+    <string name="title_vg_absolute_layout">AbsoluteLayout</string>
+    <string name="title_vg_web_view">WebView</string>
+    <string name="title_vg_grid_layout">GridLayout</string>
+    <string name="title_vg_frame_layout">FrameLayout</string>
+    <string name="title_vg_app_widget_host_view">AppWidgetHostView</string>
+    <string name="title_vg_calendar_view">CalendarView</string>
+    <string name="title_vg_gesture_overlay_view">GestureOverlayView</string>
+    <string name="title_vg_date_picker">DatePicker</string>
+    <string name="title_vg_media_controller">MediaController</string>
+    <string name="title_vg_horizontal_scroll_view">HorizontalScrollView</string>
+    <string name="title_vg_scroll_view">ScrollView</string>
+    <string name="title_vg_tab_host">TabHost</string>
+    <string name="title_vg_time_picker">TimePicker</string>
+    <string name="title_vg_view_animator">ViewAnimator</string>
+    <string name="title_vg_view_flipper">ViewFlipper</string>
+    <string name="title_vg_view_switcher">ViewSwitcher</string>
+    <string name="title_vg_image_switcher">ImageSwitcher</string>
+    <string name="title_vg_text_switcher">TextSwitcher</string>
+    <string name="title_vg_linear_layout">LinearLayout</string>
+    <string name="title_vg_action_menu_view">ActionMenuView</string>
+    <string name="title_vg_number_picker">NumberPicker</string>
+    <string name="title_vg_radio_group">RadioGroup</string>
+    <string name="title_vg_search_view">SearchView</string>
+    <string name="title_vg_tab_widget">TabWidget</string>
+    <string name="title_vg_table_layout">TableLayout</string>
+    <string name="title_vg_table_row">TableRow</string>
+    <string name="title_vg_zoom_controls">ZoomControls</string>
+    <string name="title_vg_relative_layout">RelativeLayout</string>
+    <string name="title_vg_dialer_filter">DialerFilter</string>
+    <string name="title_vg_two_line_list_item">TwoLineListItem</string>
+
+    <string name="to_animation_frame">FrameAnimation</string>
+    <string name="to_animation_tween">TweenAnimation</string>
+    <string name="to_animation_attribute">AttributeAnimation</string>
+
+    <string name="title_animation_frame">FrameAnimation</string>
+    <string name="title_animation_tween">TweenAnimation</string>
+    <string name="title_animation_attribute">AttributeAnimation</string>
 
     <!-- 功能 -->
+    <string name="title_feature_ble">BLE</string>
+    <string name="title_feature_classic_bt">ClassicBT</string>
+    <string name="title_feature_geocoder">Geocoder</string>
+    <string name="title_feature_location">LocationManager</string>
 
     <!-- 进阶 -->
     <string name="advanced_to_diy_permission">自定义Activity</string>
@@ -115,6 +241,12 @@
     <string name="advanced_to_diy_view">自定义View</string>
     <string name="advanced_to_diy_view_group">自定义ViewGroup</string>
 
+    <string name="title_diy_permission">CustomizedPermission</string>
+    <string name="title_dispatch_touch_event">DispatchTouchEvent</string>
+    <string name="title_diy_view">CustomizedView</string>
+    <string name="title_diy_view_group">CustomizedViewGroup</string>
+
+    <!-- Tags Activity -->
     <string name="tag_blink_description">被blink包裹的视图全体闪烁</string>
     <string name="tag_include_description">引入视图，复用视图代码</string>
     <string name="tag_merge_description">被引入的视图，可减少布局层次</string>
@@ -529,6 +661,17 @@
     <string name="to_state_unchanged">stateUnchanged</string>
     <string name="to_state_unspecified">stateUnspecified</string>
 
+    <string name="title_adjust_nothing" translatable="false">WSIM - adjustNothing</string>
+    <string name="title_adjust_pan" translatable="false">WSIM - adjustPan</string>
+    <string name="title_adjust_resize" translatable="false">WSIM - adjustResize</string>
+    <string name="title_adjust_unspecified" translatable="false">WSIM - adjustUnspecified</string>
+    <string name="title_state_always_hidden" translatable="false">WSIM - stateAlwaysHidden</string>
+    <string name="title_state_always_visible" translatable="false">WSIM - stateAlwaysVisible</string>
+    <string name="title_state_hidden" translatable="false">WSIM - stateHidden</string>
+    <string name="title_state_visible" translatable="false">WSIM - stateVisible</string>
+    <string name="title_state_unchanged" translatable="false">WSIM - stateUnchanged</string>
+    <string name="title_state_unspecified" translatable="false">WSIM - stateUnspecified</string>
+
     <!-- 自定义view -->
     <string name="customization_view_request_layout">调用MusicSwitchView的 requestLayout（仅UI线程）</string>
     <string name="customization_view_invalidate">调用MusicSwitchView的 invalidate（UI线程）</string>
@@ -611,7 +754,10 @@
         typeface是绿色，fontFamily是橘色，动态设置时红色。\n
     </string>
 
-    <string name="to_wcn">WcnTools</string>
+    <string name="to_wcn">Wireless Connectivity</string>
+    <string name="title_wcn">Wireless Connectivity</string>
+    <string name="to_cellular">Cellular</string>
+    <string name="title_cellular">Cellular</string>
 
     <!-- Wcn activity -->
     <string name="wcn_tab_wifi">WiFi</string>

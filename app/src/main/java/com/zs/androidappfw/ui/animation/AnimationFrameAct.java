@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class AnimationFrameAct extends BaseActivity {
+public class AnimationFrameAct extends BaseTitleActivity {
 
     private AnimationDrawable animationDrawable;
 
@@ -23,6 +23,11 @@ public class AnimationFrameAct extends BaseActivity {
         animationDrawable = (AnimationDrawable) imageView.getDrawable();
         animationDrawable.setOneShot(false);
         animationDrawable.start();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_animation_frame;
     }
 
     @Override

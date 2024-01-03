@@ -15,14 +15,14 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseFragmentActivity;
+import com.zs.androidappfw.base.BaseTitleFragmentActivity;
 import com.zs.androidappfw.wcn.bt.BleAct;
 import com.zs.androidappfw.wcn.bt.ClassicBtAct;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WcnActivity extends BaseFragmentActivity {
+public class WcnActivity extends BaseTitleFragmentActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -75,6 +75,11 @@ public class WcnActivity extends BaseFragmentActivity {
             }
             return true;
         });
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_wcn;
     }
 
     @Override

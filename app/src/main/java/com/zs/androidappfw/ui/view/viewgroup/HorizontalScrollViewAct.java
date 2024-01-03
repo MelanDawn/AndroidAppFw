@@ -5,12 +5,17 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class HorizontalScrollViewAct extends BaseActivity {
+public class HorizontalScrollViewAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_horizontal_scroll_view);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_vg_horizontal_scroll_view;
     }
 }

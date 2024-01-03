@@ -7,9 +7,9 @@ import android.widget.Button;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class StateListDrawableAct extends BaseActivity {
+public class StateListDrawableAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,5 +24,10 @@ public class StateListDrawableAct extends BaseActivity {
                 button.setEnabled(!button.isEnabled());
             }
         });
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable_state_list;
     }
 }

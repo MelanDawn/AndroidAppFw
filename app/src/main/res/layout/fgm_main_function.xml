@@ -7,4 +7,9 @@
         android:id="@+id/function_to_wcn_btn"
         style="@style/BaseButton"
         android:text="@string/to_wcn"/>
+
+    <Button
+        android:id="@+id/function_to_cellular_btn"
+        style="@style/BaseButton"
+        android:text="@string/to_cellular"/>
 </LinearLayout>

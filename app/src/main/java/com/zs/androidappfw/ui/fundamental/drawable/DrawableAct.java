@@ -7,14 +7,19 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class DrawableAct extends BaseActivity {
+public class DrawableAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_drawable);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable;
     }
 
     public void toDrawableBitmap(View v) {
@@ -56,7 +61,7 @@ public class DrawableAct extends BaseActivity {
         startActivity(ShapeDrawableAct.class);
     }
 
-    private void startActivity(Class<? extends BaseActivity> clazz) {
+    private void startActivity(Class<? extends BaseTitleActivity> clazz) {
         startActivity(new Intent(this, clazz));
     }
 }

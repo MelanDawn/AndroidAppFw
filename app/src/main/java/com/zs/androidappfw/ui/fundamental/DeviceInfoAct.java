@@ -10,11 +10,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
 import java.util.LinkedHashMap;
 
-public class DeviceInfoAct extends BaseActivity {
+public class DeviceInfoAct extends BaseTitleActivity {
 
     private static final String CENTER_RED = "CENTER_RED";
 
@@ -52,6 +52,11 @@ public class DeviceInfoAct extends BaseActivity {
             divider.setBackgroundColor(Color.BLACK);
             linearLayout.addView(divider);
         }
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_device_info;
     }
 
     private LinkedHashMap<String, String> getDeviceInfo() {

@@ -8,12 +8,15 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.zs.androidappfw.utils.LUtil;
+
 import cm.umeng.Umeng;
 
 
 // Created by zhangs on 2018/8/1.
 
 public class App extends Application {
+    private final String mTag = "App";
 
     public static Context appContext;
 
@@ -21,6 +24,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
 
+        LUtil.i(mTag);
         appContext = getApplicationContext();
         init();
     }

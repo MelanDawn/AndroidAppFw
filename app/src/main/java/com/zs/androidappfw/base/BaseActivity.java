@@ -13,12 +13,17 @@ import cm.umeng.Statistics;
 
 public abstract class BaseActivity extends Activity {
 
-    protected final String TAG = this.getClass().getSimpleName();
+    protected final String mTag = this.getClass().getSimpleName();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Push.onAppStart();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
     }
 
     @Override

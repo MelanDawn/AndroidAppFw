@@ -10,13 +10,13 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.LUtil;
 
 import java.io.File;
 import java.util.LinkedHashMap;
 
-public class FileSystemAct extends BaseActivity {
+public class FileSystemAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +52,11 @@ public class FileSystemAct extends BaseActivity {
             divider.setBackgroundColor(Color.BLACK);
             linearLayout.addView(divider);
         }
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_file_system;
     }
 
     private LinkedHashMap<String, String> getFilePath() {
@@ -144,65 +149,65 @@ public class FileSystemAct extends BaseActivity {
                 }
             }
 
-            LUtil.d(TAG, "Environment:", Environment.getExternalStorageState());
+            LUtil.d(mTag, "Environment:", Environment.getExternalStorageState());
 
-            LUtil.d(TAG, Environment.getRootDirectory().getAbsolutePath());
-            LUtil.d(TAG, Environment.getDataDirectory().getAbsolutePath());
-            LUtil.d(TAG, Environment.getDownloadCacheDirectory().getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStorageDirectory().getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStorageDirectory().getCanonicalPath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PODCASTS).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES).getAbsolutePath());
-            LUtil.d(TAG, Environment.getExternalStoragePublicDirectory("testEnvironment").getAbsolutePath());
+            LUtil.d(mTag, Environment.getRootDirectory().getAbsolutePath());
+            LUtil.d(mTag, Environment.getDataDirectory().getAbsolutePath());
+            LUtil.d(mTag, Environment.getDownloadCacheDirectory().getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStorageDirectory().getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStorageDirectory().getCanonicalPath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_ALARMS).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MOVIES).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_NOTIFICATIONS).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PODCASTS).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_RINGTONES).getAbsolutePath());
+            LUtil.d(mTag, Environment.getExternalStoragePublicDirectory("testEnvironment").getAbsolutePath());
 
-            LUtil.d(TAG, "Context:");
-            LUtil.d(TAG, getExternalCacheDir().getAbsolutePath());
-            LUtil.d(TAG, getExternalCacheDir().getCanonicalPath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_ALARMS).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_DCIM).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_MOVIES).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_NOTIFICATIONS).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_PODCASTS).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir(Environment.DIRECTORY_RINGTONES).getAbsolutePath());
-            LUtil.d(TAG, getExternalFilesDir("testContext").getAbsolutePath());
-            LUtil.d(TAG, getObbDir().getAbsolutePath());
+            LUtil.d(mTag, "Context:");
+            LUtil.d(mTag, getExternalCacheDir().getAbsolutePath());
+            LUtil.d(mTag, getExternalCacheDir().getCanonicalPath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_ALARMS).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_DCIM).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_MOVIES).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_NOTIFICATIONS).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_PICTURES).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_PODCASTS).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir(Environment.DIRECTORY_RINGTONES).getAbsolutePath());
+            LUtil.d(mTag, getExternalFilesDir("testContext").getAbsolutePath());
+            LUtil.d(mTag, getObbDir().getAbsolutePath());
 
-            LUtil.d(TAG, "Start Media List:");
+            LUtil.d(mTag, "Start Media List:");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 for (File file : getExternalMediaDirs())
-                    LUtil.d(TAG, file.getAbsolutePath());
+                    LUtil.d(mTag, file.getAbsolutePath());
             }
-            LUtil.d(TAG, "End   Media List:");
+            LUtil.d(mTag, "End   Media List:");
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N)
-                LUtil.d(TAG, getDataDir().getAbsolutePath());
-            LUtil.d(TAG, getCacheDir().getAbsolutePath());
-            LUtil.d(TAG, getCacheDir().getCanonicalPath());
-            LUtil.d(TAG, getCacheDir().getPath());
+                LUtil.d(mTag, getDataDir().getAbsolutePath());
+            LUtil.d(mTag, getCacheDir().getAbsolutePath());
+            LUtil.d(mTag, getCacheDir().getCanonicalPath());
+            LUtil.d(mTag, getCacheDir().getPath());
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-                LUtil.d(TAG, getCodeCacheDir().getAbsolutePath());
-            LUtil.d(TAG, getFilesDir().getAbsolutePath());
+                LUtil.d(mTag, getCodeCacheDir().getAbsolutePath());
+            LUtil.d(mTag, getFilesDir().getAbsolutePath());
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
-                LUtil.d(TAG, getNoBackupFilesDir().getAbsolutePath());
-            LUtil.d(TAG, getDir("testDir", Context.MODE_PRIVATE).getAbsolutePath());
-            LUtil.d(TAG, getDatabasePath("testDatabasePath").getAbsolutePath());
-            LUtil.d(TAG, getFileStreamPath("testFileStreamPath").getAbsolutePath());
-            LUtil.d(TAG, "File List:");
+                LUtil.d(mTag, getNoBackupFilesDir().getAbsolutePath());
+            LUtil.d(mTag, getDir("testDir", Context.MODE_PRIVATE).getAbsolutePath());
+            LUtil.d(mTag, getDatabasePath("testDatabasePath").getAbsolutePath());
+            LUtil.d(mTag, getFileStreamPath("testFileStreamPath").getAbsolutePath());
+            LUtil.d(mTag, "File List:");
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 for (String file : fileList())
-                    LUtil.d(TAG, file);
+                    LUtil.d(mTag, file);
             }
         } catch (Exception e) {
             e.printStackTrace();

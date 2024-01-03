@@ -24,12 +24,13 @@
 
     <style name="BaseButton">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">@dimen/bt_height</item>
+        <item name="android:layout_height">@dimen/base_btn_height</item>
         <item name="android:layout_margin">2dp</item>
         <item name="android:gravity">center_vertical|start</item>
-        <item name="android:paddingHorizontal">2dp</item>
+        <item name="android:paddingHorizontal">5dp</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:background">@drawable/act_btn_shape</item>
         <item name="enabled">true</item>
+        <item name="android:lines">1</item>
     </style>
 </resources>

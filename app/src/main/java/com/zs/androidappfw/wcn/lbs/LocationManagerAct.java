@@ -30,7 +30,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.BundleUtil;
 import com.zs.androidappfw.utils.LUtil;
 import com.zs.androidappfw.utils.PermissionUtil;
@@ -39,7 +39,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class LocationManagerAct extends BaseActivity {
+public class LocationManagerAct extends BaseTitleActivity {
 
     private static final String INTENT_ACTION3 = "com.zs.location.NETWORK_PENDING_INTENT3";
 
@@ -101,9 +101,14 @@ public class LocationManagerAct extends BaseActivity {
         setContentView(R.layout.act_wcn_lbs_locating);
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
-        HandlerThread thread = new HandlerThread(TAG);
+        HandlerThread thread = new HandlerThread(mTag);
         thread.start();
         mHandler = new Handler(thread.getLooper());
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_feature_location;
     }
 
     @Override
@@ -246,7 +251,7 @@ public class LocationManagerAct extends BaseActivity {
             try {
                 mLocationManager.requestLocationUpdates(mFusedProviderName, 1000, 1F, mFusedLocationListener);
             } catch (Exception e) {
-                LUtil.e(TAG, "requestUpdatesFused", e);
+                LUtil.e(mTag, "requestUpdatesFused", e);
             }
         }
     }
@@ -256,7 +261,7 @@ public class LocationManagerAct extends BaseActivity {
             try {
                 mLocationManager.requestLocationUpdates(mMockProviderName, 1000, 1F, mMockLocationListener);
             } catch (Exception e) {
-                LUtil.e(TAG, "requestUpdatesMock", e);
+                LUtil.e(mTag, "requestUpdatesMock", e);
             }
         }
     }
@@ -295,11 +300,11 @@ public class LocationManagerAct extends BaseActivity {
     public void addNmeaListener(View view) {
         if (PermissionUtil.checkLocationPermission(this)) {
             //Android 7.0中 GnssStatusCb.Callback部分接口无法回调，Android 7.1修复，API25用新接口
-            LUtil.i(TAG, "SDK version: " + Build.VERSION.SDK_INT);
+            LUtil.i(mTag, "SDK version: " + Build.VERSION.SDK_INT);
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
                 if (mGnssNmeaListener == null) mGnssNmeaListener = new GnssNmea();
                 if (mLocationManager.addNmeaListener(mGnssNmeaListener, mHandler)) {
-                    LUtil.d(TAG, "Gnss nmea register succeed");
+                    LUtil.d(mTag, "Gnss nmea register succeed");
                 }
             /*} else {
                 mGpsNmeaListener = new GpsNmea();
@@ -314,14 +319,14 @@ public class LocationManagerAct extends BaseActivity {
     private class GnssNmea implements OnNmeaMessageListener {
         @Override
         public void onNmeaMessage(String s, long l) {
-            LUtil.d(TAG, l, ":", s);
+            LUtil.d(mTag, l, ":", s);
         }
     }
 
     private class GpsNmea implements GpsStatus.NmeaListener {
         @Override
         public void onNmeaReceived(long l, String s) {
-            LUtil.d(TAG, l, ":", s);
+            LUtil.d(mTag, l, ":", s);
         }
     }
 
@@ -331,15 +336,15 @@ public class LocationManagerAct extends BaseActivity {
     public void registerGnssStatusCallback(View view) {
         if (PermissionUtil.checkLocationPermission(this)) {
             //Android 7.0中 GnssStatusCb.Callback部分接口无法回调，Android 7.1修复，API25用新接口
-            LUtil.i(TAG, "SDK version: " + Build.VERSION.SDK_INT);
+            LUtil.i(mTag, "SDK version: " + Build.VERSION.SDK_INT);
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
                 mGnssStatusListener = new GnssStatusCb();
                 if (mLocationManager.registerGnssStatusCallback(mGnssStatusListener, mHandler))
-                    LUtil.d(TAG, "Gnss status register succeed");
+                    LUtil.d(mTag, "Gnss status register succeed");
             } else {
                 mGpsStatusListener = new GpsStatusCb();
                 if (mLocationManager.addGpsStatusListener(mGpsStatusListener))
-                    LUtil.d(TAG, "Gps info register succeed");
+                    LUtil.d(mTag, "Gps info register succeed");
             }
         }
     }
@@ -349,25 +354,25 @@ public class LocationManagerAct extends BaseActivity {
         @Override
         public void onFirstFix(int ttffMillis) {
             super.onFirstFix(ttffMillis);
-            LUtil.i(TAG, "navigation onFirstFix:", ttffMillis);
+            LUtil.i(mTag, "navigation onFirstFix:", ttffMillis);
         }
 
         @Override
         public void onSatelliteStatusChanged(GnssStatus status) {
             super.onSatelliteStatusChanged(status);
-            LUtil.i(TAG, "navigation onSatelliteStatusChanged:", status);
+            LUtil.i(mTag, "navigation onSatelliteStatusChanged:", status);
         }
 
         @Override
         public void onStarted() {
             super.onStarted();
-            LUtil.i(TAG, "navigation onStarted");
+            LUtil.i(mTag, "navigation onStarted");
         }
 
         @Override
         public void onStopped() {
             super.onStopped();
-            LUtil.i(TAG, "navigation onStopped");
+            LUtil.i(mTag, "navigation onStopped");
         }
     }
 
@@ -378,24 +383,24 @@ public class LocationManagerAct extends BaseActivity {
                 case GpsStatus.GPS_EVENT_FIRST_FIX:
                     if (PermissionUtil.checkLocationPermission(LocationManagerAct.this)) {
                         GpsStatus status = mLocationManager.getGpsStatus(null);
-                        LUtil.d(TAG, status, "TTFF:", status != null ? status.getTimeToFirstFix() : -1);
+                        LUtil.d(mTag, status, "TTFF:", status != null ? status.getTimeToFirstFix() : -1);
                     } else {
-                        LUtil.w(TAG, "no location permission");
+                        LUtil.w(mTag, "no location permission");
                     }
                     break;
                 case GpsStatus.GPS_EVENT_SATELLITE_STATUS:
                     if (PermissionUtil.checkLocationPermission(LocationManagerAct.this)) {
                         GpsStatus status = mLocationManager.getGpsStatus(null);
-                        LUtil.d(TAG, status, "maxSatellites:", status != null ? status.getMaxSatellites() : -1);
+                        LUtil.d(mTag, status, "maxSatellites:", status != null ? status.getMaxSatellites() : -1);
                     } else {
-                        LUtil.w(TAG, "no location permission");
+                        LUtil.w(mTag, "no location permission");
                     }
                     break;
                 case GpsStatus.GPS_EVENT_STARTED:
-                    Log.i(TAG, "定位启动");
+                    Log.i(mTag, "定位启动");
                     break;
                 case GpsStatus.GPS_EVENT_STOPPED:
-                    Log.i(TAG, "定位结束");
+                    Log.i(mTag, "定位结束");
                     break;
             }
         }
@@ -407,11 +412,11 @@ public class LocationManagerAct extends BaseActivity {
     public void registerGnssNavigationMessageCallback(View view) {
         if (PermissionUtil.checkLocationPermission(this)) {
             //Android 7.0中 GnssStatusCb.Callback部分接口无法回调，Android 7.1修复，API25用新接口
-            LUtil.i(TAG, "SDK version: " + Build.VERSION.SDK_INT);
+            LUtil.i(mTag, "SDK version: " + Build.VERSION.SDK_INT);
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
                 mGnssNavigationMessageCb = new GnssNavigationMessageCb();
                 if (mLocationManager.registerGnssNavigationMessageCallback(mGnssNavigationMessageCb, mHandler)) {
-                    LUtil.d(TAG, "Gnss navigation message register succeed");
+                    LUtil.d(mTag, "Gnss navigation message register succeed");
                 }
             }
         }
@@ -422,19 +427,19 @@ public class LocationManagerAct extends BaseActivity {
         @Override
         public void onGnssNavigationMessageReceived(GnssNavigationMessage event) {
             super.onGnssNavigationMessageReceived(event);
-            LUtil.d(TAG, "GnssNavigationMessageCb", "GnssNavigationMessage:", event.toString());
-            LUtil.d(TAG, "GnssNavigationMessageCb", "getMessageId:", event.getMessageId());
-            LUtil.d(TAG, "GnssNavigationMessageCb", "getSubmessageId:", event.getSubmessageId());
-            LUtil.d(TAG, "GnssNavigationMessageCb", "getStatus:", event.getStatus());
-            LUtil.d(TAG, "GnssNavigationMessageCb", "getSvid:", event.getSvid());
-            LUtil.d(TAG, "GnssNavigationMessageCb", "getType:", event.getType());
-            LUtil.d(TAG, "GnssNavigationMessageCb", "getData:", event.getData());
+            LUtil.d(mTag, "GnssNavigationMessageCb", "GnssNavigationMessage:", event.toString());
+            LUtil.d(mTag, "GnssNavigationMessageCb", "getMessageId:", event.getMessageId());
+            LUtil.d(mTag, "GnssNavigationMessageCb", "getSubmessageId:", event.getSubmessageId());
+            LUtil.d(mTag, "GnssNavigationMessageCb", "getStatus:", event.getStatus());
+            LUtil.d(mTag, "GnssNavigationMessageCb", "getSvid:", event.getSvid());
+            LUtil.d(mTag, "GnssNavigationMessageCb", "getType:", event.getType());
+            LUtil.d(mTag, "GnssNavigationMessageCb", "getData:", event.getData());
         }
 
         @Override
         public void onStatusChanged(int status) {
             super.onStatusChanged(status);
-            LUtil.d(TAG, "GnssNavigationMessageCb", "status:", statusToString(status));
+            LUtil.d(mTag, "GnssNavigationMessageCb", "status:", statusToString(status));
         }
 
         private String statusToString(int status) {
@@ -461,11 +466,11 @@ public class LocationManagerAct extends BaseActivity {
     public void registerGnssMeasurementsCallback(View view) {
         if (PermissionUtil.checkLocationPermission(this)) {
             //Android 7.0中 GnssStatusCb.Callback部分接口无法回调，Android 7.1修复，API25用新接口
-            LUtil.i(TAG, "SDK version: " + Build.VERSION.SDK_INT);
+            LUtil.i(mTag, "SDK version: " + Build.VERSION.SDK_INT);
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.N) {
                 mGnssMeasurementsEventCb = new GnssMeasurementEventCb();
                 if (mLocationManager.registerGnssMeasurementsCallback(mGnssMeasurementsEventCb, mHandler)) {
-                    LUtil.d(TAG, "Gnss measurement event register succeed");
+                    LUtil.d(mTag, "Gnss measurement event register succeed");
                 }
             }
         }
@@ -476,16 +481,16 @@ public class LocationManagerAct extends BaseActivity {
         @Override
         public void onGnssMeasurementsReceived(GnssMeasurementsEvent eventArgs) {
             super.onGnssMeasurementsReceived(eventArgs);
-            LUtil.d(TAG, "GnssMeasurementEventCb", "GnssMeasurementsEvent:", eventArgs.toString());
-            LUtil.d(TAG, "GnssMeasurementEventCb", "GnssClock:", eventArgs.getClock());
-            LUtil.d(TAG, "GnssMeasurementEventCb", "GnssMeasurement list:", eventArgs.getMeasurements());
+            LUtil.d(mTag, "GnssMeasurementEventCb", "GnssMeasurementsEvent:", eventArgs.toString());
+            LUtil.d(mTag, "GnssMeasurementEventCb", "GnssClock:", eventArgs.getClock());
+            LUtil.d(mTag, "GnssMeasurementEventCb", "GnssMeasurement list:", eventArgs.getMeasurements());
         }
 
 
         @Override
         public void onStatusChanged(int status) {
             super.onStatusChanged(status);
-            LUtil.d(TAG, "GnssMeasurementEventCb", "status:", statusToString(status));
+            LUtil.d(mTag, "GnssMeasurementEventCb", "status:", statusToString(status));
         }
 
         private String statusToString(int status) {
@@ -521,10 +526,10 @@ public class LocationManagerAct extends BaseActivity {
 //                mLocationManager.addProximityAlert(31.065395, 121.394601, 1000F, -1, mProximityAlertIntent);
                     mLocationManager.addProximityAlert(30, 120, 100F, -1, mProximityAlertIntent);
                 } else {
-                    LUtil.e(TAG, "ProximityAlert is added");
+                    LUtil.e(mTag, "ProximityAlert is added");
                 }
             } catch (Exception e) {
-                LUtil.e(TAG, "requestUpdatesMock", e);
+                LUtil.e(mTag, "requestUpdatesMock", e);
             }
         }
     }
@@ -585,7 +590,7 @@ public class LocationManagerAct extends BaseActivity {
             mLocationManager.removeTestProvider(mMockProviderName);
             mMockEnabled = false;
         } else {
-            LUtil.d(TAG,  "No Test Provider");
+            LUtil.d(mTag,  "No Test Provider");
         }
     }
     // Deprecated method for test provider
@@ -664,14 +669,14 @@ public class LocationManagerAct extends BaseActivity {
 
         @Override
         public void onLocationChanged(final Location location) {
-            LUtil.d(TAG, mName, "onLocationChanged", location);
+            LUtil.d(mTag, mName, "onLocationChanged", location);
             if (LocationManager.NETWORK_PROVIDER.equals(location.getProvider())) {
                 Bundle bundle = location.getExtras();
-                LUtil.d(TAG, "location extra:", BundleUtil.getContent(bundle));
+                LUtil.d(mTag, "location extra:", BundleUtil.getContent(bundle));
                 if (bundle != null) {
                     Address address = (Address) bundle.get("address");
                     if (address != null) {
-                        LUtil.d(TAG, "address extra:", BundleUtil.getContent(bundle));
+                        LUtil.d(mTag, "address extra:", BundleUtil.getContent(bundle));
                     }
                 }
             }
@@ -679,22 +684,22 @@ public class LocationManagerAct extends BaseActivity {
 
         @Override
         public void onProviderDisabled(String s) {
-            LUtil.d(TAG, mName, "onProviderDisabled:", s);
+            LUtil.d(mTag, mName, "onProviderDisabled:", s);
         }
 
         @Override
         public void onProviderEnabled(String s) {
-            LUtil.d(TAG, mName, "onProviderEnabled:", s);
+            LUtil.d(mTag, mName, "onProviderEnabled:", s);
         }
 
         @Override
         public void onStatusChanged(String s, int i, Bundle bundle) {
-            LUtil.d(TAG, mName, "onStatusChanged:", s, "status:", i);
+            LUtil.d(mTag, mName, "onStatusChanged:", s, "status:", i);
             if (bundle != null) {
                 Set<String> set = bundle.keySet();
                 for (String key : set) {
                     Object value = bundle.get(key);
-                    LUtil.d(TAG, mName, key, value == null ? "NULL" : value.toString());
+                    LUtil.d(mTag, mName, key, value == null ? "NULL" : value.toString());
                 }
             }
         }
@@ -707,49 +712,49 @@ public class LocationManagerAct extends BaseActivity {
         @Override
         public void onReceive(Context context, Intent intent) {
 
-            LUtil.d(TAG, "======================  START  ====================");
-            LUtil.d(TAG, "action：", intent.getAction());
-            LUtil.d(TAG, "extra:", BundleUtil.getContent(intent.getExtras()));
-            LUtil.d(TAG, "====================== DIVIDER ====================");
+            LUtil.d(mTag, "======================  START  ====================");
+            LUtil.d(mTag, "action：", intent.getAction());
+            LUtil.d(mTag, "extra:", BundleUtil.getContent(intent.getExtras()));
+            LUtil.d(mTag, "====================== DIVIDER ====================");
 
             if (LocationManager.MODE_CHANGED_ACTION.equals(intent.getAction())) {
-                LUtil.d(TAG, SUB_TAG, "location service status changed");
+                LUtil.d(mTag, SUB_TAG, "location service status changed");
             } else if (LocationManager.PROVIDERS_CHANGED_ACTION.equals(intent.getAction())) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                     String providerName = intent.getStringExtra(LocationManager.EXTRA_PROVIDER_NAME);
-                    LUtil.d(TAG, SUB_TAG, "provider changed API 29:", providerName);
+                    LUtil.d(mTag, SUB_TAG, "provider changed API 29:", providerName);
                 }
                 // Build.VERSION_CODES.R = 30
                 if (Build.VERSION.SDK_INT >= 30) {
                     String EXTRA_PROVIDER_ENABLED = "android.location.extra.PROVIDER_ENABLED";
                     boolean enabled = intent.getBooleanExtra(EXTRA_PROVIDER_ENABLED, false);
-                    LUtil.d(TAG, SUB_TAG, "provider changed API 30:", enabled);
+                    LUtil.d(mTag, SUB_TAG, "provider changed API 30:", enabled);
                 }
             } else if (ACTION_PROXIMITY_ALERT.equals(intent.getAction())) {
                 boolean extra = intent.getBooleanExtra(LocationManager.KEY_PROXIMITY_ENTERING, false);
-                LUtil.d(TAG, SUB_TAG, "Proximity alert, enter in:", extra);
+                LUtil.d(mTag, SUB_TAG, "Proximity alert, enter in:", extra);
             } else {
                 if (INTENT_ACTION3.equals(intent.getAction())) {
-                    LUtil.d(TAG, SUB_TAG, "network intent3");
+                    LUtil.d(mTag, SUB_TAG, "network intent3");
                 } else if (INTENT_ACTION4.equals(intent.getAction())) {
-                    LUtil.d(TAG, SUB_TAG, "gnss intent4");
+                    LUtil.d(mTag, SUB_TAG, "gnss intent4");
                 } else if (INTENT_ACTION5.equals(intent.getAction())) {
-                    LUtil.d(TAG, SUB_TAG, "gnss intent5");
+                    LUtil.d(mTag, SUB_TAG, "gnss intent5");
                 }
                 Bundle bundle = intent.getExtras();
                 if (bundle != null) {
                     Location location = (Location) bundle.get(LocationManager.KEY_LOCATION_CHANGED);
                     boolean enabled = bundle.getBoolean(LocationManager.KEY_PROVIDER_ENABLED);
                     //String statusChanged = bundle.getString(LocationManager.KEY_STATUS_CHANGED);
-                    LUtil.d(TAG, SUB_TAG, "location changed:", location);
-                    LUtil.d(TAG, SUB_TAG, "provider changed:", enabled);
+                    LUtil.d(mTag, SUB_TAG, "location changed:", location);
+                    LUtil.d(mTag, SUB_TAG, "provider changed:", enabled);
 
                 } else {
-                    LUtil.d(TAG, SUB_TAG, "NULL");
+                    LUtil.d(mTag, SUB_TAG, "NULL");
                 }
             }
-            LUtil.d(TAG, "======================   END   ====================");
-            LUtil.d(TAG, "");
+            LUtil.d(mTag, "======================   END   ====================");
+            LUtil.d(mTag, "");
         }
     }
 
@@ -757,20 +762,20 @@ public class LocationManagerAct extends BaseActivity {
      ****************** Simple Method *******************
      ************************************************************/
     private void printSimpleMethod() {
-        LUtil.e(TAG, "method start with IS");
-        LUtil.d(TAG, LocationManager.GPS_PROVIDER, "enabled:", mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER));
+        LUtil.e(mTag, "method start with IS");
+        LUtil.d(mTag, LocationManager.GPS_PROVIDER, "enabled:", mLocationManager.isProviderEnabled(LocationManager.GPS_PROVIDER));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            LUtil.d(TAG, "Location Service enabled:", mLocationManager.isLocationEnabled(), "ADD API 28 Android P");
+            LUtil.d(mTag, "Location Service enabled:", mLocationManager.isLocationEnabled(), "ADD API 28 Android P");
         }
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
-        LUtil.e(TAG, "method start with GET");
+        LUtil.e(mTag, "method start with GET");
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-            LUtil.d(TAG, "GnssHardwareModelName:", mLocationManager.getGnssHardwareModelName(), "ADD API 28 Android P");
-            LUtil.d(TAG, "GnssYearOfHardware:", mLocationManager.getGnssYearOfHardware(), "ADD API 28 Android P");
+            LUtil.d(mTag, "GnssHardwareModelName:", mLocationManager.getGnssHardwareModelName(), "ADD API 28 Android P");
+            LUtil.d(mTag, "GnssYearOfHardware:", mLocationManager.getGnssYearOfHardware(), "ADD API 28 Android P");
 
         }
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
         List<String> allProviders = new ArrayList<>();
         try {
@@ -781,80 +786,80 @@ public class LocationManagerAct extends BaseActivity {
         for (String name : allProviders) {
             printProviderInfo(name);
 
-            LUtil.d(TAG, "----------------------");
+            LUtil.d(mTag, "----------------------");
         }
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
         // fused provider
         printProviderInfo(mFusedProviderName);
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
         // mock provider
         printProviderInfo(mMockProviderName);
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
         List<String> enabledProviders = mLocationManager.getProviders(true);
         for (String provider: enabledProviders) {
-            LUtil.d(TAG, "getProviders(true):", provider, "enabled:", mLocationManager.isProviderEnabled(provider));
+            LUtil.d(mTag, "getProviders(true):", provider, "enabled:", mLocationManager.isProviderEnabled(provider));
         }
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
         List<String> allProviderList = mLocationManager.getProviders(false);
         for (String provider: allProviderList) {
-            LUtil.d(TAG, "getProviders(false):", provider, "enabled:", mLocationManager.isProviderEnabled(provider));
+            LUtil.d(mTag, "getProviders(false):", provider, "enabled:", mLocationManager.isProviderEnabled(provider));
         }
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
         Criteria criteria3 = new Criteria();
         criteria3.setPowerRequirement(Criteria.POWER_LOW);
         List<String> providers = mLocationManager.getProviders(criteria3, false);
         for (String name : providers) {
-            LUtil.d(TAG, "power low provider:", name, "enabled:", mLocationManager.isProviderEnabled(name));
+            LUtil.d(mTag, "power low provider:", name, "enabled:", mLocationManager.isProviderEnabled(name));
         }
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
         Criteria criteria1 = new Criteria();
         criteria1.setAltitudeRequired(true);
         String criteriaProvider1 = mLocationManager.getBestProvider(criteria1, true);
-        LUtil.d(TAG, criteria1, criteriaProvider1);
+        LUtil.d(mTag, criteria1, criteriaProvider1);
 
         Criteria criteria2 = new Criteria();
         criteria2.setPowerRequirement(Criteria.POWER_LOW);
         String criteriaProvider2 = mLocationManager.getBestProvider(criteria2, true);
-        LUtil.d(TAG, criteria2, criteriaProvider2);
+        LUtil.d(mTag, criteria2, criteriaProvider2);
 
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
 
 //        mLocationManager.getGnssCapabilities();
 //        mLocationManager.getCurrentLocation();
 
         if (PermissionUtil.checkLocationPermission(this)) {
-            LUtil.d(TAG,  "getGpsStatus(null):", mLocationManager.getGpsStatus(null), "Deprecated API 24 Android N");
+            LUtil.d(mTag,  "getGpsStatus(null):", mLocationManager.getGpsStatus(null), "Deprecated API 24 Android N");
         }
-        LUtil.d(TAG, "===============================================");
+        LUtil.d(mTag, "===============================================");
     }
 
     private void printProviderInfo(String providerName) {
         if (!TextUtils.isEmpty(providerName)) {
             LocationProvider provider = mLocationManager.getProvider(providerName);
             if (provider != null) {
-                LUtil.d(TAG, "getName:", provider.getName(), "enabled:", mLocationManager.isProviderEnabled(providerName));
-                LUtil.d(TAG, "requiresNetwork:", provider.requiresNetwork());
-                LUtil.d(TAG, "requiresSatellite:", provider.requiresSatellite());
-                LUtil.d(TAG, "requiresCell:", provider.requiresCell());
-                LUtil.d(TAG, "hasMonetaryCost:", provider.hasMonetaryCost());
-                LUtil.d(TAG, "supportsAltitude:", provider.supportsAltitude());
-                LUtil.d(TAG, "supportsSpeed:", provider.supportsSpeed());
-                LUtil.d(TAG, "supportsBearing:", provider.supportsBearing());
-                LUtil.d(TAG, "getPowerRequirement:", getPowerRequirement(provider.getPowerRequirement()));
-                LUtil.d(TAG, "getAccuracy:", getAccuracy(provider.getAccuracy()));
+                LUtil.d(mTag, "getName:", provider.getName(), "enabled:", mLocationManager.isProviderEnabled(providerName));
+                LUtil.d(mTag, "requiresNetwork:", provider.requiresNetwork());
+                LUtil.d(mTag, "requiresSatellite:", provider.requiresSatellite());
+                LUtil.d(mTag, "requiresCell:", provider.requiresCell());
+                LUtil.d(mTag, "hasMonetaryCost:", provider.hasMonetaryCost());
+                LUtil.d(mTag, "supportsAltitude:", provider.supportsAltitude());
+                LUtil.d(mTag, "supportsSpeed:", provider.supportsSpeed());
+                LUtil.d(mTag, "supportsBearing:", provider.supportsBearing());
+                LUtil.d(mTag, "getPowerRequirement:", getPowerRequirement(provider.getPowerRequirement()));
+                LUtil.d(mTag, "getAccuracy:", getAccuracy(provider.getAccuracy()));
 
-                LUtil.d(TAG, "LocationProvider:", provider);
+                LUtil.d(mTag, "LocationProvider:", provider);
 
                 if (PermissionUtil.checkLocationPermission(this)) {
-                    LUtil.d(TAG, "LastKnownLocation:", mLocationManager.getLastKnownLocation(providerName));
+                    LUtil.d(mTag, "LastKnownLocation:", mLocationManager.getLastKnownLocation(providerName));
                 }
             } else {
-                LUtil.w(TAG, "unknown provider:", providerName);
+                LUtil.w(mTag, "unknown provider:", providerName);
             }
         }
     }

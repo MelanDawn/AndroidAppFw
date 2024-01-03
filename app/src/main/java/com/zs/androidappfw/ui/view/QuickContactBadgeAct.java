@@ -2,14 +2,14 @@ package com.zs.androidappfw.ui.view;
 
 import android.os.Bundle;
 import android.provider.ContactsContract;
-
-import androidx.annotation.Nullable;
 import android.widget.QuickContactBadge;
 
-import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import androidx.annotation.Nullable;
 
-public class QuickContactBadgeAct extends BaseActivity {
+import com.zs.androidappfw.R;
+import com.zs.androidappfw.base.BaseTitleActivity;
+
+public class QuickContactBadgeAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,4 +20,8 @@ public class QuickContactBadgeAct extends BaseActivity {
         badge.setMode(ContactsContract.QuickContact.MODE_SMALL);
     }
 
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_view_quick_contact_badge;
+    }
 }

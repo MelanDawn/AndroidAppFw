@@ -12,9 +12,28 @@
         android:protectionLevel="signature" />
     <!-- 自定义权限声明 end -->
 
+    <uses-feature android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.telephony.subscription" />
+    <uses-feature android:name="android.hardware.telephony.calling" />
+    <uses-feature android:name="android.hardware.telephony.euicc" />
+    <uses-feature android:name="android.hardware.telephony.radio.access" />
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.MANAGE_SUBSCRIPTION_PLANS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"
+        tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <!-- QuickContactBadge -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
@@ -31,12 +50,17 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <!-- Android 11 -->
+    <queries>
+        <package android:name="com.zs.androidappfw" />
+        <provider android:authorities="com.zs.androidappfw.lifecycle.ContentProviderLifecycle" />
+    </queries>
+
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:fullBackupContent="true"
         android:name=".App"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
@@ -70,6 +94,9 @@
             android:configChanges="orientation" />
         <activity android:name=".ui.lifecycle.FragmentStaticAct"
             android:configChanges="orientation" />
+        <activity android:name=".ui.lifecycle.ServiceLifecycleAct" />
+        <activity android:name=".ui.lifecycle.BroadcastReceiverLifecycleAct" />
+        <activity android:name=".ui.lifecycle.ContentProviderLifecycleAct" />
 
         <activity android:name=".ui.wsim.WindowSoftInputModeAct" />
         <activity android:name=".ui.wsim.WsimAdjustNothingAct"
@@ -204,6 +231,28 @@
         <activity android:name=".wcn.lbs.LocationManagerAct" />
         <activity android:name=".wcn.lbs.GeocodeAct" />
 
-    </application>
+        <activity android:name=".cellular.CellularActivity" />
 
+        <service android:name=".ui.lifecycle.ServiceByBind" />
+
+        <service android:name=".ui.lifecycle.ServiceByStartService" />
+
+        <receiver android:name=".ui.lifecycle.BroadcastReceiverStatic"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.SCREEN_OFF" />
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="com.zs.androidappfw.BROADCAST_RECEIVER_LIFECYCLE" />
+            </intent-filter>
+        </receiver>
+
+        <provider android:name=".ui.lifecycle.ContentProviderLifecycle"
+            android:authorities="com.zs.androidappfw.lifecycle.ContentProviderLifecycle"
+            android:enabled="true"
+            android:grantUriPermissions="true"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+    </application>
 </manifest>

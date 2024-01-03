@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_item_title" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/content_provider_add_to_book"
+        android:onClick="addToBook" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/content_provider_query_from_book"
+        android:onClick="queryFromBook" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/content_provider_update_book"
+        android:onClick="updateBook" />
+
+    <Button
+        style="@style/BaseButton"
+        android:text="@string/content_provider_delete_from_book"
+        android:onClick="deleteFromBook" />
+</LinearLayout>

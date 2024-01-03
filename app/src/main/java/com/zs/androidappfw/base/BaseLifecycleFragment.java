@@ -17,74 +17,74 @@ public class BaseLifecycleFragment extends BaseFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         this.mContext = context;
-        LUtil.d(TAG, "onAttach");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        LUtil.d(TAG, "onCreate");
+        LUtil.i(TAG);
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
             @Nullable Bundle savedInstanceState) {
-        LUtil.d(TAG, "onCreateView");
+        LUtil.i(TAG);
         return super.onCreateView(inflater, container, savedInstanceState);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        LUtil.d(TAG, "onViewCreated");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        LUtil.d(TAG, "onActivityCreated");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        LUtil.d(TAG, "onStart");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        LUtil.d(TAG, "onResume");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        LUtil.d(TAG, "onPause");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        LUtil.d(TAG, "onStop");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        LUtil.d(TAG, "onDestroyView");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        LUtil.d(TAG, "onDestroy");
+        LUtil.i(TAG);
     }
 
     @Override
     public void onDetach() {
         super.onDetach();
-        LUtil.d(TAG, "onDetach");
+        LUtil.i(TAG);
     }
 }

@@ -8,9 +8,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class BitmapDrawableAct extends BaseActivity {
+public class BitmapDrawableAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,5 +28,10 @@ public class BitmapDrawableAct extends BaseActivity {
         jpgIv.setImageDrawable(jpg);
         ImageView gifIv = findViewById(R.id.drawable_gif);
         gifIv.setImageDrawable(gif);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable_bitmap;
     }
 }

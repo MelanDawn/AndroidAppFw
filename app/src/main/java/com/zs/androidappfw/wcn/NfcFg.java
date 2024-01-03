@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.base.BaseFragment;
+import com.zs.androidappfw.base.BaseTitleFragment;
 
 public class NfcFg extends BaseFragment implements View.OnClickListener {
 
@@ -21,7 +22,7 @@ public class NfcFg extends BaseFragment implements View.OnClickListener {
         return view;
     }
 
-    private void initView(View view) {
+    protected void initView(View view) {
         initAndSetClickListener(view, R.id.fg_wcn_nfc_nfc);
     }
 

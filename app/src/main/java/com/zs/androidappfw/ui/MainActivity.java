@@ -31,10 +31,10 @@ public class MainActivity extends BaseFragmentActivity {
         final BottomNavigationView navigationView = findViewById(R.id.main_navigation_view);
 
         List<Fragment> fragmentList = new ArrayList<>();
-        fragmentList.add(new BaseFgm());
-        fragmentList.add(new NativeViewFgm());
+        fragmentList.add(new BasicFunctionFgm());
+        fragmentList.add(new ViewFgm());
         fragmentList.add(new AdvancedFgm());
-        fragmentList.add(new FunctionFgm());
+        fragmentList.add(new FeatureFgm());
         TabFragmentPagerAdapter adapter = new TabFragmentPagerAdapter(this, fragmentList);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
@@ -65,30 +65,30 @@ public class MainActivity extends BaseFragmentActivity {
                 viewPager.setCurrentItem(1);
             } else if (id == R.id.main_bottom_tab_advanced) {
                 viewPager.setCurrentItem(2);
-            } else if (id == R.id.main_bottom_tab_function) {
+            } else if (id == R.id.main_bottom_tab_feature) {
                 viewPager.setCurrentItem(3);
             }
             return true;
         });
     }
-}
 
-class TabFragmentPagerAdapter extends FragmentStateAdapter {
-    private final List<Fragment> mList;
+    static class TabFragmentPagerAdapter extends FragmentStateAdapter {
+        private final List<Fragment> mList;
 
-    TabFragmentPagerAdapter(FragmentActivity activity, List<Fragment> list) {
-        super(activity);
-        this.mList = list;
-    }
+        TabFragmentPagerAdapter(FragmentActivity activity, List<Fragment> list) {
+            super(activity);
+            this.mList = list;
+        }
 
-    @NonNull
-    @Override
-    public Fragment createFragment(int position) {
-        return mList.get(position);
-    }
+        @NonNull
+        @Override
+        public Fragment createFragment(int position) {
+            return mList.get(position);
+        }
 
-    @Override
-    public int getItemCount() {
-        return mList.size();
+        @Override
+        public int getItemCount() {
+            return mList.size();
+        }
     }
 }

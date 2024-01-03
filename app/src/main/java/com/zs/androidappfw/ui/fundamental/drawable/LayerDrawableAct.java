@@ -5,9 +5,9 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class LayerDrawableAct extends BaseActivity {
+public class LayerDrawableAct extends BaseTitleActivity {
 
 //    private ImageView imageView;
     @Override
@@ -17,6 +17,11 @@ public class LayerDrawableAct extends BaseActivity {
 
 //        imageView = findViewById(R.id.drawable_layer_iv);
 //        LUtil.d(TAG, "height=" + imageView.getHeight() + " width=" + imageView.getWidth());
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable_layer;
     }
 
     @Override

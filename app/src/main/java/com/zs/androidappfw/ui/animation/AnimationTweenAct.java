@@ -9,11 +9,11 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
 import java.util.List;
 
-public class AnimationTweenAct extends BaseActivity {
+public class AnimationTweenAct extends BaseTitleActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,5 +65,10 @@ public class AnimationTweenAct extends BaseActivity {
         translateAnimation.setRepeatCount(Animation.INFINITE);
         translateAnimation.setRepeatMode(Animation.REVERSE);
         translateIv.startAnimation(translateAnimation);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_animation_tween;
     }
 }

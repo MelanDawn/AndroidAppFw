@@ -6,9 +6,9 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseFragmentActivity;
+import com.zs.androidappfw.base.BaseTitleFragmentActivity;
 
-public class FragmentDynamicAct extends BaseFragmentActivity {
+public class FragmentDynamicAct extends BaseTitleFragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +20,10 @@ public class FragmentDynamicAct extends BaseFragmentActivity {
         findViewById(R.id.fragment_lifecycle_to_static).setOnClickListener((view) -> {
             startActivity(new Intent(this, FragmentStaticAct.class));
         });
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_fragment_dynamic;
     }
 }

@@ -13,12 +13,12 @@ import android.widget.ViewSwitcher;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
 
 // Created by zhangs on 2019/3/10.
 
-public class ViewSwitcherAct extends BaseActivity {
+public class ViewSwitcherAct extends BaseTitleActivity {
 
     private ViewSwitcher switcher;
     private Factory factory;
@@ -30,6 +30,10 @@ public class ViewSwitcherAct extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_view_switcher);
         test();
+    }
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_vg_view_switcher;
     }
 
     public void test() {

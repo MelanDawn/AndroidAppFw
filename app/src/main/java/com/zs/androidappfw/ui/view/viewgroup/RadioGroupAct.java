@@ -1,24 +1,29 @@
 package com.zs.androidappfw.ui.view.viewgroup;
 
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
 
 // Created by zhangs on 2019/2/28.
 
-public class RadioGroupAct extends BaseActivity {
+public class RadioGroupAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_radio_group);
 
         test();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_vg_radio_group;
     }
 
     private void test() {

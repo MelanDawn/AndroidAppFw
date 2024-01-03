@@ -2,21 +2,21 @@ package com.zs.androidappfw.ui.view.viewgroup;
 
 import android.content.Context;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 
+import androidx.annotation.Nullable;
+
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
 
 // Created by zhangs on 2019/3/10.
 
-public class ImageSwitcherAct extends BaseActivity {
+public class ImageSwitcherAct extends BaseTitleActivity {
 
     private int mIndex = 0;
 
@@ -26,6 +26,11 @@ public class ImageSwitcherAct extends BaseActivity {
         setContentView(R.layout.act_image_switcher);
 
         test();
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_vg_image_switcher;
     }
 
     public void test() {

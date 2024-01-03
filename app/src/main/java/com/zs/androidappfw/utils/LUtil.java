@@ -56,6 +56,8 @@ public class LUtil {
                 .append(",").append(t.getName())
                 .append(",").append(t.getThreadGroup() == null ? "NULL" : t.getThreadGroup().getName())
                 .append(" ]");
+        StackTraceElement[] elements = Thread.currentThread().getStackTrace();
+        sb.append(" ").append(elements[4].getMethodName());
         if (msg == null) {
             sb.append("NULL");
         } else {

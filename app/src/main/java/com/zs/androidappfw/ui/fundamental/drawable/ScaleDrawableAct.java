@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class ScaleDrawableAct extends BaseActivity {
+public class ScaleDrawableAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,5 +18,10 @@ public class ScaleDrawableAct extends BaseActivity {
         ImageView imageView = findViewById(R.id.drawable_scale_iv);
         ScaleDrawable scaleDrawable = (ScaleDrawable) imageView.getDrawable();
         scaleDrawable.setLevel(1);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable_scale;
     }
 }

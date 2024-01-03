@@ -1,38 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/common_item_title" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/auto_complete_tv_description"
-            android:background="@android:color/darker_gray"/>
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
 
-        <AutoCompleteTextView
-            android:id="@+id/auto_complete_tv_1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="@string/auto_complete_tv_normal"/>
-
-        <AutoCompleteTextView
-            android:id="@+id/auto_complete_tv_2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/auto_complete_tv_et_height"
-            android:completionThreshold="1"
-            android:hint="@string/auto_complete_tv_auto_1"/>
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-        <AutoCompleteTextView
-            android:id="@+id/auto_complete_tv_3"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/auto_complete_tv_et_height"
-            android:completionThreshold="0"
-            android:hint="@string/auto_complete_tv_auto_0"/>
-    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_complete_tv_description"
+                android:background="@android:color/darker_gray"/>
 
-</ScrollView>
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/auto_complete_tv_normal"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/auto_complete_tv_et_height"
+                android:completionThreshold="1"
+                android:hint="@string/auto_complete_tv_auto_1"/>
+
+            <AutoCompleteTextView
+                android:id="@+id/auto_complete_tv_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/auto_complete_tv_et_height"
+                android:completionThreshold="0"
+                android:hint="@string/auto_complete_tv_auto_0"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

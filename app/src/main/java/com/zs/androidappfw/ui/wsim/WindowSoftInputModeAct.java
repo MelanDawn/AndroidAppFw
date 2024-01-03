@@ -7,15 +7,20 @@ import android.view.View;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.LUtil;
 
-public class WindowSoftInputModeAct extends BaseActivity {
+public class WindowSoftInputModeAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_window_input_soft_mode);
-        LUtil.d(TAG, ""+this.isChild());
+        LUtil.d(mTag, "" + this.isChild());
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_window_soft_input_method;
     }
 
     public void toAdjustNothing(View view) {
@@ -49,7 +54,7 @@ public class WindowSoftInputModeAct extends BaseActivity {
         toActivity(WsimStateUnspecifiedAct.class);
     }
 
-    private void toActivity(Class<? extends BaseActivity> cls) {
+    private void toActivity(Class<? extends BaseTitleActivity> cls) {
         startActivity(new Intent(this, cls));
     }
 }

@@ -7,9 +7,9 @@ import android.widget.ImageView;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseActivity;
+import com.zs.androidappfw.base.BaseTitleActivity;
 
-public class ClipDrawableAct extends BaseActivity {
+public class ClipDrawableAct extends BaseTitleActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,5 +18,10 @@ public class ClipDrawableAct extends BaseActivity {
         ImageView imageView = findViewById(R.id.drawable_clip_iv);
         ClipDrawable drawable = (ClipDrawable) imageView.getDrawable();
         drawable.setLevel(drawable.getLevel() + 5000);
+    }
+
+    @Override
+    protected int getTitleResId() {
+        return R.string.title_drawable_clip;
     }
 }

@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import com.zs.androidappfw.config.Config;
 import com.zs.androidappfw.utils.LUtil;
 
+import org.jetbrains.annotations.Nullable;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -21,11 +23,11 @@ public class DbManager {
     private static final String DB_NAME = Config.DB_NAME;
     private static final int DB_VERSION = Config.DB_VERSION;
 
-    private AtomicInteger mDbCount = new AtomicInteger(0);
-    private SQLiteDatabase mDb;
-    private DbHelper mDbHelper;
+    private final AtomicInteger mDbCount = new AtomicInteger(0);
+    private SQLiteDatabase mDb = null;
+    private final DbHelper mDbHelper;
 
-    private static DbManager sInstance = null;
+    private static volatile DbManager sInstance = null;
     private DbManager(Context context){
         mDbHelper = new DbHelper(context, DB_NAME, null, DB_VERSION);
     }
@@ -41,10 +43,11 @@ public class DbManager {
         return sInstance;
     }
 
-    public synchronized SQLiteDatabase openDb(){
+    public synchronized @Nullable SQLiteDatabase openDb(){
         if (mDbCount.incrementAndGet() == 1) {
             mDb = mDbHelper.getWritableDatabase();
         }
+        LUtil.d(TAG, "count = ", mDbCount.get());
         return mDb;
     }
 
@@ -52,9 +55,10 @@ public class DbManager {
         if (mDbCount.decrementAndGet() == 0){
             mDb.close();
         }
+        LUtil.d(TAG, "count = ", mDbCount.get());
     }
 
-    private class DbHelper extends SQLiteOpenHelper {
+    private static class DbHelper extends SQLiteOpenHelper {
         DbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version){
             super(context, name, factory, version);
         }
