@@ -21,7 +21,7 @@ public class FontActivity extends BaseTitleActivity {
         TextView textView3 = findViewById(R.id.font_times_3);
         TextView textView4 = findViewById(R.id.font_times_4);
 
-        Typeface typeface1 = Typeface.create("font/times.ttf", Typeface.NORMAL);
+        Typeface typeface1 = Typeface.create("font/times.ttf", Typeface.ITALIC);
         textView1.setTypeface(typeface1);
 
         Typeface typeface2 = Typeface.create("font/timesbd.ttf", Typeface.BOLD);

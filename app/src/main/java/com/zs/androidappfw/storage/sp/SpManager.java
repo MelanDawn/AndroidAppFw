@@ -5,7 +5,7 @@ package com.zs.androidappfw.storage.sp;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.zs.androidappfw.App;
+import com.zs.androidappfw.AppLifecycle;
 import com.zs.androidappfw.config.Config;
 
 import java.util.HashSet;
@@ -14,7 +14,7 @@ import java.util.Set;
 public class SpManager {
 
     public static SharedPreferences getSp() {
-        return App.appContext.getSharedPreferences(Config.SP_DEFAULT, Context.MODE_PRIVATE);
+        return AppLifecycle.appContext.getSharedPreferences(Config.SP_DEFAULT, Context.MODE_PRIVATE);
     }
 
     public static SharedPreferences.Editor getEditor() {

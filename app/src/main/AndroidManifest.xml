@@ -39,8 +39,8 @@
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <!-- bluetooth -->
-    <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
     <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
     <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
@@ -61,7 +61,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".App"
+        android:name=".AppLifecycle"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
 
@@ -75,6 +75,22 @@
         </activity>
 
         <activity android:name=".ui.MainActivity"/>
+
+        <activity android:name=".ui.fundamental.lang.JavaAct" />
+        <activity android:name=".ui.fundamental.lang.JavaLangAct" />
+        <activity android:name=".ui.fundamental.lang.JavaLangAnnotationAct" />
+        <activity android:name=".ui.fundamental.lang.JavaLangInvokeAct" />
+        <activity android:name=".ui.fundamental.lang.JavaLangReflectAct" />
+        <activity android:name=".ui.fundamental.lang.JavaLangRefAct" />
+        <activity android:name=".ui.fundamental.lang.ClassDetailsAct" />
+
+        <activity android:name=".ui.fundamental.AndroidBasicInfoAct" />
+        <activity android:name=".ui.fundamental.BuildAct" />
+        <activity android:name=".ui.fundamental.DebugAct" />
+        <activity android:name=".ui.fundamental.EnvironmentAct" />
+        <activity android:name=".ui.fundamental.LocaleListAct" />
+        <activity android:name=".ui.fundamental.ProcessAct" />
+        <activity android:name=".ui.fundamental.UserHandleAct" />
 
         <activity android:name=".ui.lifecycle.ActivitySingleInstanceAct"
             android:launchMode="singleInstance"/>
@@ -137,8 +153,7 @@
 
         <activity android:name=".ui.fundamental.font.FontActivity" />
 
-        <activity android:name=".ui.fundamental.DeviceInfoAct" />
-        <activity android:name=".ui.fundamental.FileSystemAct" />
+        <activity android:name=".ui.fundamental.ContextFileSystemAct" />
 
         <activity android:name=".ui.view.tag.BlinkAct" />
         <activity android:name=".ui.view.tag.IncludeAct" />

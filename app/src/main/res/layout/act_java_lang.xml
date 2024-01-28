@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_item_title" />
+
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/java_lang_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+<!--            <Button-->
+<!--                style="@style/BaseButton"-->
+<!--                android:onClick="toObject"-->
+<!--                android:text="@string/to_java_lang_object" />-->
+
+<!--            <Button-->
+<!--                style="@style/BaseButton"-->
+<!--                android:onClick="toPackage"-->
+<!--                android:text="@string/to_java_lang_package" />-->
+
+<!--            <Button-->
+<!--                style="@style/BaseButton"-->
+<!--                android:onClick="toClass"-->
+<!--                android:text="@string/to_java_lang_class" />-->
+
+<!--            <Button-->
+<!--                style="@style/BaseButton"-->
+<!--                android:onClick="toField"-->
+<!--                android:text="@string/to_java_lang_field" />-->
+
+<!--            <Button-->
+<!--                style="@style/BaseButton"-->
+<!--                android:onClick="toConstructor"-->
+<!--                android:text="@string/to_java_lang_constructor" />-->
+
+<!--            <Button-->
+<!--                style="@style/BaseButton"-->
+<!--                android:onClick="toMethod"-->
+<!--                android:text="@string/to_java_lang_method" />-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

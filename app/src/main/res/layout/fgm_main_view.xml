@@ -10,30 +10,47 @@
         android:orientation="vertical">
 
         <!-- tag -->
-        <Button
-            android:id="@+id/view_to_tag_blink"
-            style="@style/BaseButton"
-            android:text="@string/to_tag_blink" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/view_to_tag_blink"
+                style="@style/BaseButton"
+                android:layout_weight="1"
+                android:text="@string/to_tag_blink" />
+            <Button
+                android:id="@+id/view_to_tag_include"
+                style="@style/BaseButton"
+                android:layout_weight="1"
+                android:text="@string/to_tag_include" />
+            <Button
+                android:id="@+id/view_to_tag_merge"
+                style="@style/BaseButton"
+                android:layout_weight="1"
+                android:text="@string/to_tag_merge" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/view_to_tag_include"
-            style="@style/BaseButton"
-            android:text="@string/to_tag_include" />
-
-        <Button
-            android:id="@+id/view_to_tag_merge"
-            style="@style/BaseButton"
-            android:text="@string/to_tag_merge" />
-
-        <Button
-            android:id="@+id/view_to_tag_request_focus"
-            style="@style/BaseButton"
-            android:text="@string/to_tag_request_focus" />
-
-        <Button
-            android:id="@+id/view_to_tag_tag"
-            style="@style/BaseButton"
-            android:text="@string/to_tag_tag" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/view_to_tag_request_focus"
+                style="@style/BaseButton"
+                android:layout_weight="1"
+                android:text="@string/to_tag_request_focus" />
+            <Button
+                android:id="@+id/view_to_tag_tag"
+                style="@style/BaseButton"
+                android:layout_weight="1"
+                android:text="@string/to_tag_tag" />
+            <!-- Space -->
+            <androidx.legacy.widget.Space
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/base_btn_height" />
+        </LinearLayout>
 
         <!-- ProgressBar and its subclass -->
         <Button

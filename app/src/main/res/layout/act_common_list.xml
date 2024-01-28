@@ -8,11 +8,13 @@
 
     <ScrollView android:layout_height="match_parent"
         android:layout_width="match_parent" >
+
         <LinearLayout
-            android:id="@+id/file_system_ll"
+            android:id="@+id/common_list_ll"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

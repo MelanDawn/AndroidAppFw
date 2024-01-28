@@ -18,5 +18,4 @@ public abstract class BaseLifecycleBroadcastReceiver extends BaseBroadcastReceiv
         LUtil.i(mTag);
         return super.peekService(myContext, service);
     }
-
 }

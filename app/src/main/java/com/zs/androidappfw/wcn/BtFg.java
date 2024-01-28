@@ -1,5 +1,6 @@
 package com.zs.androidappfw.wcn;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,6 +33,7 @@ public class BtFg extends BaseFragment implements View.OnClickListener {
         view.findViewById(id).setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View v) {
         switch (v.getId()) {

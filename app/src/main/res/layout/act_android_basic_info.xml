@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_item_title" />
+
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+        <LinearLayout
+            android:id="@+id/java_lang_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toBuild"
+                android:text="@string/to_android_build" />
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toDebug"
+                android:text="@string/to_android_debug" />
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toEnvironment"
+                android:text="@string/to_android_environment" />
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toFileSystem"
+                android:text="@string/to_android_file_system" />
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toLocaleList"
+                android:text="@string/to_android_locale_list" />
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toProcess"
+                android:text="@string/to_android_process" />
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toUserHandle"
+                android:text="@string/to_android_user_handle" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

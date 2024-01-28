@@ -18,10 +18,6 @@ public abstract class BaseFragment extends Fragment {
         this.mContext = context;
     }
 
-    public String getTAG() {
-        return TAG;
-    }
-
     protected void startActivity(Class<? extends BaseTitleActivity> cls) {
         startActivity(new Intent(getActivity(), cls));
     }

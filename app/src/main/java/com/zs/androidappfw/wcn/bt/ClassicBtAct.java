@@ -29,7 +29,7 @@ public class ClassicBtAct extends BaseTitleActivity {
 
     private BluetoothAdapter mAdapter;
 
-    private Receiver mReceiver = new Receiver();
+    private final Receiver mReceiver = new Receiver();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -56,7 +56,7 @@ public class ClassicBtAct extends BaseTitleActivity {
         filter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECT_REQUESTED);
         filter.addAction(BluetoothDevice.ACTION_ACL_DISCONNECTED);
 
-        registerReceiver(mReceiver, filter);
+        registerReceiverDelegate(mReceiver, filter);
 
         mAdapter = BluetoothUtils.getInstance(this);
 

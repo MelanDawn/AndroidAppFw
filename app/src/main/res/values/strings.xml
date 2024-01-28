@@ -8,7 +8,59 @@
     <string name="main_tab_advanced">进阶</string>
 
     <!-- 基础 -->
-    <string name="to_activity_lifecycle_and_launch_mode">Activity`s Lifecycle and LaunchMode </string>
+    <string name="to_java">Java</string>
+    <string name="to_java_lang">java.lang</string>
+    <string name="to_java_lang_annotation">java.lang.annotation</string>
+    <string name="to_java_lang_constant">java.lang.constant</string>
+    <string name="to_java_lang_invoke">java.lang.invoke</string>
+    <string name="to_java_lang_ref">java.lang.ref</string>
+    <string name="to_java_lang_reflect">java.lang.reflect</string>
+    <string name="to_java_lang_runtime">java.lang.runtime</string>
+    <string name="title_java">Java</string>
+    <string name="title_java_lang">java.lang</string>
+    <string name="title_java_lang_annotation">java.lang.annotation</string>
+    <string name="title_java_lang_constant">java.lang.constant</string>
+    <string name="title_java_lang_invoke">java.lang.invoke</string>
+    <string name="title_java_lang_ref">java.lang.ref</string>
+    <string name="title_java_lang_reflect">java.lang.reflect</string>
+    <string name="title_java_lang_runtime">java.lang.runtime</string>
+
+    <string name="java_class_section_constructor">Constructor</string>
+    <string name="java_class_section_field">Field</string>
+    <string name="java_class_section_method">Method</string>
+
+    <string name="to_java_lang_object">toObject</string>
+    <string name="to_java_lang_package">toPackage</string>
+    <string name="to_java_lang_class">toClass</string>
+    <string name="to_java_lang_field">toField</string>
+    <string name="to_java_lang_constructor">toConstructor</string>
+    <string name="to_java_lang_method">toMethod</string>
+    <string name="title_java_lang_object">Object</string>
+    <string name="title_java_lang_package">Package</string>
+    <string name="title_java_lang_class">Class</string>
+    <string name="title_java_lang_field">Field</string>
+    <string name="title_java_lang_constructor">Constructor</string>
+    <string name="title_java_lang_method">Method</string>
+
+    <string name="to_android">AndroidBasicInfo</string>
+    <string name="to_android_build">Build</string>
+    <string name="to_android_debug">Debug</string>
+    <string name="to_android_environment">Environment File System</string>
+    <string name="to_android_file_system">Context File System</string>
+    <string name="to_android_locale_list">LocaleList</string>
+    <string name="to_android_process">Process</string>
+    <string name="to_android_user_handle">UserHandle</string>
+
+    <string name="title_android_basic_info">AndroidBasicInfo</string>
+    <string name="title_android_build">Build</string>
+    <string name="title_android_debug">Debug</string>
+    <string name="title_android_environment">Environment File System</string>
+    <string name="title_android_file_system">Context File System</string>
+    <string name="title_android_locale_list">LocaleList</string>
+    <string name="title_android_process">Process</string>
+    <string name="title_android_user_handle">UserHandle</string>
+
+    <string name="to_activity_lifecycle_and_launch_mode">Activity`s Lifecycle and LaunchMode</string>
     <string name="to_activity_standard">to standard Activity</string>
     <string name="to_activity_single_top">to singTop Activity</string>
     <string name="to_activity_single_task">to singleTask Activity</string>
@@ -84,11 +136,6 @@
     <string name="to_font">Font</string>
     <string name="title_font">ShapeDrawable</string>
 
-    <string name="to_file_system">FileSystem</string>
-    <string name="title_file_system">FileSystem</string>
-
-    <string name="to_device_info">DeviceInfo</string>
-    <string name="title_device_info">DeviceInfo</string>
 
     <!-- UI -->
     <string name="to_tag_blink">blink</string>

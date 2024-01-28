@@ -9,7 +9,7 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 
-import com.zs.androidappfw.App;
+import com.zs.androidappfw.AppLifecycle;
 import com.zs.androidappfw.utils.LUtil;
 
 public class NetworkState {
@@ -50,8 +50,8 @@ public class NetworkState {
     private NetworkState(){
         LUtil.i(TAG, "init");
 
-        registerBroadcastReceiver(App.appContext);
-        updateNetworkStatus(App.appContext);
+        registerBroadcastReceiver(AppLifecycle.appContext);
+        updateNetworkStatus(AppLifecycle.appContext);
     }
 
     public static NetworkState getInstance(){

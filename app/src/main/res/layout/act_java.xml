@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/common_item_title" />
+
+    <ScrollView android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/java_lang_ll"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toJavaLang"
+                android:text="@string/to_java_lang" />
+
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toJavaLangAnnotation"
+                android:text="@string/to_java_lang_annotation" />
+
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toJavaLangInvoke"
+                android:text="@string/to_java_lang_invoke" />
+
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toJavaLangRef"
+                android:text="@string/to_java_lang_ref" />
+
+            <Button
+                style="@style/BaseButton"
+                android:onClick="toJavaLangReflect"
+                android:text="@string/to_java_lang_reflect" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

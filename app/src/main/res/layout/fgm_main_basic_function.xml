@@ -4,6 +4,16 @@
     android:layout_height="match_parent">
 
     <Button
+        android:id="@+id/basic_function_to_java"
+        style="@style/BaseButton"
+        android:text="@string/to_java" />
+
+    <Button
+        android:id="@+id/basic_function_to_android"
+        style="@style/BaseButton"
+        android:text="@string/to_android" />
+
+    <Button
         android:id="@+id/basic_function_to_activity_lifecycle"
         style="@style/BaseButton"
         android:text="@string/to_activity_lifecycle_and_launch_mode" />
@@ -42,15 +52,5 @@
         android:id="@+id/basic_function_to_font"
         style="@style/BaseButton"
         android:text="@string/to_font" />
-
-    <Button
-        android:id="@+id/basic_function_to_file_system"
-        style="@style/BaseButton"
-        android:text="@string/to_file_system" />
-
-    <Button
-        android:id="@+id/basic_function_to_device_info"
-        style="@style/BaseButton"
-        android:text="@string/to_device_info" />
 
 </LinearLayout>

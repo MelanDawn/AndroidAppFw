@@ -10,17 +10,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.ui.fundamental.DeviceInfoAct;
-import com.zs.androidappfw.ui.fundamental.FileSystemAct;
+import com.zs.androidappfw.base.BaseFragment;
+import com.zs.androidappfw.ui.fundamental.AndroidBasicInfoAct;
+import com.zs.androidappfw.ui.fundamental.drawable.DrawableAct;
+import com.zs.androidappfw.ui.fundamental.font.FontActivity;
+import com.zs.androidappfw.ui.fundamental.lang.JavaAct;
+import com.zs.androidappfw.ui.lifecycle.ActivityStandardAct;
 import com.zs.androidappfw.ui.lifecycle.BroadcastReceiverLifecycleAct;
 import com.zs.androidappfw.ui.lifecycle.ContentProviderLifecycleAct;
 import com.zs.androidappfw.ui.lifecycle.FragmentDynamicAct;
 import com.zs.androidappfw.ui.lifecycle.ServiceLifecycleAct;
 import com.zs.androidappfw.ui.wsim.WindowSoftInputModeAct;
-import com.zs.androidappfw.ui.fundamental.drawable.DrawableAct;
-import com.zs.androidappfw.ui.fundamental.font.FontActivity;
-import com.zs.androidappfw.ui.lifecycle.ActivityStandardAct;
-import com.zs.androidappfw.base.BaseFragment;
 
 public class BasicFunctionFgm extends BaseFragment implements View.OnClickListener {
 
@@ -34,6 +34,8 @@ public class BasicFunctionFgm extends BaseFragment implements View.OnClickListen
     }
 
     protected void initView(View view) {
+        initAndSetClickListener(view, R.id.basic_function_to_java);
+        initAndSetClickListener(view, R.id.basic_function_to_android);
         initAndSetClickListener(view, R.id.basic_function_to_activity_lifecycle);
         initAndSetClickListener(view, R.id.basic_function_to_fragment_lifecycle);
         initAndSetClickListener(view, R.id.basic_function_to_service);
@@ -42,8 +44,6 @@ public class BasicFunctionFgm extends BaseFragment implements View.OnClickListen
         initAndSetClickListener(view, R.id.basic_function_to_wsim);
         initAndSetClickListener(view, R.id.basic_function_to_drawable);
         initAndSetClickListener(view, R.id.basic_function_to_font);
-        initAndSetClickListener(view, R.id.basic_function_to_file_system);
-        initAndSetClickListener(view, R.id.basic_function_to_device_info);
     }
 
     private void initAndSetClickListener(View view, int id) {
@@ -54,6 +54,12 @@ public class BasicFunctionFgm extends BaseFragment implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+            case R.id.basic_function_to_java:
+                startActivity(JavaAct.class);
+                break;
+            case R.id.basic_function_to_android:
+                startActivity(AndroidBasicInfoAct.class);
+                break;
             case R.id.basic_function_to_activity_lifecycle:
                 startActivity(ActivityStandardAct.class);
                 break;
@@ -77,12 +83,6 @@ public class BasicFunctionFgm extends BaseFragment implements View.OnClickListen
                 break;
             case R.id.basic_function_to_font:
                 startActivity(FontActivity.class);
-                break;
-            case R.id.basic_function_to_file_system:
-                startActivity(FileSystemAct.class);
-                break;
-            case R.id.basic_function_to_device_info:
-                startActivity(DeviceInfoAct.class);
                 break;
         }
     }
