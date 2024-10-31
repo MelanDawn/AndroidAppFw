@@ -10,15 +10,15 @@ import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
 
-public abstract class BaseTitleFragment extends BaseFragment {
+public abstract class BaseTitleFragment extends BaseClickFragment {
 
     public static final String FRAGMENT_TITLE_RES_ID = "FRAGMENT_TITLE_RES_ID";
 
     protected ImageButton mTitleBackBtn, mTitleMoreBtn;
     protected TextView mTitleTv;
-    protected void initView(View view) {
-        initTitleView(view);
-    }
+//    protected void initView(View view) {
+//        initTitleView(view);
+//    }
 
     protected void initTitleView(View view) {
         mTitleBackBtn = view.findViewById(R.id.title_back_btn);

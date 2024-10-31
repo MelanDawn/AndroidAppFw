@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/fgm_bredr_scan_btn"
+        android:text="@string/app_name"
+        android:gravity="center"
+        style="@style/BaseButton" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fgm_bredr_scan_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

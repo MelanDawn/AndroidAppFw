@@ -1,9 +1,7 @@
-package com.zs.androidappfw.wcn;
+package com.zs.androidappfw.wcn.bt;
 
-import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -16,13 +14,18 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.base.BaseTitleFragmentActivity;
-import com.zs.androidappfw.wcn.bt.BleAct;
-import com.zs.androidappfw.wcn.bt.BredrBaseFgm;
+import com.zs.androidappfw.utils.LUtil;
+import com.zs.androidappfw.utils.PermissionUtil;
+import com.zs.androidappfw.wcn.utils.BtAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WcnActivity extends BaseTitleFragmentActivity {
+public class BredrActivity extends BaseTitleFragmentActivity {
+
+    private final BluetoothReceiver mReceiver = new BluetoothReceiver();
+
+    private BredrScanFgm bredrScanFgm = new BredrScanFgm();
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,11 +36,8 @@ public class WcnActivity extends BaseTitleFragmentActivity {
         final BottomNavigationView navigationView = findViewById(R.id.wcn_navigation_view);
 
         List<Fragment> fragmentList = new ArrayList<>();
-        fragmentList.add(new WifiFgm());
-        fragmentList.add(new BtFgm());
-        fragmentList.add(new LbsFgm());
-        fragmentList.add(new NfcFgm());
-        fragmentList.add(new UwbFgm());
+        fragmentList.add(bredrScanFgm);
+        fragmentList.add(new BredrScanFgm());
         TabFragmentStateAdapter adapter = new TabFragmentStateAdapter(this, fragmentList);
         viewPager.setAdapter(adapter);
         viewPager.setCurrentItem(0);
@@ -62,42 +62,53 @@ public class WcnActivity extends BaseTitleFragmentActivity {
 
         navigationView.setOnItemSelectedListener(item -> {
             int id = item.getItemId();
-            if (id == R.id.wcn_bottom_tab_wifi) {
+//            if (id == R.id.wcn_bottom_tab_wifi) {
                 viewPager.setCurrentItem(0);
-            } else if (id == R.id.wcn_bottom_tab_bt) {
-                viewPager.setCurrentItem(1);
-            } else if (id == R.id.wcn_bottom_tab_lbs) {
-                viewPager.setCurrentItem(2);
-            } else if (id == R.id.wcn_bottom_tab_nfc) {
-                viewPager.setCurrentItem(3);
-            } else if (id == R.id.wcn_bottom_tab_uwb) {
-                viewPager.setCurrentItem(4);
-            }
+//            } else if (id == R.id.wcn_bottom_tab_bt) {
+//                viewPager.setCurrentItem(1);
+//            } else if (id == R.id.wcn_bottom_tab_lbs) {
+//                viewPager.setCurrentItem(2);
+//            } else if (id == R.id.wcn_bottom_tab_nfc) {
+//                viewPager.setCurrentItem(3);
+//            } else if (id == R.id.wcn_bottom_tab_uwb) {
+//                viewPager.setCurrentItem(4);
+//            }
             return true;
         });
+
+        if (PermissionUtil.checkBluetoothPermission(this)) {
+            LUtil.i(mTag, "discovery start:", BtAdapter.getInstance(this).startDiscovery());
+        } else {
+            LUtil.i(mTag, "NO permission");
+        }
     }
 
     @Override
     protected int getTitleResId() {
-        return R.string.title_wcn;
+        return R.string.title_bt_classic;
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        registerReceiverDelegate(mReceiver, BluetoothReceiver.getIntentFilter());
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        unregisterReceiver(mReceiver);
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         if (requestCode == 1 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            Toast.makeText(WcnActivity.this, "Has Location Permission", Toast.LENGTH_SHORT).show();
+            Toast.makeText(BredrActivity.this, "Has Location Permission", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(WcnActivity.this, "No Location Permission", Toast.LENGTH_SHORT).show();
+            Toast.makeText(BredrActivity.this, "No Location Permission", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    public void toClassicBt(View v) {
-        startActivity(new Intent(WcnActivity.this, BredrBaseFgm.class));
-    }
-
-    public void toBle(View v) {
-        startActivity(new Intent(WcnActivity.this, BleAct.class));
     }
 
     private static class TabFragmentStateAdapter extends FragmentStateAdapter {

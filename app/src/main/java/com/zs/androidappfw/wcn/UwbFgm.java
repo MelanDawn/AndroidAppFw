@@ -9,21 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseFragment;
-import com.zs.androidappfw.base.BaseTitleFragment;
+import com.zs.androidappfw.base.BaseClickFragment;
 
-public class NfcFg extends BaseFragment implements View.OnClickListener {
+public class UwbFgm extends BaseClickFragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fgm_wcn_nfc, container, false);
+        View view = inflater.inflate(R.layout.fgm_wcn_uwb, container, false);
         initView(view);
         return view;
     }
 
     protected void initView(View view) {
-        initAndSetClickListener(view, R.id.fg_wcn_nfc_nfc);
+        initAndSetClickListener(view, R.id.fg_wcn_uwb_uwb);
     }
 
     private void initAndSetClickListener(View view, int id) {
@@ -33,7 +32,7 @@ public class NfcFg extends BaseFragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.fg_wcn_nfc_nfc:
+            case R.id.fg_wcn_uwb_uwb:
                 break;
         }
     }

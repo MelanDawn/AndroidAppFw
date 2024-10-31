@@ -34,7 +34,7 @@ import com.zs.androidappfw.utils.LUtil;
 import java.io.FileDescriptor;
 import java.io.PrintWriter;
 
-public class BaseLifecycleFragment extends BaseFragment {
+public abstract class BaseLifecycleFragment extends BaseClickFragment {
 
     @Override
     public void onAttach(@NonNull Context context) {

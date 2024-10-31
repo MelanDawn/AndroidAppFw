@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseFragment;
+import com.zs.androidappfw.base.BaseClickFragment;
 import com.zs.androidappfw.ui.fundamental.AndroidBasicInfoAct;
 import com.zs.androidappfw.ui.fundamental.drawable.DrawableAct;
 import com.zs.androidappfw.ui.fundamental.font.FontActivity;
@@ -22,32 +22,26 @@ import com.zs.androidappfw.ui.lifecycle.FragmentDynamicAct;
 import com.zs.androidappfw.ui.lifecycle.ServiceLifecycleAct;
 import com.zs.androidappfw.ui.wsim.WindowSoftInputModeAct;
 
-public class BasicFunctionFgm extends BaseFragment implements View.OnClickListener {
+public class BasicFunctionFgm extends BaseClickFragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fgm_main_basic_function, container, false);
-        initView(view);
+        initAndSetClickListener(view, new int[] {
+                R.id.basic_function_to_java,
+                R.id.basic_function_to_android,
+                R.id.basic_function_to_activity_lifecycle,
+                R.id.basic_function_to_fragment_lifecycle,
+                R.id.basic_function_to_service,
+                R.id.basic_function_to_broadcast_receiver,
+                R.id.basic_function_to_content_provider,
+                R.id.basic_function_to_wsim,
+                R.id.basic_function_to_drawable,
+                R.id.basic_function_to_font,
+        });
         return view;
-    }
-
-    protected void initView(View view) {
-        initAndSetClickListener(view, R.id.basic_function_to_java);
-        initAndSetClickListener(view, R.id.basic_function_to_android);
-        initAndSetClickListener(view, R.id.basic_function_to_activity_lifecycle);
-        initAndSetClickListener(view, R.id.basic_function_to_fragment_lifecycle);
-        initAndSetClickListener(view, R.id.basic_function_to_service);
-        initAndSetClickListener(view, R.id.basic_function_to_broadcast_receiver);
-        initAndSetClickListener(view, R.id.basic_function_to_content_provider);
-        initAndSetClickListener(view, R.id.basic_function_to_wsim);
-        initAndSetClickListener(view, R.id.basic_function_to_drawable);
-        initAndSetClickListener(view, R.id.basic_function_to_font);
-    }
-
-    private void initAndSetClickListener(View view, int id) {
-        view.findViewById(id).setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")

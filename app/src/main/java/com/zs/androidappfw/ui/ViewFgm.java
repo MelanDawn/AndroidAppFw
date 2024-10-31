@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseFragment;
+import com.zs.androidappfw.base.BaseClickFragment;
 import com.zs.androidappfw.ui.animation.AnimationAttributeAct;
 import com.zs.androidappfw.ui.animation.AnimationFrameAct;
 import com.zs.androidappfw.ui.animation.AnimationTweenAct;
@@ -73,86 +73,80 @@ import com.zs.androidappfw.ui.view.viewgroup.ViewSwitcherAct;
 import com.zs.androidappfw.ui.view.viewgroup.WebViewAct;
 import com.zs.androidappfw.ui.view.viewgroup.ZoomControlsAct;
 
-public class ViewFgm extends BaseFragment implements View.OnClickListener {
+public class ViewFgm extends BaseClickFragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fgm_main_view, container, false);
-        initView(view);
+        initAndSetClickListener(view, new int[] {
+                R.id.view_to_tag_blink,
+                R.id.view_to_tag_include,
+                R.id.view_to_tag_merge,
+                R.id.view_to_tag_request_focus,
+                R.id.view_to_tag_tag,
+
+                R.id.view_to_progress_bar,
+                R.id.view_to_abs_seek_bar,
+                R.id.view_to_seek_bar,
+                R.id.view_to_rating_bar,
+                R.id.view_to_image_view,
+                R.id.view_to_image_button,
+                R.id.view_to_quick_contact_badge,
+                R.id.view_to_text_view,
+                R.id.view_to_checked_text_view,
+                R.id.view_to_chronometer,
+                R.id.view_to_text_clock,
+                R.id.view_to_edit_text,
+                R.id.view_to_auto_complete_text_view,
+                R.id.view_to_multi_auto_complete_text_view,
+                R.id.view_to_extract_edit_text,
+                R.id.view_to_button,
+                R.id.view_to_compound_button,
+                R.id.view_to_check_box,
+                R.id.view_to_radio_btn,
+                R.id.view_to_switch,
+                R.id.native_view_to_toggle_btn,
+                R.id.view_to_view_group,
+                R.id.view_to_absolute_layout,
+                R.id.view_to_web_view,
+                R.id.view_to_frame_layout,
+                R.id.view_to_app_widget_host_view,
+                R.id.view_to_calendar_view,
+                R.id.view_to_date_picker,
+                R.id.view_to_time_picker,
+                R.id.view_to_gesture_overlay_view,
+                R.id.view_to_media_controller,
+                R.id.view_to_horizontal_scroll_view,
+                R.id.view_to_scroll_view,
+                R.id.view_to_tab_host,
+                R.id.view_to_view_animator,
+                R.id.view_to_view_flipper,
+                R.id.view_to_view_switcher,
+                R.id.view_to_image_switcher,
+                R.id.view_to_text_switcher,
+                R.id.view_to_grid_layout,
+                R.id.view_to_linear_layout,
+                R.id.view_to_action_menu_view,
+                R.id.view_to_number_picker,
+                R.id.view_to_radio_group,
+                R.id.view_to_search_view,
+                R.id.view_to_tab_widget,
+                R.id.view_to_table_layout,
+                R.id.view_to_table_row,
+                R.id.view_to_zoom_controls,
+                R.id.view_to_relative_layout,
+                R.id.view_to_dialer_filter,
+                R.id.view_to_two_line_list_item,
+                R.id.view_to_space,
+                R.id.view_to_view_stub,
+
+                R.id.view_to_animation_frame,
+                R.id.view_to_animation_tween,
+                R.id.view_to_animation_attribute,
+        });
         return view;
-    }
-
-    protected void initView(View view) {
-        initAndSetClickListener(view, R.id.view_to_tag_blink);
-        initAndSetClickListener(view, R.id.view_to_tag_include);
-        initAndSetClickListener(view, R.id.view_to_tag_merge);
-        initAndSetClickListener(view, R.id.view_to_tag_request_focus);
-        initAndSetClickListener(view, R.id.view_to_tag_tag);
-
-        initAndSetClickListener(view, R.id.view_to_progress_bar);
-        initAndSetClickListener(view, R.id.view_to_abs_seek_bar);
-        initAndSetClickListener(view, R.id.view_to_seek_bar);
-        initAndSetClickListener(view, R.id.view_to_rating_bar);
-        initAndSetClickListener(view, R.id.view_to_image_view);
-        initAndSetClickListener(view, R.id.view_to_image_button);
-        initAndSetClickListener(view, R.id.view_to_quick_contact_badge);
-        initAndSetClickListener(view, R.id.view_to_text_view);
-        initAndSetClickListener(view, R.id.view_to_checked_text_view);
-        initAndSetClickListener(view, R.id.view_to_chronometer);
-        initAndSetClickListener(view, R.id.view_to_text_clock);
-        initAndSetClickListener(view, R.id.view_to_edit_text);
-        initAndSetClickListener(view, R.id.view_to_auto_complete_text_view);
-        initAndSetClickListener(view, R.id.view_to_multi_auto_complete_text_view);
-        initAndSetClickListener(view, R.id.view_to_extract_edit_text);
-        initAndSetClickListener(view, R.id.view_to_button);
-        initAndSetClickListener(view, R.id.view_to_compound_button);
-        initAndSetClickListener(view, R.id.view_to_check_box);
-        initAndSetClickListener(view, R.id.view_to_radio_btn);
-        initAndSetClickListener(view, R.id.view_to_switch);
-        initAndSetClickListener(view, R.id.native_view_to_toggle_btn);
-        initAndSetClickListener(view, R.id.view_to_view_group);
-        initAndSetClickListener(view, R.id.view_to_absolute_layout);
-        initAndSetClickListener(view, R.id.view_to_web_view);
-        initAndSetClickListener(view, R.id.view_to_frame_layout);
-        initAndSetClickListener(view, R.id.view_to_app_widget_host_view);
-        initAndSetClickListener(view, R.id.view_to_calendar_view);
-        initAndSetClickListener(view, R.id.view_to_date_picker);
-        initAndSetClickListener(view, R.id.view_to_time_picker);
-        initAndSetClickListener(view, R.id.view_to_gesture_overlay_view);
-        initAndSetClickListener(view, R.id.view_to_media_controller);
-        initAndSetClickListener(view, R.id.view_to_horizontal_scroll_view);
-        initAndSetClickListener(view, R.id.view_to_scroll_view);
-        initAndSetClickListener(view, R.id.view_to_tab_host);
-        initAndSetClickListener(view, R.id.view_to_view_animator);
-        initAndSetClickListener(view, R.id.view_to_view_flipper);
-        initAndSetClickListener(view, R.id.view_to_view_switcher);
-        initAndSetClickListener(view, R.id.view_to_image_switcher);
-        initAndSetClickListener(view, R.id.view_to_text_switcher);
-        initAndSetClickListener(view, R.id.view_to_grid_layout);
-        initAndSetClickListener(view, R.id.view_to_linear_layout);
-        initAndSetClickListener(view, R.id.view_to_action_menu_view);
-        initAndSetClickListener(view, R.id.view_to_number_picker);
-        initAndSetClickListener(view, R.id.view_to_radio_group);
-        initAndSetClickListener(view, R.id.view_to_search_view);
-        initAndSetClickListener(view, R.id.view_to_tab_widget);
-        initAndSetClickListener(view, R.id.view_to_table_layout);
-        initAndSetClickListener(view, R.id.view_to_table_row);
-        initAndSetClickListener(view, R.id.view_to_zoom_controls);
-        initAndSetClickListener(view, R.id.view_to_relative_layout);
-        initAndSetClickListener(view, R.id.view_to_dialer_filter);
-        initAndSetClickListener(view, R.id.view_to_two_line_list_item);
-        initAndSetClickListener(view, R.id.view_to_space);
-        initAndSetClickListener(view, R.id.view_to_view_stub);
-
-        initAndSetClickListener(view, R.id.view_to_animation_frame);
-        initAndSetClickListener(view, R.id.view_to_animation_tween);
-        initAndSetClickListener(view, R.id.view_to_animation_attribute);
-    }
-
-    private void initAndSetClickListener(View view, int id) {
-        view.findViewById(id).setOnClickListener(this);
     }
 
     @SuppressLint("NonConstantResourceId")

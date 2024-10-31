@@ -10,24 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.zs.androidappfw.R;
-import com.zs.androidappfw.base.BaseFragment;
+import com.zs.androidappfw.base.BaseClickFragment;
 import com.zs.androidappfw.cellular.CellularActivity;
 import com.zs.androidappfw.wcn.WcnActivity;
 
-public class FeatureFgm extends BaseFragment implements View.OnClickListener {
+public class FeatureFgm extends BaseClickFragment implements View.OnClickListener {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fgm_main_function, container, false);
-        initView(view);
+        initAndSetClickListener(view, new int[] {
+                R.id.function_to_wcn_btn,
+                R.id.function_to_cellular_btn,
+        });
         return view;
-    }
-
-    protected void initView(View view) {
-        view.findViewById(R.id.function_to_wcn_btn).setOnClickListener(this);
-        view.findViewById(R.id.function_to_cellular_btn).setOnClickListener(this);
     }
 
     @Override

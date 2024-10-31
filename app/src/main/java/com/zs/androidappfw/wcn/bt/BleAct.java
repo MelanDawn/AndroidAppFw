@@ -27,7 +27,7 @@ import androidx.annotation.Nullable;
 import com.zs.androidappfw.R;
 import com.zs.androidappfw.base.BaseTitleActivity;
 import com.zs.androidappfw.utils.LUtil;
-import com.zs.androidappfw.wcn.utils.BluetoothUtils;
+import com.zs.androidappfw.wcn.utils.BtAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,7 +52,7 @@ public class BleAct extends BaseTitleActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.act_wcn_ble_advertise);
 
-        mAdapter = BluetoothUtils.getInstance(this);
+        mAdapter = BtAdapter.getInstance(this);
         mBleAdvertiser = mAdapter.getBluetoothLeAdvertiser();
         mBleScanner = mAdapter.getBluetoothLeScanner();
     }

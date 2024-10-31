@@ -10,31 +10,29 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/fg_wifi_sta_switch_btn"
+                style="@style/BaseButton"
+                android:text="@string/wifi_sta_setWifiEnabled" />
+            <Button
+                android:id="@+id/fg_wifi_sta_scan_btn"
+                style="@style/BaseButton"
+                android:text="@string/wifi_sta_startScan" />
 
             <Button
-                android:id="@+id/fg_wcn_wifi_sta"
+                android:id="@+id/fg_wifi_sta_reassociate_btn"
                 style="@style/BaseButton"
-                android:text="@string/to_wifi_sta" />
+                android:text="@string/wifi_sta_reassociate" />
 
             <Button
-                android:id="@+id/fg_wcn_wifi_sap"
+                android:id="@+id/fg_wifi_sta_disconnect_btn"
                 style="@style/BaseButton"
-                android:text="@string/to_wifi_sap" />
+                android:text="@string/wifi_sta_disconnect" />
 
             <Button
-                android:id="@+id/fg_wcn_wifi_p2p"
+                android:id="@+id/fg_wifi_sta_reconnect_btn"
                 style="@style/BaseButton"
-                android:text="@string/to_wifi_p2p" />
-
-            <Button
-                android:id="@+id/fg_wcn_wifi_nan"
-                style="@style/BaseButton"
-                android:text="@string/to_wifi_nan" />
-
-            <Button
-                android:id="@+id/fg_wcn_wifi_rtt"
-                style="@style/BaseButton"
-                android:text="@string/to_wifi_rtt" />
+                android:text="@string/wifi_sta_reconnect" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -801,17 +801,35 @@
         typeface是绿色，fontFamily是橘色，动态设置时红色。\n
     </string>
 
-    <string name="to_wcn">Wireless Connectivity</string>
-    <string name="title_wcn">Wireless Connectivity</string>
+    <string name="to_wcn">Wireless Connectivity Network</string>
+    <string name="title_wcn">Wireless Connectivity Network</string>
+
+    <string name="to_wifi_sta">Wi-Fi STA</string>
+    <string name="to_wifi_sap">Wi-Fi SAP</string>
+    <string name="to_wifi_p2p">Wi-Fi P2P</string>
+    <string name="to_wifi_nan">Wi-Fi NAN</string>
+    <string name="to_wifi_rtt">Wi-Fi RTT</string>
+
+    <string name="wifi_sta_setWifiEnabled">setWifiEnabled</string>
+    <string name="wifi_sta_startScan">startScan</string>
+    <string name="wifi_sta_reassociate">reassociate</string>
+    <string name="wifi_sta_disconnect">disconnect</string>
+    <string name="wifi_sta_reconnect">reconnect</string>
+
+    <string name="wifi_rtt_start_ranging">start ranging</string>
+    <string name="wifi_rtt_stop_ranging">stop ranging</string>
+
     <string name="to_cellular">Cellular</string>
     <string name="title_cellular">Cellular</string>
 
     <!-- Wcn activity -->
-    <string name="wcn_tab_wifi">WiFi</string>
+    <string name="wcn_tab_wifi">Wi-Fi</string>
     <string name="wcn_tab_bt">BT</string>
     <string name="wcn_tab_lbs">LBS</string>
     <string name="wcn_tab_nfc">NFC</string>
     <string name="wcn_tab_uwb">UWB</string>
+
+    <string name="title_bt_classic">Classic BT</string>
 
     <string name="wcn_to_lm">LocationManager</string>
     <string name="wcn_to_geocode">Geocoder</string>
